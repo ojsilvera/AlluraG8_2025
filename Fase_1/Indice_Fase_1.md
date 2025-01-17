@@ -12,3 +12,31 @@ archivos:
     index.html --> Contiene el documento de navigacion por parte del jugador.
     app.js     --> Contiene la logica de programacion.
     style.css  --> Contiene los estilos del documento de navegacion del jugador
+
+los comentarios en javascript son con //texto o con /*texto*/
+los comentarios en html <!-- texto -->
+
+qlert() nos permite mostrar una alerta en el navegador con la frase hola mundo, se encuentra emtre "" para
+designar una cadena de texto, tambien se puede reemplazar con una variable que contenga un numero o
+un texto, sintaxys:
+
+    alert("Hola mundo");
+
+promp() nos permite obtener informacion del usuario o que el usuario envie informacion a la aplicacion
+o la pagina
+prompt("Digita un numero: ");
+
+la salida del prompt sino se almacena en una variable se pierde, la forma de declarar una variable en
+js seria:
+
+    const:  se utiliza para declarar variables que no se pueden reasignar. Al igual que let, tiene un
+    alcance de bloque. Sin embargo, es importante notar que si la variable es un objeto o un array,
+    puedes modificar sus propiedades o elementos, pero no puedes reasignar la variable a un nuevo
+    objeto o array.
+
+    let: permite declarar variables con un alcance de bloque. Esto significa que la variable solo estará
+    disponible dentro del bloque donde fue definida (por ejemplo, dentro de un if o un for). A diferencia
+    de var, no se puede redeclarar la misma variable en el mismo bloque.
+
+    var: tienen un alcance global o de función, lo que significa que pueden ser accesibles fuera del
+    bloque en el que fueron definidas. Además, var permite redeclarar la misma variable sin errores.
