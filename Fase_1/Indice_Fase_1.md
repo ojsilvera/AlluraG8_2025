@@ -16,15 +16,21 @@ archivos:
 los comentarios en javascript son con //texto o con /*texto*/
 los comentarios en html <!-- texto -->
 
-qlert() nos permite mostrar una alerta en el navegador con la frase hola mundo, se encuentra emtre "" para
+alert() nos permite mostrar una alerta en el navegador con la frase hola mundo, se encuentra emtre "" para
 designar una cadena de texto, tambien se puede reemplazar con una variable que contenga un numero o
 un texto, sintaxys:
 
     alert("Hola mundo");
 
+Para interpolar una variable en el texto que se muestra con el alert usamos comillas simples '' y el signo
+$ seguido de llaves {} en el cetro de las llaves la variable ${variable}
+
+    alert('Has acertado El numero secreto es ${numeroSecreto}')
+
 promp() nos permite obtener informacion del usuario o que el usuario envie informacion a la aplicacion
 o la pagina
-prompt("Digita un numero: ");
+
+    prompt("Digita un numero: ");
 
 la salida del prompt sino se almacena en una variable se pierde, la forma de declarar una variable en
 js seria:
@@ -40,3 +46,24 @@ js seria:
 
     var: tienen un alcance global o de función, lo que significa que pueden ser accesibles fuera del
     bloque en el que fueron definidas. Además, var permite redeclarar la misma variable sin errores.
+
+console.log(variable o texto) nos permite mostrar un mensaje o variable en la consola del navegador,
+para acceder a esta se presiona la tecla f12
+
+Estructura condicional if, que permite comparar el número ingresado por el usuario con un número secreto
+almacenado en otra variable.
+
+es una estructura de control que permite ejecutar un bloque de código solo si se cumple una condición
+específica. Es fundamental en la lógica de programación, ya que permite tomar decisiones basadas en
+condiciones.
+
+if (condición) {
+    // bloque de código a ejecutar si la condición es verdadera
+}
+
+Usar dos signos de igual para comparar valores, a diferencia de un solo signo que se utiliza para asignar
+valores.
+
+if ( numero1 == numero2 ) {
+    // bloque de código a ejecutar si la condición es verdadera
+}
