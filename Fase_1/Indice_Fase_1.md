@@ -82,4 +82,10 @@ Desafíos para afianzar lo aprendido
 9. Pide al usuario que ingrese su edad usando un prompt y almacénala en la variable edad.
 10. Ahora, si la edad es mayor o igual a 18, muestra una alerta con el mensaje "¡Puedes obtener tu licencia de conducir!".
 
-## Condicionales y concatenacion
+## interpolacion
+
+E la interpolacion estamos usando comillas invertidas ``(ALT+96) para crear las plantillas literales. El formato ${marcador}
+nos permite insertar un valor dinámico en la cadena. Todo lo que hay dentro ${} es evaluado como JavaScript.
+
+Por ejemplo, podríamos escribir Se estima que la Tierra tiene ${edad + 10} mil millones de años., y funcionaría como si
+hiciéramos const edad = 4.5 + 10;.
