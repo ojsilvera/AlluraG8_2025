@@ -7,18 +7,7 @@ let contador = 0;
 // definiendo o inicializando la variable para el bucle while
 let numeroUsuario = 0;
 
-// Solicita al usuario un numero y lo carga en una variable llamada numeroUsuario
-// let numeroUsuario = prompt("Digita un numero entre 1 y 10: ");
-
-// muestra el contenido de la variable en la consola del navegador se abre con F12 y menu consola o console
-// console.log(numeroUsuario);
-
-//muestra el contenido de la variable en una alerta del navegador
-// alert(numeroUsuario);
-
-// clausula de omparacion if nos permite comparar una variable con un dato y si se cumple genera un resultado esperado
-// sino genera otro resultado
-
+// ciclo de preguntas e intentos
 while (numeroUsuario != numeroSecreto) {
 
     numeroUsuario = prompt("Digita un numero entre 1 y 10: ");
@@ -30,7 +19,7 @@ while (numeroUsuario != numeroSecreto) {
         contador = contador + 1;
         
         alert(`lo has logrado en tu intento numero: ${contador}`);
-        
+
     } else {
         //alert("No acertaste el numero secreto")
         if (numeroUsuario < numeroSecreto) {
