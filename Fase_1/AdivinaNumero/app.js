@@ -32,7 +32,7 @@ while (numeroUsuario != numeroSecreto) {
         
         contador = contador + 1;
         
-        alert(`Esta es tu intento numero: ${contador}`);
+        alert(`Este es tu intento numero: ${contador}`);
     };
     
 };

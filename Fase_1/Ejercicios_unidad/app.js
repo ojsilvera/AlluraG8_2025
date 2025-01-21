@@ -98,3 +98,56 @@ alert(`Mensaje del sistema: ${mensaje}`);
 let userName = prompt('digita tu nombre: ');
 
 alert(`Bienvenid@ ${userName} el sistema está en linea`)
+
+//Desafio_3
+
+/*Crea un contador que comience en 1 y vaya hasta 10 usando un bucle 'while'. Muestra cada número.*/
+
+let contador = 1;
+
+while (contador <= 10) {
+
+    alert(contador);
+
+    contador = contador + 1;
+    
+};
+
+/*Crea un contador que comience en 10 y vaya hasta 0 usando un bucle 'while'. Muestra cada número.*/
+
+let contadorInverso = 10;
+
+while (contadorInverso >= 0) {
+
+    alert(contadorInverso);
+
+    contadorInverso = contadorInverso - 1;
+    
+};
+
+/*Crea un programa de cuenta regresiva. Pide un número y cuenta desde ese numero hasta 0 utilizando un bucle 'while' en
+la consola del navegador.*/
+
+let contadorMaximo = prompt('digita el tiempo maximo del contador');
+
+while (contadorMaximo >= 0) {
+
+    console.log(`Quedan: ${contadorMaximo} segundos`);
+
+    contadorMaximo = contadorMaximo - 1;
+    
+};
+
+/*Crea un programa de cuenta progresiva. Pide un número y cuenta desde 0 hasta ese número utilizando un bucle 'while' en
+la consola del navegador.*/
+
+let contadorProgresivo = prompt('digita el tiempo maximo del contador');
+let incremento = 0;
+
+while (contadorProgresivo > incremento) {
+
+    console.log(`Van: ${incremento} segundos`);
+
+    incremento = incremento + 1;
+    
+};
