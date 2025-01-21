@@ -158,3 +158,11 @@ Cada uno de estos bucles tiene su propio uso y es útil en diferentes situacione
 En los ciclos es posible incluir un contador el cual por ejemplo puede marcar el numero de intento o las veces que se obtiene
 un resultado en el ciclo hasta que este termina, se declara una variable de tipo entero que inicia en cero y se incrementa
 cada vez que sucede un evento especifico en el ciclo que estamos evaluando.
+
+En js el contador puede ser esplicito:
+
+    variable = variable + 1
+
+o puede omplicito
+
+    variable = variable++

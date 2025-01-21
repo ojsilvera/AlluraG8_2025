@@ -24,24 +24,26 @@ while (numeroUsuario != numeroSecreto) {
     numeroUsuario = prompt("Digita un numero entre 1 y 10: ");
     
     if (numeroUsuario == numeroSecreto) {
-    // le indica al usuario que acerto el numero secreto
+        // le indica al usuario que acerto el numero secreto
         alert(` Has acertado El numero secreto es ${ numeroSecreto } `);
+        
         contador = contador + 1;
-
+        
+        alert(`lo has logrado en tu intento numero: ${contador}`);
+        
     } else {
-    //alert("No acertaste el numero secreto")
+        //alert("No acertaste el numero secreto")
         if (numeroUsuario < numeroSecreto) {
             // le indica al usuario que su numero es menor que el numero secreto para que lo intente de nuevo
             alert("tu numero es menor que el numero secreto");
-            
-            contador = contador + 1;
         } else {
             // le indica al usuario que su numero es mayor que el numero secreto para que lo intente de nuevo
             alert("Tu numero es mayor que el numero secreto");
-            
-            contador = contador + 1;
         }
+        
+        contador = contador + 1;
+        
+        alert(`Esta es tu intento numero: ${contador}`);
     };
     
-    alert(`lo has logrado en tu intento numero: ${contador}`);
 };
