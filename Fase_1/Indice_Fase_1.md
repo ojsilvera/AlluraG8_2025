@@ -94,7 +94,7 @@ Tambien es posible concatenar de la siguiente manera:
 
     alert('un texto ' + variable1 + ' ' + 'otro texto ' + variable2)
 
-Desafíos:
+Desafíos_2:
 
 Pregunta al usuario qué día de la semana es. Si la respuesta es "Sábado" o "Domingo", muestra "¡Buen fin de semana!". De
 lo contrario, muestra "¡Buena semana!".
@@ -108,3 +108,45 @@ Crea un mensaje que informe al usuario sobre el saldo de su cuenta, utilizando u
 del saldo.
 
 Pide al usuario que ingrese su nombre mediante un prompt. Luego, muestra una alerta de bienvenida usando ese nombre.
+
+## bucles
+
+Sintaxis while:
+
+    while (condición) {
+        // Código a ejecutar mientras la condición sea verdadera
+    }
+
+while: Es la palabra clave que inicia el bucle.
+(condición): Es una expresión que se evalúa antes de cada iteración del bucle. Si la condición es verdadera (true), el
+código dentro de las llaves se ejecutará. Si es falsa (false), el bucle se detendrá.
+{ // Código }: Aquí se coloca el bloque de código que se ejecutará repetidamente mientras la condición sea verdadera.
+
+Bucle "for":La sintaxis es la siguiente:
+Este bucle se utiliza cuando se conoce de antemano cuántas veces se debe ejecutar el bloque de código.
+
+    for (inicialización; condición; incremento) {
+        // Código a ejecutar en cada iteración
+    }
+
+Bucle "do...while":La sintaxis es:
+En este caso, el bloque de código se ejecuta al menos una vez, ya que la condición se evalúa después de la ejecución del código.
+
+    do {
+        // Código a ejecutar
+    } while (condición);
+
+Bucle "for...in":
+Este bucle se utiliza para iterar sobre las propiedades de un objeto. La sintaxis es:
+
+    for (variable in objeto) {
+        // Código a ejecutar para cada propiedad
+    }
+
+Bucle "for...of":Este bucle se utiliza para iterar sobre los elementos de un array o de objetos iterables. La sintaxis es:
+
+    for (variable of iterable) {
+        // Código a ejecutar para cada elemento
+    }
+
+Cada uno de estos bucles tiene su propio uso y es útil en diferentes situaciones.
