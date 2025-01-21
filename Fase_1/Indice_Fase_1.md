@@ -122,6 +122,10 @@ while: Es la palabra clave que inicia el bucle.
 código dentro de las llaves se ejecutará. Si es falsa (false), el bucle se detendrá.
 { // Código }: Aquí se coloca el bloque de código que se ejecutará repetidamente mientras la condición sea verdadera.
 
+la variable de la condicion se inicializa al inicio con un valor del tipo que se va a manejar en el loop, luego dentro si
+es necesario volver a solicitarla o cambiar su valor no se declara con let, var o cons ya que estohace que la variable se
+limpie cada vez que se inicie el ciclo y esto resulta en un ciclo infinito o que nunca termina.
+
 Bucle "for":La sintaxis es la siguiente:
 Este bucle se utiliza cuando se conoce de antemano cuántas veces se debe ejecutar el bloque de código.
 

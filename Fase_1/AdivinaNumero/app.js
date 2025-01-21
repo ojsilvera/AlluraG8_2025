@@ -16,15 +16,14 @@ let numeroUsuario = 0;
 // clausula de omparacion if nos permite comparar una variable con un dato y si se cumple genera un resultado esperado
 // sino genera otro resultado
 
-
-
 while (numeroUsuario != numeroSecreto) {
 
-    let numeroUsuario = prompt("Digita un numero entre 1 y 10: ");
-
+    numeroUsuario = prompt("Digita un numero entre 1 y 10: ");
+    
     if (numeroUsuario == numeroSecreto) {
     // le indica al usuario que acerto el numero secreto
         alert(` Has acertado El numero secreto es ${ numeroSecreto } `);
+
     } else {
     //alert("No acertaste el numero secreto")
         if (numeroUsuario < numeroSecreto) {
@@ -35,5 +34,6 @@ while (numeroUsuario != numeroSecreto) {
             alert("Tu numero es mayor que el numero secreto");
         }
     };
-
+    
+    alert(numeroUsuario);
 };
