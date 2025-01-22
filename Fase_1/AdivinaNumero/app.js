@@ -7,6 +7,8 @@ let contador = 0;
 // definiendo o inicializando la variable para el bucle while
 let numeroUsuario = 0;
 
+alert(`Tienes 3 intentos, Buena suerte`)
+
 // ciclo de preguntas e intentos
 while (numeroUsuario != numeroSecreto) {
 
@@ -31,8 +33,19 @@ while (numeroUsuario != numeroSecreto) {
         }
         
         contador = contador + 1;
+
+        if (contador < 3) {
+            
+            alert(`Tienes: ${contador - 1}`);
+
+        } else {
+            
+            alert(`Usaste ${contador}, perdiste`);
+            
+            break;
+        }
         
-        alert(`Este es tu intento numero: ${contador}`);
+        
     };
     
 };

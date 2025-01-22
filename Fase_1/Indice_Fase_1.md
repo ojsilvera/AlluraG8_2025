@@ -167,6 +167,8 @@ o puede omplicito
 
     variable = variable++
 
+"ruptura forzada" o break en los bucles, que permite salir de un ciclo cuando se cumple una condición específica, 
+
 Desafio_3
 
 Crea un contador que comience en 1 y vaya hasta 10 usando un bucle 'while'. Muestra cada número.
