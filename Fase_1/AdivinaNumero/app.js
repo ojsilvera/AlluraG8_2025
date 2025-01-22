@@ -7,6 +7,10 @@ let contador = 0;
 // definiendo o inicializando la variable para el bucle while
 let numeroUsuario = 0;
 
+//maximo numero de intentos
+
+let intentosMaximos = 3 ;
+
 alert(`Tienes 3 intentos, Buena suerte`)
 
 // ciclo de preguntas e intentos
@@ -18,7 +22,7 @@ while (numeroUsuario != numeroSecreto) {
         // le indica al usuario que acerto el numero secreto
         alert(` Has acertado El numero secreto es ${ numeroSecreto } `);
         
-        contador = contador + 1;
+        contador++ ;
         
         alert(`lo has logrado en tu intento numero: ${contador}`);
 
@@ -32,15 +36,15 @@ while (numeroUsuario != numeroSecreto) {
             alert("Tu numero es mayor que el numero secreto");
         }
         
-        contador = contador + 1;
+        contador++;
 
-        if (contador < 3) {
+        if (contador < intentosMaximos) {
             
-            alert(`Tienes: ${3 - contador }`);
+            alert(`Tienes: ${intentosMaximos - contador }`);
 
         } else {
             
-            alert(`Usaste ${contador}, perdiste`);
+            alert(`Usaste ${intentosMaximos}, perdiste`);
             
             break;
         }

@@ -163,9 +163,14 @@ En js el contador puede ser esplicito:
 
     variable = variable + 1
 
-o puede omplicito
+o puede implicito que incrementara de 1 en 1
 
     variable = variable++
+
+o para que el contador incremente en pasos distinto al 1 en 1
+
+    variable += 2; incrementara de dos en dos
+    variable += 3; incrementara de tres en tres
 
 "ruptura forzada" o break en los bucles, que permite salir de un ciclo cuando se cumple una condición específica, 
 
