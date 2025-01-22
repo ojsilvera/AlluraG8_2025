@@ -36,7 +36,7 @@ while (numeroUsuario != numeroSecreto) {
 
         if (contador < 3) {
             
-            alert(`Tienes: ${contador - 1}`);
+            alert(`Tienes: ${3 - contador }`);
 
         } else {
             
