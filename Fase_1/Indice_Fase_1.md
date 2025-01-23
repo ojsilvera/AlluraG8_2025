@@ -199,3 +199,16 @@ consola del navegador.
 ![alt](./Assets/operadores_2.png)
 
 ## numero random
+
+Definimos la variable que almacena el numero a adivinar, el cual se genera obteniendo la parte entera de un numero
+random que va del 1 hasta el valor maximo determinado que es 10
+
+    let numeroSecreto = Math.floor(Math.random() * 10) + 1;
+
+typeof-> nos permite obtener el tipo de dato que le suminstremos a la funcion
+
+    typeof(datos o variable);
+
+parseInt -> convierte un dato a entero
+
+    parseInt(dato o variable);

@@ -1,6 +1,6 @@
 // definimos la variable que almacena el numero a adivinar, el cual se genera obteniendo la parte entera de un numero
-// random que va del 0 hasta el valor maximo determinado que es 10
-let numeroSecreto = Math.floor(Math.random() * 10);
+// random que va del 1 hasta el valor maximo determinado que es 10
+let numeroSecreto = Math.floor(Math.random() * 10) + 1;
 
 // estbalecemos el contador de intentos
 let contador = 0;
@@ -17,7 +17,7 @@ alert(`Tienes 3 intentos, Buena suerte`)
 // ciclo de preguntas e intentos
 while (numeroUsuario != numeroSecreto) {
 
-    numeroUsuario = prompt("Digita un numero entre 1 y 10: ");
+    numeroUsuario = parseInt(prompt("Digita un numero entre 1 y 10: "));
     
     if (numeroUsuario == numeroSecreto) {
         // le indica al usuario que acerto el numero secreto
