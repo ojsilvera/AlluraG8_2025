@@ -197,3 +197,5 @@ consola del navegador.
 ## operadores logicos
 
 ![alt](./Assets/operadores_2.png)
+
+## numero random

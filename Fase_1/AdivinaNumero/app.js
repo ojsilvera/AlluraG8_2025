@@ -1,5 +1,6 @@
-// definimos la variable que almacena el numero a adivinar
-let numeroSecreto = 6;
+// definimos la variable que almacena el numero a adivinar, el cual se genera obteniendo la parte entera de un numero
+// random que va del 0 hasta el valor maximo determinado que es 10
+let numeroSecreto = Math.floor(Math.random() * 10);
 
 // estbalecemos el contador de intentos
 let contador = 0;
