@@ -27,6 +27,13 @@ $ seguido de llaves {} en el cetro de las llaves la variable ${variable}
 
     alert('Has acertado El numero secreto es ${numeroSecreto}')
 
+Tambien es posble realizar operaciones de copmpracion durante la intermpoalcion de la siguiente manera:
+
+    alert('lo hiciste en ${numeroIntento == 1 ? 'in intento' : 'Intentos' }')
+
+notece que en l interpolacion agregamos una condicion(numeroIntento == 1) el signo interrogacion (?) que
+nos asemeja al if y los dos puntos(:) que nos devuelve el valor falso del if osea el else.
+
 promp() nos permite obtener informacion del usuario o que el usuario envie informacion a la aplicacion
 o la pagina
 
@@ -172,7 +179,7 @@ o para que el contador incremente en pasos distinto al 1 en 1
     variable += 2; incrementara de dos en dos
     variable += 3; incrementara de tres en tres
 
-"ruptura forzada" o break en los bucles, que permite salir de un ciclo cuando se cumple una condición específica, 
+"ruptura forzada" o break en los bucles, que permite salir de un ciclo cuando se cumple una condición específica,
 
 Desafio_3
 
