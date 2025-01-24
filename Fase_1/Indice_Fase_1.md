@@ -172,7 +172,7 @@ En js el contador puede ser esplicito:
 
 o puede implicito que incrementara de 1 en 1
 
-    variable = variable++
+    variable++
 
 o para que el contador incremente en pasos distinto al 1 en 1
 

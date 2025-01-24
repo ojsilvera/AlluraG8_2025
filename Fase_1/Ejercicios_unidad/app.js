@@ -188,16 +188,53 @@ console.log(`La suma de ${valor1} y ${valor2} es igual a ${resultado}`);
 la resta de estos dos valores y almacena el resultado en una tercera variable llamada "resultado". Utiliza console.log
 para mostrar el mensaje "La diferencia entre [valor1] y [valor2] es igual a [resultado]." en la consola.*/
 
+let valor1Resta = 25;
+let valor2Resta = 15;
+let resultadoResta = valor1 + valor2;
+console.log(`La resta de ${valor1Resta} y ${valor2Resta} es igual a ${resultadoResta}`);
+
 /*Pide al usuario que ingrese su edad con prompt. Con base en la edad ingresada, utiliza un if para verificar si la persona
 es mayor o menor de edad y muestra un mensaje apropiado en la consola.*/
+
+let edadUser = prompt('ingresa tu edad');
+if (edadUser >= 18) {
+    console.log("Eres mayor de edad");
+} else {
+    console.log("Eres menor de edada");
+};
 
 /*Crea una variable "numero" y solicita un valor con prompt. Luego, verifica si es positivo, negativo o cero utilizando un
 if-else y muestra el mensaje correspondiente.*/
 
+let numeroUser = prompt('Digita un numero');
+if (numeroUser == 0) {
+    alert('el numero es cero y positivo');
+} else {
+    if (numeroUser > 0) {
+        alert('Numero positivo');
+    } else {
+        alert('El numero es negativo');
+    }
+}
+
 /*Utiliza un bucle while para mostrar los números del 1 al 10 en la consola.*/
+
+let contadorTimerUser = 0;
+while (contadorTimerUser <= 10) {
+    console.log(timerUser);
+    contadorTimerUser++;
+};
+
 
 /*Crea una variable "nota" y asígnale un valor numérico. Utiliza un if-else para determinar si la nota es mayor o igual a 7
 y muestra "Aprobado" o "Reprobado" en la consola.*/
+
+let nota = Math.floor(Math.random()*10)+1;
+if (nota>=7) {
+    alert(`Aprobaste con nota de ${nota}`);
+} else {
+    alert(`No Aprobado con nota de ${nota}`);
+};
 
 /*Utiliza Math.random para generar cualquier número aleatorio y muestra ese número en la consola.*/
 
