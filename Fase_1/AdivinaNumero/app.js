@@ -1,6 +1,9 @@
+6//Solicita al usuario el valor maximo del rango a usar
+let valorRangoMaximo = parseInt(prompt('Elige el valor maximo del numero a adivinar'));
+
 // definimos la variable que almacena el numero a adivinar, el cual se genera obteniendo la parte entera de un numero
-// random que va del 1 hasta el valor maximo determinado que es 10
-let numeroSecreto = Math.floor(Math.random() * 10) + 1;
+// random que va del 1 hasta el valor maximo determinado por el usuario
+let numeroSecreto = Math.floor(Math.random() * valorRangoMaximo) + 1;
 
 // estbalecemos el contador de intentos
 let contador = 0;
@@ -14,10 +17,14 @@ let intentosMaximos = 3 ;
 
 alert(`Tienes 3 intentos, Buena suerte`)
 
+//Regkas del juego
+alert(`Tienes ${intentosMaximos} intentos`)
+alert(`El nuemro está entre 1 y ${valorMaximo}`)
+
 // ciclo de preguntas e intentos
 while (numeroUsuario != numeroSecreto) {
 
-    numeroUsuario = parseInt(prompt("Digita un numero entre 1 y 10: "));
+    numeroUsuario = parseInt(prompt(`Digita un numero entre 1 y ${valorRangoMaximo}: `));
     
     if (numeroUsuario == numeroSecreto) {
         // le indica al usuario que acerto el numero secreto

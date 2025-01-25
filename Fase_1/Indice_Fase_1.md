@@ -1,4 +1,4 @@
-# Introduccion
+# Introduccion a la programacion con Java script
 
 En la fase numero 1 se desarrolla la logica de programacion iniciando con javascript y apoyandoce
 en html y css.
@@ -249,3 +249,5 @@ Utiliza Math.random para generar cualquier número aleatorio y muestra ese núme
 Utiliza Math.random para generar un número entero entre 1 y 10 y muestra ese número en la consola.
 
 Utiliza Math.random para generar un número entero entre 1 y 1000 y muestra ese número en la consola.
+
+## Lógica de programación: explorar funciones y listas
