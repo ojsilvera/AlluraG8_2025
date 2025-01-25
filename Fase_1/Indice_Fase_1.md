@@ -251,3 +251,38 @@ Utiliza Math.random para generar un número entero entre 1 y 10 y muestra ese n�
 Utiliza Math.random para generar un número entero entre 1 y 1000 y muestra ese número en la consola.
 
 ## Lógica de programación: explorar funciones y listas
+
+Objetivos de la seccion:
+
+Aprenda qué son las funciones y cómo utilizar JavaScript para manipular elementos en la pantalla
+Desarrolla aún más tu lógica de programación inspirándote en un proyecto real
+Aprende a usar Github para publicar tus proyectos
+Descubre cómo utilizar las listas, una de las principales estructuras de datos en el mundo de la programación
+Cree manipulaciones de palabras y números dinámicamente con JavaScript
+
+### Interactuando con HTML Ver el primer video
+
+En este curso de lógica de programación, se va a aumentar el nivel de complejidad y se va a empezar a interactuar entre
+HTML y JavaScript; Se va a seguir trabajando con el juego del número secreto del curso anterior, pero de una manera más
+profesional.
+
+Se muestra cómo conectar el archivo JavaScript con el archivo HTML usando la etiqueta `<script>`.
+
+Se explica el concepto del Document Object Model (DOM), que permite a JavaScript acceder y manipular los elementos HTML.
+
+Se utiliza el método document.querySelector() para seleccionar elementos HTML específicos, como el título (`<h1>`) y el
+párrafo (`<p>`).
+
+Una vez seleccionados los elementos, se puede acceder a sus propiedades y métodos, como innerHTML, para modificar su contenido.
+
+Se agrega un título y un mensaje explicativo al juego del número secreto utilizando JavaScript y el DOM.
+
+Se menciona que se seguirá mejorando el sistema del juego en los próximos videos.
+
+### Funciones
+
+### Reniciando el juego
+
+### Listas
+
+### Publicando el proyecto
