@@ -15,23 +15,22 @@ let numeroUsuario = 0;
 
 let intentosMaximos = 3 ;
 
-alert(`Tienes 3 intentos, Buena suerte`)
+//Reglas del juego
+alert(`Tienes ${intentosMaximos} intentos`);
 
-//Regkas del juego
-alert(`Tienes ${intentosMaximos} intentos`)
-alert(`El nuemro está entre 1 y ${valorMaximo}`)
+alert(`El nuemro está entre 1 y ${valorRangoMaximo}`);
 
 // ciclo de preguntas e intentos
 while (numeroUsuario != numeroSecreto) {
 
     numeroUsuario = parseInt(prompt(`Digita un numero entre 1 y ${valorRangoMaximo}: `));
-    
+
     if (numeroUsuario == numeroSecreto) {
         // le indica al usuario que acerto el numero secreto
         alert(` Has acertado El numero secreto es ${ numeroSecreto } `);
-        
+
         contador++ ;
-        
+
         alert(`lo has logrado en tu intento numero: ${contador}`);
 
     } else {
@@ -43,21 +42,21 @@ while (numeroUsuario != numeroSecreto) {
             // le indica al usuario que su numero es mayor que el numero secreto para que lo intente de nuevo
             alert("Tu numero es mayor que el numero secreto");
         }
-        
+
         contador++;
 
         if (contador < intentosMaximos) {
-            
-            alert(`Tienes: ${intentosMaximos - contador }`);
+
+            alert(`Tienes: ${intentosMaximos - contador } Intentos restantes`);
 
         } else {
-            
-            alert(`Usaste ${intentosMaximos}, perdiste`);
-            
+
+            alert(`Usaste ${intentosMaximos} intentos, perdiste, el numero secreto era ${numeroSecreto}`);
+
             break;
         }
-        
-        
+
+
     };
-    
+
 };
