@@ -260,7 +260,7 @@ Aprende a usar Github para publicar tus proyectos
 Descubre cómo utilizar las listas, una de las principales estructuras de datos en el mundo de la programación
 Cree manipulaciones de palabras y números dinámicamente con JavaScript
 
-### Interactuando con HTML Ver el primer video
+### Interactuando con HTML
 
 En este curso de lógica de programación, se va a aumentar el nivel de complejidad y se va a empezar a interactuar entre
 HTML y JavaScript; Se va a seguir trabajando con el juego del número secreto del curso anterior, pero de una manera más
