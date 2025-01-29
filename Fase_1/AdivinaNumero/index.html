@@ -7,33 +7,22 @@
 </head>
 <body>
     <header>
-    navbar con logo y nombre del juego y un boton de inicio
+    <h1>Adivina el número</h1>
     <nav>
-        <div class="logo">
-            <img src="logo.png" alt="Logo del juego">
-            <span>Adivina el número</span>
-        </div>
-        <button onclick="iniciarJuego()">Inicio</button>
-    </nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Jugar</a></li>
+            <li><a href="#">Reglas</a></li>
+            <li><a href="#">Acerca de</a></li>
+        </ul>
     </header>
     <section>
         <article>
-            <figure>
-                <img src="./Assets/ia.png" alt="AI">
-                <figcaption></figcaption>
-            </figure>
+            <h2>Slecciona el rango para adivinar</h2>
+            <input type="text" id="min" placeholder="Maximo valor">
         </article>
         <article>
-            <figure>
-                <img>
-                <figcaption></figcaption>
-            </figure>
-        </article>
-        <article>
-            <figure>
-                <img>
-                <figcaption></figcaption>
-            </figure>
+            <h2>Numero de intentos</h2>
         </article>
     </section>
     <footer>
