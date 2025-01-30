@@ -1,4 +1,17 @@
-6//Solicita al usuario el valor maximo del rango a usar
+//Con esto selecciono el selector con nombre h1, la seleccion puede ser el selector de una clase, id, etiqueta, etc.
+let titulo = document.querySelector('h1');
+
+//se le asigna el valor a la variable titulo para que aparezca en el documento html
+titulo.innerHTML = "Juago adivina el numero";
+
+//Con esto selecciono el selector p, la seleccion puede ser el selector de una clase, id, etiqueta, etc.
+let inputTitle = document.querySelector('p');
+
+//se le asigna el valor a la variable titulo para que aparezca en el documento html
+inputTitle.innerHTML = "Digita un numero del 1 al 10";
+
+/*
+//Solicita al usuario el valor maximo del rango a usar
 let valorRangoMaximo = parseInt(prompt('Elige el valor maximo del numero a adivinar'));
 
 // definimos la variable que almacena el numero a adivinar, el cual se genera obteniendo la parte entera de un numero
@@ -60,3 +73,4 @@ while (numeroUsuario != numeroSecreto) {
     };
 
 };
+*/
