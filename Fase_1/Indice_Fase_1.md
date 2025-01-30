@@ -277,7 +277,20 @@ Una vez seleccionados los elementos, se puede acceder a sus propiedades y métod
 
 Se agrega un título y un mensaje explicativo al juego del número secreto utilizando JavaScript y el DOM.
 
-Se menciona que se seguirá mejorando el sistema del juego en los próximos videos.
+- Los eventos en java script
+
+JavaScript tiene la capacidad de gestionar estos eventos, como el evento "click", y reaccionar a ellos.
+
+Para manejar el evento de clic en un botón, se utiliza la propiedad onclick en la etiqueta HTML del botón, la cual llama
+a una función de JavaScript.
+
+Se muestra cómo declarar una función en JavaScript usando la palabra clave function, y cómo llamar a esa función desde
+el evento onclick del botón en HTML.
+
+Al hacer clic en el botón, se ejecuta la función declarada en JavaScript, la cual por ahora solo muestra una alerta.
+
+Se menciona que en el próximo video se continuará desarrollando la lógica completa de la función llamada cuando se hace
+clic en el botón.
 
 ### Funciones
 
