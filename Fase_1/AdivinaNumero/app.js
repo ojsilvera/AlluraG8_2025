@@ -10,6 +10,11 @@ let inputTitle = document.querySelector('p');
 //se le asigna el valor a la variable titulo para que aparezca en el documento html
 inputTitle.innerHTML = "Digita un numero del 1 al 10";
 
+//establecemnos la funcion para el boton intentoUsuario
+function intentoUsuario(){
+    alert("Click desde el boton");
+};
+
 /*
 //Solicita al usuario el valor maximo del rango a usar
 let valorRangoMaximo = parseInt(prompt('Elige el valor maximo del numero a adivinar'));
