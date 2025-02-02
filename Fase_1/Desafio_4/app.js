@@ -16,3 +16,18 @@ function prompUser(){
     let city = prompt('Escribe el nombre de una ciudad de Brasil');
     alert(`Estuve en ${city} y me acordé de ti`);
 }
+
+//Crea una función que muestre una alerta con el mensaje: "Yo amo JS" siempre que se presione el botón "Alerta".
+
+function alertUser(){
+    alert('Yo amo JS');
+}
+
+//Al hacer clic en el botón "suma", pide 2 números y muestra el resultado de la suma en una alerta.
+
+function sumaUser(){
+    let num1 = parseInt(prompt('Escribe un número'));
+    let num2 = parseInt(prompt('Escribe otro número'));
+    let result = num1 + num2;
+    alert(`La suma de los números es: ${result}`);
+}
