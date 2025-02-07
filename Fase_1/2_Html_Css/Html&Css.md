@@ -28,3 +28,30 @@ define el título de la página.
         </body>
     </html>
 `
+
+### **Resumen: Creación del Cuerpo de un Proyecto en HTML**
+
+1. **Estructura Básica en HTML**
+   - Se usa la etiqueta `<body>` para el contenido principal del proyecto.
+   - Se agrega un título, un párrafo y una imagen en HTML.
+
+2. **Diferencia entre `<title>` y `<h1>`**
+   - `<title>` define el nombre de la pestaña en el navegador.
+   - `<h1>` se usa para el título principal dentro del contenido y debe utilizarse solo una vez por página.
+   - Para subtítulos, se emplean `<h2>`, `<h3>`, etc.
+
+3. **Creación del Contenido**
+   - Se agrega un título con `<h1>Esto es un título</h1>`.
+   - Se incluye un párrafo con `<p>Esto es un párrafo</p>`.
+
+4. **Inserción de una Imagen**
+   - Se usa la etiqueta `<img>` sin etiqueta de cierre.
+   - Se añade el atributo `src="html5.png"` para indicar la ruta de la imagen.
+   - Para visualizar los cambios en el navegador, es necesario guardar el archivo antes de actualizar la página.
+
+5. **Accesibilidad**
+   - Se agrega el atributo `alt="Logo de HTML5"` a la imagen para permitir que lectores de pantalla describan la imagen a personas con discapacidad visual.
+
+6. **Revisión Final**
+   - Se habilita la función *autosave* en VSCode para evitar olvidar guardar los cambios.
+   - Se prueba el resultado en el navegador para confirmar que todo funciona correctamente.
