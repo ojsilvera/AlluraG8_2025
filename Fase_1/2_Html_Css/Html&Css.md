@@ -55,3 +55,32 @@ define el título de la página.
 6. **Revisión Final**
    - Se habilita la función *autosave* en VSCode para evitar olvidar guardar los cambios.
    - Se prueba el resultado en el navegador para confirmar que todo funciona correctamente.
+
+## live servers, quirck mode y etiqueta DOCTYPE
+
+### **1. Prueba con la etiqueta Doctype**
+
+- Se eliminó la etiqueta `Doctype` para observar cambios en el código.
+- Inicialmente, la página no muestra cambios visibles.
+- Al inspeccionar con **Google DevTools**, en la pestaña "Problemas", se detecta un error relacionado con **QuirksMode**.
+
+### **2. ¿Qué es QuirksMode?**
+
+- **QuirksMode** es un modo de compatibilidad heredado de versiones anteriores de HTML.
+- Antes de HTML5, los desarrolladores debían indicar la compatibilidad con navegadores como **Internet Explorer** y **Netscape**.
+- El uso de `Doctype` evita que el navegador active **QuirksMode**, asegurando una mejor visualización en todos los navegadores modernos.
+
+### **3. Importancia de la curiosidad en el desarrollo**
+
+- Ser curioso ayuda a entender el funcionamiento del código y herramientas como **Google DevTools**.
+
+### **4. Uso de Live Server para facilitar el desarrollo**
+
+- **Problema:** Cada cambio en el HTML requiere actualizar manualmente la página en el navegador.
+- **Solución:** Instalar la extensión **Live Server** en **VSCode**.
+  - Se busca en la pestaña de **Extensiones** y se instala.
+  - Al activarlo con "Go Live", los cambios en HTML se reflejan automáticamente sin necesidad de recargar la página.
+
+### **5. Próximos pasos**
+
+- Se concluyen las pruebas y se inicia el desarrollo del **proyecto del curso**: un **portafolio web**.
