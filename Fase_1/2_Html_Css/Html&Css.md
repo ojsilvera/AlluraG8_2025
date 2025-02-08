@@ -231,17 +231,16 @@ En resumen:
 para vincular el css en el html, utilizamos la etiqueta link, con las propiedades, rel y hrf, esto se agrega en la seccion del
 head de la pagina.
 
-`
-   <link rel="stylesheet" href="./style.css">
-`
+``<link rel="stylesheet" href="./style.css">``
+
 para cambviar las cararcteristicas de estilo, se llama a la clase, etiqueta o id del elemento html, seguido de una llaves
 que delimitan el lugar donde se escribiran las propiedades y los valores que asumiran tras el cambio.
 
-clse, etiqueta o id {
-
-   Aque irian las propiedades y sus valores a cambiar terminando en ;
-
+``
+clase, etiqueta o id {
+Aquí irian las propiedades y sus valores a cambiar terminando en ;
 }
+``
 
 ## **Colores en CSS y Figma**
 
