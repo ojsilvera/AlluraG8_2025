@@ -278,59 +278,40 @@ clse, etiqueta o id {
 
 [Tag references](https://developer.mozilla.org/es/docs/Web/HTML/Element)
 
-HTML, CSS y JavaScript - Las diferencias
-   https://www.aluracursos.com/blog/html-css-javascript-cuales-son-las-diferencias
+[HTML, CSS y JavaScript - Las diferencias](https://www.aluracursos.com/blog/html-css-javascript-cuales-son-las-diferencias)
 
-Introducción a las etiquetas HTML
-   https://www.w3schools.com/tags/
+[Introducción a las etiquetas HTML](https://www.w3schools.com/tags/)
 
-Tutorial de HTML Básico
-   https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/HTML_basics
+[Tutorial de HTML Básico](https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/HTML_basics)
 
-Estructura básica de una página HTML
-   https://htmldog.com/guides/html/beginner/
+[Estructura básica de una página HTML](https://htmldog.com/guides/html/beginner/)
 
-Tutorial de accesibilidad en la web
-   https://webaim.org/intro/
+[Tutorial de accesibilidad en la web](https://webaim.org/intro/)
 
-Modo Quirks y estándares en navegadores
-   https://developer.mozilla.org/es/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
+[Modo Quirks y estándares en navegadores](https://developer.mozilla.org/es/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)
 
-Uso de extensiones en Visual Studio Code - Visual Studio Code Docs
-   https://code.visualstudio.com/docs/editor/extension-marketplace
+[Uso de extensiones en Visual Studio Code - Visual Studio Code Docs](https://code.visualstudio.com/docs/editor/extension-marketplace)
 
-Extensión Live Server para Visual Studio Code - GitHub
-   https://github.com/ritwickdey/vscode-live-server
+[Extensión Live Server para Visual Studio Code - GitHub](https://github.com/ritwickdey/vscode-live-server)
 
-UX/UI Design: Fundamentos para la calidad en la interfaz de usuario - Interaction Design Foundation
-   https://www.interaction-design.org/literature/topics/ux-design
+[UX/UI Design: Fundamentos para la calidad en la interfaz de usuario - Interaction Design Foundation](https://www.interaction-design.org/literature/topics/ux-design)
 
-Consejos de CSS
-   https://css-tricks.com/guides/
+[Consejos de CSS](https://css-tricks.com/guides/)
 
-Guía de estructuración de páginas HTML con semántica
-   https://developer.mozilla.org/es/docs/Web/HTML/Element
+[Guía de estructuración de páginas HTML con semántica](https://developer.mozilla.org/es/docs/Web/HTML/Element)
 
-Utilizando Emmet para acelerar el desarrollo HTML - CSS-Tricks
-   https://css-tricks.com/emmet/
+[Utilizando Emmet para acelerar el desarrollo HTML - CSS-Tricks](https://css-tricks.com/emmet/)
 
-Introducción a HTML5 y etiquetas semánticas - HTML.com
-   https://html.com/html5/
+[Introducción a HTML5 y etiquetas semánticas - HTML.com](https://html.com/html5/)
 
-Uso efectivo de las etiquetas de anclaje en HTML - W3Schools
-   https://www.w3schools.com/html/html_links.asp
+[Uso efectivo de las etiquetas de anclaje en HTML - W3Schools](https://www.w3schools.com/html/html_links.asp)
 
-Cómo insertar imágenes en HTML
-   https://developer.mozilla.org/es/docs/Web/HTML/Element/img
+[Cómo insertar imágenes en HTML](https://developer.mozilla.org/es/docs/Web/HTML/Element/img)
 
-Prácticas recomendadas para el diseño responsivo - Smashing Magazine
-   https://www.smashingmagazine.com/2011/01/guidelines-for-responsive-web-design/
+[Prácticas recomendadas para el diseño responsivo - Smashing Magazine](https://www.smashingmagazine.com/2011/01/guidelines-for-responsive-web-design/)
 
-Introducción a CSS - W3Schools
-   https://www.w3schools.com/css/
+[Introducción a CSS - W3Schools](https://www.w3schools.com/css/)
 
-Cómo utilizar hojas de estilo en cascada (CSS) - MDN Web Docs
-   https://developer.mozilla.org/en-US/docs/Web/CSS
+[Cómo utilizar hojas de estilo en cascada (CSS) - MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
-Guía de colores y fuentes en CSS - Adobe Color
-   https://color.adobe.com/es/create/color-wheel
+[Guía de colores y fuentes en CSS - Adobe Color](https://color.adobe.com/es/create/color-wheel)
