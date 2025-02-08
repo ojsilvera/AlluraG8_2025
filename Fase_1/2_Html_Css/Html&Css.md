@@ -84,3 +84,5 @@ define el título de la página.
 ### **5. Próximos pasos**
 
 - Se concluyen las pruebas y se inicia el desarrollo del **proyecto del curso**: un **portafolio web**.
+
+## tag semanticos
