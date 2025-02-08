@@ -106,19 +106,21 @@ define el título de la página.
      - **Distancias entre componentes** (botones, textos, etc.).
    - Funciona como una guía para desarrollar el proyecto con precisión.
 
-#### **1. Creación del Proyecto**
+## etiquetas header, main y footer
+
+### **1. Creación del Proyecto**
 
 - Se crea una nueva carpeta llamada **Portafolio**.
 - Se abre la carpeta en **VSCode** mediante *File > Open Folder*.
 - Se genera un archivo **index.html** para comenzar el desarrollo.
 
-#### **2. Generación del código base en HTML**
+### **2. Generación del código base en HTML**
 
 - Para facilitar la creación del código inicial, se usa el signo de **exclamación (!) + Enter** en **VSCode**, lo que
 - genera automáticamente la estructura básica del documento HTML.
 - Se observa la presencia de nuevas etiquetas y atributos en el código generado.
 
-#### **3. Explicación de Etiquetas Importantes**
+### **3. Explicación de Etiquetas Importantes**
 
 - **`lang="en"`**: Define el idioma del documento. Se cambia a **"es-MX"** para español de México.
 - **`meta charset="UTF-8"`**: Permite el uso de caracteres especiales y evita errores en la visualización del texto.
@@ -126,7 +128,7 @@ define el título de la página.
   - `width=device-width`: Ajusta el ancho de la página según el dispositivo.
   - `initial-scale=1.0`: Evita el zoom inicial en la pantalla.
 
-#### **4. Organización del Proyecto HTML**
+### **4. Organización del Proyecto HTML**
 
 - Se cambia el título del documento a **Portafolio**.
 - Se identifican las tres secciones principales del HTML:
@@ -135,6 +137,7 @@ define el título de la página.
   3. **`footer`**: Sección inferior del sitio.
 - Se escriben estas etiquetas en el código para estructurar la página.
 
-#### **5. Próximos Pasos**
+### **5. Próximos Pasos**
+
 - Se revisará el diseño en **Figma**.
 - Se agregarán los contenidos en la sección **main** en el siguiente paso del desarrollo.
