@@ -141,3 +141,39 @@ define el título de la página.
 
 - Se revisará el diseño en **Figma**.
 - Se agregarán los contenidos en la sección **main** en el siguiente paso del desarrollo.
+
+## Agregando elementos al main
+
+### **1. Selección y Copiado de Elementos desde Figma**
+
+- Se selecciona el título (H1) en Figma y se copia con **CTRL-C**.
+- En **VSCode**, se pega dentro de una etiqueta **H1** con **CTRL-V**.
+- Se agrega la etiqueta **strong** para resaltar parte del texto.
+
+### **2. Visualización en el Navegador**
+
+- Se usa **Live Server** para visualizar los cambios.
+- La etiqueta **strong** no altera la apariencia del texto, pero informa al navegador sobre la importancia de esa parte.
+
+### **3. Creación de un Párrafo**
+
+- Se copia el texto "Hola, soy Ana García" y se pega dentro de una etiqueta **P** en **VSCode**.
+- Se organiza el código para mejorar su legibilidad.
+
+### **4. Creación de Enlaces (No Botones)**
+
+- Se identifican los enlaces a **Instagram** y **GitHub**.
+- Se usa la etiqueta **A** en lugar de **button**, ya que no envían información, solo redirigen.
+- Se agregan las URLs en el atributo **href** para hacer los enlaces funcionales.
+
+### **5. Inserción de una Imagen**
+
+- Se exporta la imagen desde Figma y se descarga.
+- Se arrastra la imagen al proyecto en **VSCode**.
+- Se usa la etiqueta **img** con los atributos:
+  - **src**: para la ruta del archivo.
+  - **alt**: "Imagen de Ana García trabajando" para accesibilidad.
+
+### **6. Próximos Pasos**
+
+- El **HTML está completo**, pero el diseño aún no coincide con el de **Figma**, se aplicará **CSS** para estilizar la página.
