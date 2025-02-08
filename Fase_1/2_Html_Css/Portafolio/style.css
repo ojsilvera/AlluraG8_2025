@@ -9,3 +9,15 @@ body{
 a{
     color: #FFFFFF;
 }
+
+strong{
+    font-weight: bold;
+    color: #22D4FD;
+}
+
+
+span{
+    color: #22D4FD;
+    border: 1px solid #22D4FD;
+    padding: 10px;
+}
