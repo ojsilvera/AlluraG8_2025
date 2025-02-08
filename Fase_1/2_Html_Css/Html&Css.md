@@ -177,3 +177,68 @@ define el título de la página.
 ### **6. Próximos Pasos**
 
 - El **HTML está completo**, pero el diseño aún no coincide con el de **Figma**, se aplicará **CSS** para estilizar la página.
+
+## **CSS y su importancia**
+
+### **1. Uso de CSS en proyectos HTML**
+
+- CSS permite que los proyectos HTML se vean más organizados y atractivos, siguiendo diseños como los creados en Figma.
+- Para aprender CSS, es recomendable consultar documentación oficial, como la de *W3 Schools*.
+
+### **2. Definición y aplicación básica de CSS**
+
+- CSS (Cascading Style Sheets) es un lenguaje de hojas de estilo en cascada.
+- Se escribe en un archivo separado del HTML.
+- Se pueden aplicar estilos mediante selectores, por ejemplo:
+  - Para cambiar el color de fondo del `body`, se usa `{ background-color: blue; }`.
+  - Se pueden probar cambios en tiempo real en entornos interactivos como *W3 Schools*.
+
+### **3. Historia y evolución de CSS**
+
+- Antes del CSS, la estilización se hacía dentro del HTML (hasta la versión 3.2).
+- Los sitios web de los años 2000 eran poco atractivos y similares entre sí.
+- Para mejorar la personalización y evitar sobrecargar el HTML, se creó CSS, separando la estructura (HTML) del estilo (CSS).
+- CSS permitió que los sitios web tuvieran identidades visuales únicas con distintos colores y estilos.
+
+En el próximo paso, se profundizará en la aplicación práctica de CSS.
+
+## **Resumen: Creación y Vinculación de un Archivo CSS en VS Code**
+
+1. **Creación del archivo CSS**
+   - En **VS Code**, se crea un nuevo archivo llamado `style.css`.
+   - Se utiliza este archivo para escribir los estilos de la página.
+
+2. **Cambio del fondo en CSS**
+   - Se revisa **Figma** para determinar el primer cambio.
+   - Se establece el fondo negro en la etiqueta `<body>` utilizando la propiedad `background-color: black;`.
+   - Al verificar en el navegador, el cambio no se refleja.
+
+3. **Vinculación del CSS al HTML**
+   - Se identifica que el archivo HTML no reconoce el CSS.
+   - Se agrega la etiqueta `<link>` en `<head>`, con `rel="stylesheet"` y `href="style.css"`.
+   - Ahora el CSS se aplica correctamente.
+
+4. **Cambio del color de texto**
+   - Se observa que el texto desapareció porque es negro sobre fondo negro.
+   - Se agrega `color: white;` en `<body>` para hacer visible el contenido.
+
+5. **Próximos pasos**
+   - Se confirma que los cambios funcionan.
+   - Se continuará con más estilización en el siguiente video.
+
+En resumen:
+
+para vincular el css en el html, utilizamos la etiqueta link, con las propiedades, rel y hrf, esto se agrega en la seccion del
+head de la pagina.
+
+`
+   <link rel="stylesheet" href="./style.css">
+`
+para cambviar las cararcteristicas de estilo, se llama a la clase, etiqueta o id del elemento html, seguido de una llaves
+que delimitan el lugar donde se escribiran las propiedades y los valores que asumiran tras el cambio.
+
+clse, etiqueta o id {
+
+   Aque irian las propiedades y sus valores a cambiar terminando en ;
+
+}
