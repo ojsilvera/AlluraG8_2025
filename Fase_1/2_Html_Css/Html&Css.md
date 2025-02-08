@@ -50,7 +50,8 @@ define el título de la página.
    - Para visualizar los cambios en el navegador, es necesario guardar el archivo antes de actualizar la página.
 
 5. **Accesibilidad**
-   - Se agrega el atributo `alt="Logo de HTML5"` a la imagen para permitir que lectores de pantalla describan la imagen a personas con discapacidad visual.
+   - Se agrega el atributo `alt="Logo de HTML5"` a la imagen para permitir que lectores de pantalla describan la imagen
+   - a personas con discapacidad visual.
 
 6. **Revisión Final**
    - Se habilita la función *autosave* en VSCode para evitar olvidar guardar los cambios.
@@ -86,3 +87,21 @@ define el título de la página.
 - Se concluyen las pruebas y se inicia el desarrollo del **proyecto del curso**: un **portafolio web**.
 
 ## tag semanticos
+
+### **Resumen del Proceso de Desarrollo de un Proyecto**
+
+1. **Diseño Inicial**
+   - Un diseñador UX/UI define los colores, imágenes, fuentes y otros aspectos visuales del proyecto.
+   - Luego, el diseño es entregado al equipo de desarrollo.
+
+2. **Uso de Software de Diseño**
+   - Se emplea software como **Figma** para compartir y visualizar los diseños.
+   - En este proyecto específico, se utilizará **Figma**, cuyo enlace está disponible en la sección de preparación del ambiente.
+   - Para acceder, es necesario iniciar sesión con un correo electrónico.
+
+3. **Interpretación del Diseño en Figma**
+   - Figma permite obtener detalles clave del diseño:
+     - **Tamaño y tipo de fuente** (ejemplo: Chroma One, tamaño 36).
+     - **Colores de los elementos** (representados en códigos hexadecimales).
+     - **Distancias entre componentes** (botones, textos, etc.).
+   - Funciona como una guía para desarrollar el proyecto con precisión.
