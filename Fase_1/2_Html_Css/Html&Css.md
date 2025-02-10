@@ -357,3 +357,20 @@ Donde .navbar es el bloque al que pertenece el item y el modificador, en html se
     <a href="#" class="navbar_item--activate">Home</a>
 </navbar
 `
+
+## Reset CSS: Qué es, Ejemplos, Cómo Crear y Utilizar
+
+El reset lo que persigue es eliminar cualquier estilo agregado a la pagina en un inicio por parte del navegador, teniendo
+presente podemos tener un archivo reset.css o utlizar la biblioteca [normalice](https://github.com/necolas/normalize.css/)
+la cual cuenta con el codigo necesario para esta tarea, de una forma u otra se incorpora como una hoja de estilo en el head
+de nuestro html, logrando con esto un documento libre de estilos, un ejemplo de como se veria nuestro head:
+
+`
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" href="./style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portafolio</title>
+    </head>
+`
