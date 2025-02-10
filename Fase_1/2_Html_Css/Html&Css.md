@@ -314,3 +314,46 @@ Aquí irian las propiedades y sus valores a cambiar terminando en ;
 [Cómo utilizar hojas de estilo en cascada (CSS) - MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
 [Guía de colores y fuentes en CSS - Adobe Color](https://color.adobe.com/es/create/color-wheel)
+
+## las clases en css
+
+- Uso de clases en CSS para modificar estilos específicos.
+
+1. **Problema inicial:**
+   - Se quería cambiar el estilo de una etiqueta `<strong>` en un título específico sin afectar otra etiqueta `<strong>`
+     en el mismo documento.
+   - Al modificar `<strong>`, ambas etiquetas cambiaban simultáneamente.
+
+2. **Solución propuesta:**
+   - Uso de **clases en CSS** para aplicar estilos a un solo elemento.
+
+3. **Implementación:**
+   - Se crea una clase en HTML usando `class="tituloDestaque"`.
+   - En el archivo CSS, se define la clase con un **punto** (`.tituloDestaque { color: ...; }`).
+   - Se aplica el nuevo color sin afectar el otro `<strong>`.
+
+4. **Verificación y ajustes:**
+   - Se revisa en el navegador que solo el título deseado tiene el cambio de color.
+   - Se elimina el `<strong>` innecesario después de comprobar que la clase funciona correctamente.
+
+5. **Conclusión:**
+   - Las clases en CSS permiten modificar elementos específicos sin afectar otros similares.
+   - Se continuará el aprendizaje en el siguiente video.
+
+- Notacion BEM para la escritura de clase.
+
+El estandar BEM de sus siglas, Block_Element-Modifier, nos permite tener clases mantenibles y un stanadar de
+escritura de nombres que ayuda a desarrolladores para trabajar con proyectos en los cuales no participaron
+desde el inicio, el nomre de clases con el estandar BEM seria:
+
+   .navbar__item--active {}
+
+Donde .navbar es el bloque al que pertenece el item y el modificador, en html seria:
+
+`
+-- navbar block
+<navbar class="navbar">
+-- la a es el item y el activate es el modifier en css
+    <a href="#" class="navbar_item--activate">Home</a>
+</navbar
+`
