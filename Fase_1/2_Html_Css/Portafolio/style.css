@@ -1,8 +1,6 @@
 body{
     font-family: 'Roboto', sans-serif;
     color: #FFFFFF;
-    margin: 0;
-    padding: 0;
     background-color: #000000;
 }
 
@@ -26,4 +24,9 @@ span{
     color: #22D4FD;
     font-size: 1em;
     font-weight: bold;
+}
+
+.main_img--avatar{
+    width: 25%;
+    height: 25%;
 }

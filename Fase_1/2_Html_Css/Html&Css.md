@@ -361,7 +361,7 @@ Donde .navbar es el bloque al que pertenece el item y el modificador, en html se
 ## Reset CSS: Qué es, Ejemplos, Cómo Crear y Utilizar
 
 El reset lo que persigue es eliminar cualquier estilo agregado a la pagina en un inicio por parte del navegador, teniendo
-presente podemos tener un archivo reset.css o utlizar la biblioteca [normalice](https://github.com/necolas/normalize.css/)
+presente podemos tener un archivo reset.css o utlizar la biblioteca [normalize](https://github.com/necolas/normalize.css/)
 la cual cuenta con el codigo necesario para esta tarea, de una forma u otra se incorpora como una hoja de estilo en el head
 de nuestro html, logrando con esto un documento libre de estilos, un ejemplo de como se veria nuestro head:
 
