@@ -13,9 +13,9 @@ HTML es un lenguaje de marcado, no de programación. Se usa para estructurar el 
 DOCTYPE: Define que el archivo es HTML5.
 
 HTML: Es la etiqueta raíz del documento.
-Tiene una etiqueta de apertura <html> y una de cierre </html>. Se debe usar sangría (TAB) para mejorar la legibilidad.
+Tiene una etiqueta de apertura `<html>` y una de cierre `</html>`. Se debe usar sangría (TAB) para mejorar la legibilidad.
 
-Sección Head Contiene información para el navegador. Se usa la etiqueta <head>. Dentro de <head> se coloca <title>, que
+Sección Head Contiene información para el navegador. Se usa la etiqueta `<head>`. Dentro de `<head>` se coloca `<title>`, que
 define el título de la página.
 
 `
@@ -373,4 +373,36 @@ de nuestro html, logrando con esto un documento libre de estilos, un ejemplo de 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portafolio</title>
     </head>
+`
+
+## displa flex o display grid
+
+Ambos, el display flex es usado para la ubicacion de los elementos que se encuentran dentro de la grilla de maquetacion
+realizada con display grid, por lo tanto en el contenedor padre se uutiliza el display grid par crear la grilla que organiza
+los dontenedores en los cuales se ubicaran los objetos que seran afectados por el display flex, por lo tanto lo mas recomendable
+es utilizarlos juntos.
+
+## ajustar una imagen al contenedor
+
+El maquetado puede ser con display grid en el contenedor que aalverga al contenedor padre de la imagen y otros elementos,
+luego en el En el contenedor padre tendriamos los siguientes elementos para configurar el comportamiento de sus elementos:
+
+`
+.main_img--container{
+    display: flex; /* Asegura que la imagen se centre si es necesario */
+    justify-content: center;
+    overflow: hidden; /* Oculta cualquier desbordamiento de la imagen */
+}
+`
+
+En la imagen como tal:
+
+`
+.article_img--avatar{
+    max-width: 100%; /* La imagen no será más ancha que su contenedor */
+    max-height: 100%; /* La imagen no será más alta que su contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    width: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Ajusta la imagen dentro del contenedor */
+}
 `
