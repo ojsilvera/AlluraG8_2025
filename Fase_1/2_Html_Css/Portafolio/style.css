@@ -21,13 +21,11 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     height: 70%;
-    border-style: solid;
 }
 
 .main_article--container{
     grid-column: 2 / 2;
     line-height: 2em;
-    border-style: solid;
     display: flex;
     flex-direction: column;
     justify-content: center;
