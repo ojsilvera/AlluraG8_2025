@@ -60,11 +60,11 @@ span{
     font-weight: 400;
     font-style: normal;
     font-size: 36px;
-    line-height: 35px;
+    line-height: 40px;
 }
 
 .section_p--text{
-    margin-top: 10%;
+    margin-top: 5%;
     font-size: 24px;
     line-height: 36px;
     font-family: "Montserrat", serif;
@@ -92,14 +92,15 @@ span{
     height: auto; /* Mantiene la proporción de la imagen */
     width: auto; /* Mantiene la proporción de la imagen */
     object-fit: cover; /* Ajusta la imagen dentro del contenedor */
+    border-radius: 5%;
 }
 
 .section_a--redes{
     font-family: "Krona One", serif;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 24px;
     background-color: #22D4FD;
-    padding: 0px 20px;
+    padding: 5px 25px;
     border-radius: 10px;
     color: #000000;
 
