@@ -28,6 +28,9 @@ body{
     grid-column: 2 / 2;
     line-height: 2em;
     border-style: solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .main_h1--highlight{
@@ -52,11 +55,10 @@ span{
 }
 
 .main_img--container{
-    grid-column: 3/3;
+    grid-column: 3/3;/* ubica la imagen en la tercera columna */
     display: flex; /* Asegura que la imagen se centre si es necesario */
     justify-content: center;
-    align-items: center;
-    overflow: hidden; /* Oculta cualquier desbordamiento */
+    overflow: hidden; /* Oculta cualquier desbordamiento de la imagen */
 }
 
 .article_img--avatar{
