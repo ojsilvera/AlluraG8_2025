@@ -1,10 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root{
+    --color-primary: #22D4FD;
+    --color-secondary: black;
+    --color-tertiary: #FFFFFF;
+
+    --font-primary: "Krona One", serif;
+    --font-secondary: "Montserrat", serif;
+
+    --text_hover: #c0c0c0;
+}
+
+
 body{
     font-family: 'Roboto', sans-serif;
-    color: #FFFFFF;
-    background-color: #000000;
+    color: var(--color-tertiary);
+    background-color: var(--color-secondary);
     height: 100vh;
     width: 100%;
 }
@@ -48,12 +60,12 @@ body{
 }
 
 .header_li--item{
-    font-family: "Montserrat", serif;
+    font-family: var(--font-secondary);
     font-weight: 400;
     font-style: normal;
     font-size: 24px;
     line-height: 20px;
-    color: #22D4FD;
+    color: var(--color-primary);
 }
 
 .main_article--container{
@@ -65,24 +77,24 @@ body{
 }
 
 .main_h1--highlight{
-    color: #22D4FD;
+    color: var(--color-primary);
     font-size: 1em;
     font-weight: bold;
 }
 
 strong{
     font-weight: bold;
-    color: #22D4FD;
+    color: var(--color-primary);
 }
 
 span{
-    color: #22D4FD;
-    border: 1px solid #22D4FD;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
     padding: 10px;
 }
 
 .section_h1--title{
-    font-family: "Krona One", serif;
+    font-family: var(--font-primary);
     font-weight: 400;
     font-style: normal;
     font-size: 36px;
@@ -93,7 +105,7 @@ span{
     margin-top: 5%;
     font-size: 24px;
     line-height: 36px;
-    font-family: "Montserrat", serif;
+    font-family: var(--font-secondary);
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -108,7 +120,7 @@ span{
 }
 
 .section_h2--title_redes{
-    font-family: "Krona One", serif;
+    font-family: var(--font-primary);
     font-weight: 400;
     font-style: normal;
     font-size: 24px;
@@ -132,10 +144,10 @@ span{
 }
 
 .section_a--redes{
-    font-family: "Krona One", serif;
+    font-family: var(--font-primary);
     font-weight: 500;
     font-size: 24px;
-    border-color: #22D4FD;
+    border-color: var(--color-primary);
     border-style: solid;
     padding: 16px;
     border-radius: 10px;
@@ -146,5 +158,12 @@ span{
 }
 
 .section_a--redes:hover{
-    background-color: #22D4FD;
+    background-color: var(--text_hover);
+}
+
+.article_section--textAbout{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 16px;
 }

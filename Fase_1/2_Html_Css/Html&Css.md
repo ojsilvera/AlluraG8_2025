@@ -406,3 +406,14 @@ En la imagen como tal:
     object-fit: cover; /* Ajusta la imagen dentro del contenedor */
 }
 `
+
+## variables en css
+
+se delaran en un secion de nombre root, antecedidas por `--` lo cual determina el nombre de la variable luego `:` y el
+valor que esta toma, finaliza con `;` de la siguiente manera:
+
+`
+:root{
+   --nombreVariable: valorVariable;
+}
+`
