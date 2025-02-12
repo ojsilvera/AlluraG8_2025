@@ -11,6 +11,8 @@ body{
 
 .body_header--container{
     height: 15%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
 }
 
 .body_footer--container{
@@ -25,6 +27,25 @@ body{
     grid-template-columns: 1fr 2fr 2fr 1fr;
     height: 70%;
 }
+
+.header_nav--container{
+
+    grid-column: 2/2;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.nav_ul--container{
+    display: flex;
+    justify-content: space-evenly;
+
+    list-style: none;
+    gap: 10px;
+}
+
 
 .main_article--container{
     grid-column: 2 / 2;
@@ -77,6 +98,16 @@ span{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.section_h2--title_redes{
+    font-family: "Krona One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 40px;
 }
 
 .main_img--container{
@@ -99,9 +130,10 @@ span{
     font-family: "Krona One", serif;
     font-weight: 500;
     font-size: 24px;
-    background-color: #22D4FD;
+    border-color: #22D4FD;
+    border-style: solid;
     padding: 5px 25px;
     border-radius: 10px;
-    color: #000000;
+    color: white;
 
 }
