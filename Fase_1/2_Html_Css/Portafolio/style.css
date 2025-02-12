@@ -144,3 +144,7 @@ span{
     text-align: center;
     border-radius: 8px;
 }
+
+.section_a--redes:hover{
+    background-color: #22D4FD;
+}
