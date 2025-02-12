@@ -61,10 +61,6 @@ body{
     font-weight: bold;
 }
 
-a{
-    color: #FFFFFF;
-}
-
 strong{
     font-weight: bold;
     color: #22D4FD;
@@ -99,7 +95,7 @@ span{
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    gap: 10px;
+    gap: 16px;
 }
 
 .section_h2--title_redes{
@@ -132,8 +128,10 @@ span{
     font-size: 24px;
     border-color: #22D4FD;
     border-style: solid;
-    padding: 5px 25px;
+    padding: 16px;
     border-radius: 10px;
     color: white;
-
+    height: 68px;
+    width: 378px;
+    text-align: center;
 }
