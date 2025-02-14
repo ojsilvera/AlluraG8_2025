@@ -10,6 +10,8 @@
     --font-secondary: "Montserrat", serif;
 
     --text_hover: #c0c0c0;
+
+    --font_size_gnl: 1.5rem;
 }
 
 
@@ -56,15 +58,15 @@ body{
     height: 100%;
     width: 100%;
     align-items: center;
-    gap: 80px;
+    gap: 5rem;
 }
 
 .header_li--item{
     font-family: var(--font-secondary);
     font-weight: 400;
     font-style: normal;
-    font-size: 24px;
-    line-height: 20px;
+    font-size: var(--font_size_gnl);
+    line-height: 0.25rem;
     color: var(--color-primary);
 }
 
@@ -89,22 +91,22 @@ strong{
 
 span{
     color: var(--color-primary);
-    border: 1px solid var(--color-primary);
-    padding: 10px;
+    border: 0.0625rem solid var(--color-primary);
+    padding: 0.625rem;
 }
 
 .section_h1--title{
     font-family: var(--font-primary);
     font-weight: 400;
     font-style: normal;
-    font-size: 36px;
-    line-height: 40px;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
 }
 
 .section_p--text{
     margin-top: 5%;
-    font-size: 24px;
-    line-height: 36px;
+    font-size: var(--font_size_gnl);
+    line-height: 2.25rem;
     font-family: var(--font-secondary);
     font-optical-sizing: auto;
     font-weight: 400;
@@ -116,15 +118,15 @@ span{
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    gap: 16px;
+    gap: 1rem;
 }
 
 .section_h2--title_redes{
     font-family: var(--font-primary);
     font-weight: 400;
     font-style: normal;
-    font-size: 24px;
-    line-height: 40px;
+    font-size: var(--font_size_gnl);
+    line-height: 2.5rem;
 }
 
 .main_img--container{
@@ -146,15 +148,15 @@ span{
 .section_a--redes{
     font-family: var(--font-primary);
     font-weight: 500;
-    font-size: 24px;
+    font-size: var(--font_size_gnl);
     border-color: var(--color-primary);
     border-style: solid;
-    padding: 16px;
-    border-radius: 10px;
+    padding: 1rem;
+    border-radius: 0.625rem;
     color: white;
-    width: 378px;
+    width: 23.625rem;
     text-align: center;
-    border-radius: 8px;
+    border-radius: 0.5rem;
 }
 
 .section_a--redes:hover{
@@ -165,5 +167,5 @@ span{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    gap: 16px;
+    gap: 1rem;
 }

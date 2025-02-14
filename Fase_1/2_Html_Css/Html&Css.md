@@ -417,3 +417,18 @@ valor que esta toma, finaliza con `;` de la siguiente manera:
    --nombreVariable: valorVariable;
 }
 `
+
+## Medidas en css
+
+- Abosolutas
+
+![Medidas absolutas](./Portafolio/assets/img/M_Absolutas.png)
+
+- Relativas
+
+![Medidas Relativas](./Portafolio/assets/img/M_relativas.png)
+
+Nota: 1rem siempre se toma como 16px, por lo tanto para el ejemplo:
+
+   24px, serian 1rem = 16px y 0.5rem = 8px, por lo tanto
+   1rem + 05rem = 24px
