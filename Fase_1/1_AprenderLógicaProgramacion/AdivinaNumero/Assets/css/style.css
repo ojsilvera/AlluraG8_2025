@@ -5,22 +5,28 @@ body{
     height: 100vh;
     display:grid;
     grid-template-rows: 15% 4fr 15%;
-    background-image: url(../img/Ruido.png);
-    background-size: cover;
+    background-color: #111827;
+    color: white;
 }
 
 .body__header--container{
+    grid-row: 1/2;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .body__main--container{
-    font-size: 2em;
+    grid-row: 2/3;
+    font-size: 1.5em;
     font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .body__footer--container{
+    grid-row: 3/4;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,6 +34,58 @@ body{
 
 .header__h1--title{
     font-family: 'Krona One', sans-serif;
-    font-size: 3em;
-    color: #500000;
+    font-size: 2em;
+    color: #014fad;
+}
+
+.main__section--containerInput{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section__input--user{
+    font-size: .5em;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    border: 2px solid #00a1dc;
+    background-color: #28395b;
+}
+
+.main__section--containerButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section__button--newGame{
+    background-color: #500000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5em;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.section__button--ejecutar{
+    background-color: #500000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5em;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
 }

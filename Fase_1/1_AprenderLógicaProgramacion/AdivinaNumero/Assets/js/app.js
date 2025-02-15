@@ -5,10 +5,16 @@ let titulo = document.querySelector('h1');
 titulo.innerHTML = "Juego adivina el numero";
 
 //Con esto selecciono el selector p, la seleccion puede ser el selector de una clase, id, etiqueta, etc.
-let inputTitle = document.querySelector('p');
+let inputTitle_maxRangeUser = document.querySelector('.section__p--maxRangeUser');
 
 //se le asigna el valor a la variable titulo para que aparezca en el documento html
-inputTitle.innerHTML = "Elije el numero mayor para el rango a adivinar";
+inputTitle_maxRangeUser.innerHTML = "Elije el numero mayor para el rango a adivinar";
+
+//Con esto selecciono el selector p, la seleccion puede ser el selector de una clase, id, etiqueta, etc.
+let inputTitle_intentosUser = document.querySelector('.section__p_intentosUser');
+
+//se le asigna el valor a la variable titulo para que aparezca en el documento html
+inputTitle_intentosUser.innerHTML = "Elije el numero de intentos";
 
 //establecemnos la funcion para el boton intentoUsuario
 function intentoUsuario(){
