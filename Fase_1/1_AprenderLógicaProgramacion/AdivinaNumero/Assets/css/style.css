@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    height: 100vh;
+    display:grid;
+    grid-template-rows: 15% 4fr 15%;
+    background-image: url(../img/Ruido.png);
+    background-size: cover;
+}
+
+.body__header--container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body__main--container{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.body__footer--container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__h1--title{
+    font-family: 'Krona One', sans-serif;
+    font-size: 3em;
+    color: #500000;
+}

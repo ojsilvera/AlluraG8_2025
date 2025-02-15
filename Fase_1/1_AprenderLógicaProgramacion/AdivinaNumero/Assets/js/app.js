@@ -2,13 +2,13 @@
 let titulo = document.querySelector('h1');
 
 //se le asigna el valor a la variable titulo para que aparezca en el documento html
-titulo.innerHTML = "Juago adivina el numero";
+titulo.innerHTML = "Juego adivina el numero";
 
 //Con esto selecciono el selector p, la seleccion puede ser el selector de una clase, id, etiqueta, etc.
 let inputTitle = document.querySelector('p');
 
 //se le asigna el valor a la variable titulo para que aparezca en el documento html
-inputTitle.innerHTML = "Digita un numero del 1 al 10";
+inputTitle.innerHTML = "Elije el numero mayor para el rango a adivinar";
 
 //establecemnos la funcion para el boton intentoUsuario
 function intentoUsuario(){
