@@ -221,6 +221,17 @@ clic en el botón.
 
 ### Funciones
 
+para crear una funcion seria la palabra reservada function seguida del nombre y llaves
+
+`
+function nombre(){
+    aqui el codigo a ejecutar
+}
+`
+
+Las funciones se mapean al inicio de la ejecucion del js y luego se van llamando conforme se necesitan, por lo tanto no
+importa donde las coloquemos, pero por convencion se ubican al inicio del documento de html.
+
 ### Reniciando el juego
 
 ### Listas
