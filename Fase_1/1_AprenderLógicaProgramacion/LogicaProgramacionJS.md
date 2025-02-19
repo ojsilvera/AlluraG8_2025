@@ -216,8 +216,19 @@ el evento onclick del botón en HTML.
 
 Al hacer clic en el botón, se ejecuta la función declarada en JavaScript, la cual por ahora solo muestra una alerta.
 
-Se menciona que en el próximo video se continuará desarrollando la lógica completa de la función llamada cuando se hace
-clic en el botón.
+En JavaScript, se pueden seleccionar elementos HTML utilizando los métodos:
+
+    getElementById,
+    getElementsByClassName,
+    getElementsByTagName,
+    querySelector
+    querySelectorAll.
+    getElementById
+
+Selecciona un elemento HTML único por su atributo id: Es uno de los métodos más rápidos y utilizados
+getElementsByClassName: Selecciona todos los elementos que comparten una clase, Devuelve una colección de elementos
+getElementsByTagName: Selecciona todos los elementos que coinciden con un nombre de etiqueta específico, Devuelve una
+colección de elementos
 
 ### Funciones
 
