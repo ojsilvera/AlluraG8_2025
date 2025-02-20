@@ -216,6 +216,8 @@ el evento onclick del botón en HTML.
 
 Al hacer clic en el botón, se ejecuta la función declarada en JavaScript, la cual por ahora solo muestra una alerta.
 
+#### seleccionando elementos con js
+
 En JavaScript, se pueden seleccionar elementos HTML utilizando los métodos:
 
     getElementById,
@@ -230,6 +232,52 @@ getElementsByClassName: Selecciona todos los elementos que comparten una clase, 
 getElementsByTagName: Selecciona todos los elementos que coinciden con un nombre de etiqueta específico, Devuelve una
 colección de elementos
 
+- Ocultar elementos con js
+tenemos dos opciones visibility = 'hidden' o display = 'none'
+
+display: none oculta un elemento de manera que no se vea y altera su diseño,
+visibility: hidden oculta un elemento sin cambiar su diseño.
+
+de la siguiente manera:
+`
+document.queryselector('nombreDelSlector').style.display = 'none';
+`
+`
+document.queryselector('nombreDelSlector').style.visibility = 'hidden';
+`
+
+en el queryselector('nombreDelSlector'), puede ser el nombre de un tag, clase o ID(este antecedido del simbolo #idDelSlector)
+tambien podemos seleccionar el elemento con: getElementById, getElementsByClassName, getElementsByTagName, querySelector
+y querySelectorAll, siendo estos metodos mas especificos que queryselector.
+
+- Setear el atributo de un elemento en html
+el elemento no posee un atributo y necesitamos deshabilitar el elemento, por lo tanto seria:
+
+`
+document.queryselector('#elIdselector').setAttribute('disabled', 'true');
+`
+
+- Remover el atributo de un elemento en html
+para esto, por ejemplo un boton desabilitado por defecto a habilitado seria:
+
+`
+document.queryselector('#elIdselector').removeAttribute('disabled');
+`
+esto es especialmente util si el elemento depende de una accion del usuario, en el caso del ejemplo el usuario
+debe ganar inicialmente el juego para llamar a un nuevo juego.
+
+-Limpier el elemneto en html en este caso un input
+Para esto creamos una funcion llamada limpiarObjeto, de la siguiente
+forma:
+
+`
+function limpiarObjeto(){
+    document.queryselector('nombreDelSlector').value = '';
+}
+`
+
+en el nombreDelSlector, puede ser el nombre de un tag, clase o ID(este antecedido del simbolo #idDelSlector)
+
 ### Funciones
 
 para crear una funcion seria la palabra reservada function seguida del nombre y llaves
@@ -242,6 +290,7 @@ function nombre(){
 
 Las funciones se mapean al inicio de la ejecucion del js y luego se van llamando conforme se necesitan, por lo tanto no
 importa donde las coloquemos, pero por convencion se ubican al inicio del documento de html.
+
 
 ### Reniciando el juego
 
