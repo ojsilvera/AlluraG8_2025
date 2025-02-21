@@ -291,9 +291,13 @@ function nombre(){
 Las funciones se mapean al inicio de la ejecucion del js y luego se van llamando conforme se necesitan, por lo tanto no
 importa donde las coloquemos, pero por convencion se ubican al inicio del documento de html.
 
+### Listas y arreglos
 
-### Reniciando el juego
+los arrglos o arrays en js se declaran co [], inicializar una variable que sea del tipo array seria de la siguiente
+manera:
 
-### Listas
+`
+let nombreVriable = []:
+`
 
-### Publicando el proyecto
+lo anterior inicializa un array vacio, para ser utilizado mas adelante en nuestro codigo.
