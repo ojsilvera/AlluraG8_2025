@@ -297,7 +297,55 @@ los arrglos o arrays en js se declaran co [], inicializar una variable que sea d
 manera:
 
 `
-let nombreVriable = []:
+let nombreVariable = []:
 `
 
 lo anterior inicializa un array vacio, para ser utilizado mas adelante en nuestro codigo.
+
+#### Manipulacion de array
+
+para ver el contenido de un array solo pbasta con nombrar su variable y traera el elemento, por ejemplo:
+`
+nombreVariable;
+`
+
+para obtener un elemento del array, teniendo en cuenta que los indices inician en 0, seria, para obtener
+el tercer elemento del siguiente array, responde a la logica posicion del elemento - 1, ya que inician en la posicion 0:
+
+`
+let ciudades = [Bogota Barranquilla Cali Medellin Bucaramanga];
+ciudades[2]; //Cali
+`
+
+Para obtener el ultimo elemento del array  hace de la siguiente forma: array.length - 1 esto nos dara la posicion del
+ultimo elemento del arraya, por ejemplo teniendo en cuenta el array ciudades:
+
+`
+let ciudades = [Bogota Barranquilla Cali Medellin Bucaramanga];
+let ultimoElemento = ciudades[ciudades.length - 1]; //Bucaramanga;
+`
+
+La manipulacion de los arrays se realiza a traves de los metodos asociados a esta estructura de datos, de la sigiente
+manera, teniendo en cuenta que nombreVariable es una variable tipo array declarada en el punto anterior:
+
+`
+nombreVariable.metodo;
+`
+
+por ejemplo adicionar un elemento al final del array, con el metodo push:
+
+`
+nombreVariable.push(elElementoAdicionar);
+`
+
+obtener la longitud de un array metodo length:
+
+`
+nombreVariable.length;
+`
+
+Para verificar si un elemento se encuentra en un array es posible utilizar un for each, el cual recorre el array y al
+encontrar el numero lo devuelve, entre otra informacion, pero tambien podemos usar el metodo includes que nos permite saber
+si un elemento se encuentra en el array, de la siguiente manera:
+
+array.includes(elementoBuscado);
