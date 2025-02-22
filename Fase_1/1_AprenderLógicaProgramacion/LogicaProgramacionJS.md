@@ -218,7 +218,7 @@ Al hacer clic en el botón, se ejecuta la función declarada en JavaScript, la c
 
 #### seleccionando elementos con js
 
-En JavaScript, se pueden seleccionar elementos HTML utilizando los métodos:
+En JavaScript, se pueden seleccionar elementos HTML utilizando los métodos, asociados a document.elMetodo:
 
     getElementById,
     getElementsByClassName,
@@ -349,3 +349,14 @@ encontrar el numero lo devuelve, entre otra informacion, pero tambien podemos us
 si un elemento se encuentra en el array, de la siguiente manera:
 
 array.includes(elementoBuscado);
+
+#### obtener ultimo elemento del array
+
+Muestra multiples metodos que pueden ayudar en la obtencion del ultimo elemento del array
+
+    [referencia]([https://](https://www.techiedelight.com/es/get-last-item-in-an-array-in-javascript/))
+
+para el ejemplo del amigo secreto yo ultilice el metodo .at(-1), el cual me permite acceder a posiciones negativas
+dentro del array, haciendo mas facil localizar elemento, una explicacion mas rapida en el siguiente video de midudev
+
+    [Midedev-at]([https://](https://www.youtube.com/watch?v=gSSjhChWYK4&ab_channel=midulive))
