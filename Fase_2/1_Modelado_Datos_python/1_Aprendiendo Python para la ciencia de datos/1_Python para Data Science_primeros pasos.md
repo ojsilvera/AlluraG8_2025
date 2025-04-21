@@ -71,7 +71,7 @@
 
 ---
 
-## Conclusión
+### Conclusión
 
 Python, por su simplicidad y flexibilidad, junto con herramientas como **Google Colab**, se presenta como el entorno perfecto
 para comenzar en **Data Science** de forma interactiva, práctica y accesible.
@@ -79,6 +79,59 @@ para comenzar en **Data Science** de forma interactiva, práctica y accesible.
 ---
 
 ### hola mundo
+
+#### 💻 Entorno de trabajo: Google Colab
+
+  -**Colab** es un entorno interactivo para programar en Python directamente desde el navegador.
+  -Las **celdas** pueden ser de texto o código. En este entrenamiento se prioriza el uso de celdas de **código**.
+
+#### ▶️ Ejecución de celdas
+
+- **Shift + Enter**: Ejecuta la celda actual y crea una nueva celda debajo.
+- **Ctrl + Enter**: Ejecuta la celda sin crear una nueva.
+- También se puede ejecutar presionando el ícono de **play** a la izquierda de la celda.
+
+#### 🖨️ El clásico "Hola, mundo"
+
+- Primera instrucción típica en cualquier lenguaje de programación.
+- En **Python** se puede hacer con una sola línea gracias a su **sintaxis sencilla** y **legibilidad**.
+
+```python
+print('Hola, mundo')
+```
+
+#### 🔍 Función `print()` y documentación
+
+  -`print()` es una **función incorporada (built-in)** de Python.
+  -Se usa para **mostrar salidas en pantalla**.
+  -Al hacer clic sobre `print` en Colab, se accede directamente a la **documentación oficial de Python**.
+
+#### 💡 Built-in Functions
+
+  -Funciones ya disponibles en Python sin necesidad de importar módulos adicionales.
+  -Ejemplo: `print()`, `len()`, `type()`, entre otras.
+
+#### 📄 Sintaxis de texto en Python
+
+  -Los **textos (strings)** se representan entre **comillas simples (' ')** o **dobles (" ")**.
+  -Se pueden imprimir mensajes personalizados:
+
+```python
+print('Mi nombre es Álvaro y tengo 39 años')
+```
+
+#### 🧠 Características del lenguaje Python
+
+- **Intuitivo** y **legible**.
+- **Interpretado**, no necesita compilación previa.
+- Ideal para ciencia de datos por su **facilidad de uso y documentación abundante**.
+
+#### 🧪 Interacción en Colab
+
+- Es posible:
+  - Escribir múltiples comandos en una sola celda.
+  - Ver resultados inmediatamente tras la ejecución.
+  - Eliminar, mover o transformar celdas entre código y texto (Markdown).
 
 ### Desafios
 
