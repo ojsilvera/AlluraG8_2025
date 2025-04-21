@@ -135,6 +135,8 @@ print('Mi nombre es Álvaro y tengo 39 años')
 
 ### Desafios
 
+   Los desafios se encuentra en: [Desafios](https://github.com/ojsilvera/AlluraG8_2025_fase2_desafios/)
+
 ## Manipulando datos en Python
 
 ## Estructuras condicionales
