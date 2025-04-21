@@ -133,11 +133,88 @@ print('Mi nombre es Álvaro y tengo 39 años')
   - Ver resultados inmediatamente tras la ejecución.
   - Eliminar, mover o transformar celdas entre código y texto (Markdown).
 
-### Desafios
+### Desafios 1
 
    Los desafios se encuentra en: [Desafios](https://github.com/ojsilvera/AlluraG8_2025_fase2_desafios/)
 
+---
+
 ## Manipulando datos en Python
+
+### Variables
+
+#### 💻 Entorno de Ejecución en Google Colab
+
+- Cada vez que haces clic en **"Conectar"**, se asigna un entorno virtual con:
+  - +12 GB de **memoria RAM**
+  - +100 GB de **almacenamiento en disco**
+- Este entorno es **temporal**:
+  - Se pierde al cerrar o dejar de usar el notebook por un tiempo.
+  - También existe un **límite de uso** en cuentas gratuitas.
+
+#### 🔁 Ejecución de Celdas
+
+- Ejecutar celdas con `Ctrl + Enter` o `Shift + Enter`.
+- Los **números entre corchetes** indican la secuencia de ejecución.
+- Sirven como referencia para saber si el entorno sigue activo.
+
+#### 🧠 Memoria y Variables
+
+- Programar es **utilizar y gestionar memoria**.
+- Una **variable** es un nombre asociado a un **valor en memoria**.
+  - Ejemplo: `edad = 5`
+- Python maneja las variables con **asignación dinámica**, sin necesidad de declarar el tipo.
+
+#### 📌 La función `id()`
+
+- Devuelve la **dirección de memoria** del objeto.
+  - Ejemplo: `id(5)` y `id(edad)` devuelven el mismo valor si `edad = 5`.
+
+#### 🔠 Tipos de Datos y Asignación
+
+- Se puede asignar texto con comillas:
+  - `nombre = 'Gabriel'` o `nombre = "Gabriel"`
+- `id(nombre)` y `id('Gabriel')` apuntan al mismo espacio en memoria.
+
+#### ⚠️ Reglas para Nombres de Variables
+
+1. No comenzar con números (`❌ 10notas`)
+2. No usar espacios (`❌ nombre escuela`)
+3. No usar **palabras reservadas** de Python (`❌ for`, `if`, `class`, etc.)
+4. Python distingue entre **mayúsculas y minúsculas** (`edad` ≠ `Edad` ≠ `EDAD`)
+
+#### 🧠 Asignación Estática vs Dinámica
+
+- Lenguajes como C o Java requieren **asignación estática** (tipo y tamaño).
+- **Python** asigna dinámicamente:
+  - Más **simple, rápido y flexible** para principiantes.
+
+#### Los comentarios
+
+'#' es el simbolo para iniciar un comentario de una sola linea
+
+'''
+Este es un comentario
+de varias líneas o bloque de comentario.
+'''
+
+---
+
+### Tipos de variables
+
+### Variables numericas
+
+### Variables de texto
+
+### Colectando datos
+
+### Que hace la funcion input
+
+### Desafios 2
+
+   Los desafios se encuentra en: [Desafios](https://github.com/ojsilvera/AlluraG8_2025_fase2_desafios/)
+
+---
 
 ## Estructuras condicionales
 
