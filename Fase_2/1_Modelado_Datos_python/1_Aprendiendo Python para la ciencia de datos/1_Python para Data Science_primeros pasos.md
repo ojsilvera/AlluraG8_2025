@@ -133,7 +133,7 @@ print('Mi nombre es Álvaro y tengo 39 años')
   - Ver resultados inmediatamente tras la ejecución.
   - Eliminar, mover o transformar celdas entre código y texto (Markdown).
 
-### Desafios 1
+#### Desafios 1
 
    Los desafios se encuentra en: [Desafios](https://github.com/ojsilvera/AlluraG8_2025_fase2_desafios/)
 
@@ -202,7 +202,176 @@ de varias líneas o bloque de comentario.
 
 ### Tipos de variables
 
+#### 🎯 Contexto
+
+- Somos asistentes de ciencia de datos en una institución educativa.
+- El objetivo es manipular registros de datos utilizando Python.
+- Comprender los **tipos de variables** es esencial para este trabajo.
+
+---
+
+#### 🧩 Tipos de Variables en Python
+
+Python clasifica las variables según el tipo de objeto que almacenan. Los tipos principales son:
+
+#### 1. **Enteros (`int`)**
+
+- Representan números enteros.
+- Ejemplo:
+  ``python
+  edad = 5
+  type(edad)  # devuelve <class 'int'>
+  ´´
+
+#### 2. **Decimales (`float`)**
+
+- Números con punto decimal (no se usa coma).
+- Ejemplo:
+  ``python
+  promedio = 9.5
+  type(promedio)  # devuelve <class 'float'>
+  ``
+
+#### 3. **Cadenas de texto (`str`)**
+
+- Texto entre comillas simples o dobles.
+- Ejemplo:
+  ``python
+  nombre = "Penelope Camacho"
+  type(nombre)  # devuelve <class 'str'>
+  ``
+
+#### 4. **Booleanos (`bool`)**
+
+- Valores lógicos: `True` o `False`.
+- Ejemplo:
+  ``python
+  aprobado = True
+  type(aprobado)  # devuelve <class 'bool'>
+  ``
+
+---
+
+#### 🧠 Ejemplo aplicado
+
+Supongamos que tenemos los siguientes datos de una estudiante:
+
+- **Nombre**: Penelope Camacho
+- **Edad**: 11
+- **Promedio**: 9.75
+- **Situación académica**: Aprobada (True)
+
+Se pueden declarar en Python así:
+
+``python
+nombre_estudiante = "Penelope Camacho"
+edad_estudiante = 11
+promedio_estudiante = 9.75
+situacion_academica = True
+``
+
+Podemos imprimirlas todas con `print()`:
+``python
+print(nombre_estudiante, edad_estudiante, promedio_estudiante, situacion_academica)
+``
+
+Y verificar su tipo:
+``python
+type(nombre_estudiante)       # str
+type(edad_estudiante)         # int
+type(promedio_estudiante)     # float
+type(situacion_academica)     # bool
+``
+
+---
+
+#### ✅ Conclusión
+
+- Comprender los tipos de variables es crucial para manipular datos correctamente.
+- Cada tipo de variable tiene su comportamiento y utilidad específica.
+
+---
+
+¿Quieres que convierta este resumen en una ficha de Notion o lo guarde como archivo Markdown?
+
 ### Variables numericas
+
+#### 📘 Resumen: Trabajo con Variables Numéricas en Python (`int` y `float`)
+
+En este entrenamiento se introduce el uso de **variables numéricas** en Python, específicamente de los tipos `int` y `float`,
+aplicados al análisis de datos de empleados de una institución educativa.
+
+#### 🧮 Escenario planteado
+
+Se cuenta con una tabla que contiene tres roles:
+
+- **Vigilantes**: 5 empleados, salario de 300 dólares
+- **Docentes**: 16 empleados, salario de 500 dólares
+- **Coordinadores**: 2 empleados, salario de 600 dólares
+
+Estas variables son representadas así en Python:
+
+``python
+Cvigilante = 5
+Svigilante = 300
+Cdocente = 16
+Sdocente = 500
+Ccoordinador = 2
+Scoordinador = 600
+``
+
+#### 🧩 Cálculos requeridos
+
+#### 1. ✅ **Cantidad total de empleados**
+
+Se suman todas las cantidades:
+
+```python
+TotalEmpleados = Cvigilante + Cdocente + Ccoordinador
+# Resultado: 23 (tipo int)
+```
+
+#### 2. 📉 **Diferencia entre el salario más alto y el más bajo**
+
+Se calcula restando el salario más bajo (vigilante) del más alto (coordinador):
+
+```python
+diferencia_salario = Scoordinador - Svigilante
+# Resultado: 300
+```
+
+#### 3. 📊 **Promedio ponderado de los salarios**
+
+Se usa la fórmula del promedio ponderado:
+
+\[
+\text{Promedio} = \frac{(C_v \cdot S_v) + (C_d \cdot S_d) + (C_c \cdot S_c)}{C_v + C_d + C_c}
+\]
+
+En código:
+
+```python
+promedio_salarios = (Cvigilante * Svigilante +
+                     Cdocente * Sdocente +
+                     Ccoordinador * Scoordinador) / TotalEmpleados
+# Resultado: 465.0 (tipo float)
+```
+
+#### 🧠 Conceptos clave abordados
+
+- **Tipos de datos numéricos**:
+  - `int`: enteros (ej. cantidades de empleados)
+  - `float`: números decimales (ej. promedio de salarios)
+- **Operaciones aritméticas**:
+  - Suma, resta, multiplicación y división
+  - Precedencia de operaciones (producto antes de suma)
+- **Buenas prácticas**:
+  - Nombres explícitos para las variables
+  - Uso de `type()` para identificar el tipo de variable
+- **Estructura visual del código**:
+  - Uso de saltos de línea para mejorar la legibilidad
+
+---
 
 ### Variables de texto
 
