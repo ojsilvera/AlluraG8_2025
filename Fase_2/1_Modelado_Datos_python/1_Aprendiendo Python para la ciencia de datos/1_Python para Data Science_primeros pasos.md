@@ -375,6 +375,80 @@ promedio_salarios = (Cvigilante * Svigilante +
 
 ### Variables de texto
 
+Una *string* es un conjunto de caracteres alfanuméricos que conforman un texto. Se pueden crear asignando un texto entre
+comillas simples o dobles a una variable.
+
+```python
+T = "Alura"
+type(T)  # <class 'str'>
+```
+
+---
+
+#### 🧰 Métodos de objetos *string*
+
+Las *strings* son objetos en Python que tienen métodos propios que permiten su manipulación.
+Para invocar un método o atributo se usa el operador punto (`.`).
+
+#### Métodos comunes:
+
+- `.upper()` → Convierte el texto a **mayúsculas**.
+- `.lower()` → Convierte el texto a **minúsculas**.
+- `.strip()` → Elimina **espacios en blanco** al inicio y al final.
+- `.replace("valor_antiguo", "valor_nuevo")` → **Sustituye** cadenas dentro del texto.
+
+---
+
+#### 🧪 Ejemplo práctico: Limpieza y transformación de una cadena
+
+Caso: Se debe corregir el nombre de una profesora en los registros.
+Errores detectados:
+
+- Espacios en blanco al inicio y final.
+- Apellido incorrecto ("Sánchez" → "Santos").
+- Se desea dejar el texto en mayúsculas.
+
+```python
+texto = "  Micaela de los SánChez  "
+nuevo_texto = texto.strip().replace("SánChez", "Santos").upper()
+print(nuevo_texto)  # "MICAELA DE LOS SANTOS"
+```
+
+---
+
+#### 🧠 Conceptos clave sobre memoria en Python
+
+- Las *strings* son **inmutables**. Las transformaciones no modifican la variable original a menos que se reasigne.
+- Para conservar cambios, se debe **asignar el resultado a una nueva variable** o sobrescribir la anterior.
+
+```python
+print(id(texto))        # ID original
+print(id(nuevo_texto))  # Nuevo ID → nueva ubicación en memoria
+
+# Sobrescribir la misma variable
+texto = texto.strip().replace("SánChez", "Santos").upper()
+print(id(texto))        # Nuevo ID, distinto al original
+```
+
+- Python utiliza un **recolector de basura** que libera la memoria cuando una variable ya no está referenciada.
+
+---
+
+#### 📥 Captura de datos del usuario
+
+Hasta ahora, las cadenas han sido ingresadas manualmente en el código.
+En futuras lecciones, se verá cómo capturar texto directamente desde el input del usuario.
+
+---
+
+#### 🧩 Conclusión
+
+Conocer el funcionamiento de las cadenas de texto, sus métodos y cómo Python gestiona la memoria es esencial para realizar
+transformaciones correctas sin afectar otras variables. Es una práctica importante, especialmente al trabajar con grandes
+volúmenes de datos.
+
+---
+
 ### Colectando datos
 
 ### Que hace la funcion input
