@@ -550,6 +550,62 @@ else:
 
 ### Colectando datos
 
+Aprender a capturar datos introducidos por el usuario mediante la función `input()` en Python, y cómo transformarlos a
+tipos de datos adecuados para su posterior manipulación.
+
+---
+
+#### 🧩 `input()`: Captura de datos
+
+- Permite ingresar información desde el teclado.
+- Sintaxis básica: `input("Escribe algo: ")`
+- **Siempre retorna un valor de tipo `str`**, sin importar si se ingresan números o letras.
+
+#### 🧪 Buenas prácticas
+
+- Siempre **almacenar el valor capturado en una variable**, por ejemplo:
+
+  ```python
+  nombre = input("Escribe tu nombre: ")
+  ```
+
+#### 🧮 Conversión de tipos
+
+Para realizar operaciones numéricas, es necesario **convertir los datos capturados**:
+
+| Tipo deseado | Función de conversión | Ejemplo |
+|--------------|-----------------------|---------|
+| Entero       | `int()`               | `int(input("Año de admisión: "))` |
+| Decimal      | `float()`             | `float(input("Nota de admisión: "))` |
+
+#### ⚠️ Concatenación no deseada
+
+Si no conviertes los valores, sumar dos entradas numéricas con `+` resultará en concatenación de cadenas, no en una
+operación aritmética.
+
+```python
+a = input("Año de admisión: ")   # "2023"
+b = input("Año de salida: ")     # "2024"
+print(a + b)                     # "20232024" (concatenación)
+```
+
+---
+
+#### 🎨 Formateo de Salida
+
+##### ✅ Uso de f-strings
+
+Una forma moderna y clara de mostrar resultados:
+
+```python
+print(f"\n\tEl año de admisión fue: {añoAdmisión}\n\tLa nota de admisión fue: {notaAdmisión}")
+```
+
+- `\n`: Nueva línea (line break)
+- `\t`: Tabulación (tab)
+
+---
+
 ### Que hace la funcion input
 
 ### Desafios 2
