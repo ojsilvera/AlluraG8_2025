@@ -449,6 +449,105 @@ volúmenes de datos.
 
 ---
 
+### Operadores en python
+
+Los **operadores** son símbolos o palabras clave que se utilizan para realizar operaciones sobre **valores** o
+**variables**. Python tiene varios tipos de operadores, que se agrupan según su función:
+
+---
+
+#### 1. 🔢 Operadores Aritméticos
+
+Se usan para realizar operaciones matemáticas básicas:
+
+| Operador | Descripción         | Ejemplo (`a = 10, b = 3`) | Resultado |
+|----------|---------------------|----------------------------|-----------|
+| `+`      | Suma                | `a + b`                    | `13`      |
+| `-`      | Resta               | `a - b`                    | `7`       |
+| `*`      | Multiplicación      | `a * b`                    | `30`      |
+| `/`      | División            | `a / b`                    | `3.33`    |
+| `//`     | División entera     | `a // b`                   | `3`       |
+| `%`      | Módulo (resto)      | `a % b`                    | `1`       |
+| `**`     | Potencia            | `a ** b`                   | `1000`    |
+
+---
+
+#### 2. 🧮 Operadores de Asignación
+
+Sirven para **asignar valores** a variables y también para combinar operaciones con asignación.
+
+| Operador | Equivalente a | Ejemplo     | Resultado (`a = 10`) |
+|----------|---------------|-------------|----------------------|
+| `=`      | -             | `a = 10`    | `a = 10`             |
+| `+=`     | `a = a + 5`   | `a += 5`    | `a = 15`             |
+| `-=`     | `a = a - 3`   | `a -= 3`    | `a = 7`              |
+| `*=`     | `a = a * 2`   | `a *= 2`    | `a = 20`             |
+| `/=`     | `a = a / 2`   | `a /= 2`    | `a = 5.0`            |
+| `//=`    | `a = a // 2`  | `a //= 2`   | `a = 5`              |
+| `%=`     | `a = a % 2`   | `a %= 2`    | `a = 0` o `1`        |
+| `**=`    | `a = a ** 2`  | `a **= 2`   | `a = 100`            |
+
+---
+
+#### 3. 📏 Operadores de Comparación
+
+Comparan dos valores y devuelven **True** o **False**.
+
+| Operador | Descripción         | Ejemplo       | Resultado |
+|----------|---------------------|---------------|-----------|
+| `==`     | Igual a             | `a == b`      | `False`   |
+| `!=`     | Distinto de         | `a != b`      | `True`    |
+| `>`      | Mayor que           | `a > b`       | `True`    |
+| `<`      | Menor que           | `a < b`       | `False`   |
+| `>=`     | Mayor o igual que   | `a >= b`      | `True`    |
+| `<=`     | Menor o igual que   | `a <= b`      | `False`   |
+
+---
+
+#### 4. 🔁 Operadores Lógicos
+
+Se utilizan para combinar expresiones booleanas.
+
+| Operador | Descripción       | Ejemplo                  | Resultado |
+|----------|-------------------|--------------------------|-----------|
+| `and`    | Verdadero si ambas son verdaderas | `True and False`     | `False`   |
+| `or`     | Verdadero si una es verdadera     | `True or False`      | `True`    |
+| `not`    | Invierte el valor lógico          | `not True`           | `False`   |
+
+---
+
+#### 5. 📦 Operadores de Membresía
+
+Verifican si un valor está dentro de una **secuencia** (como listas, strings, tuplas).
+
+| Operador | Descripción          | Ejemplo            | Resultado |
+|----------|----------------------|--------------------|-----------|
+| `in`     | Está en              | `'a' in 'casa'`    | `True`    |
+| `not in` | No está en           | `'z' not in 'casa'`| `True`    |
+
+---
+
+#### 6. 🧠 Operadores de Identidad
+
+Comparan si dos variables apuntan al **mismo objeto** en memoria.
+
+| Operador | Descripción         | Ejemplo         | Resultado |
+|----------|---------------------|-----------------|-----------|
+| `is`     | Es el mismo objeto  | `a is b`        | `False`   |
+| `is not` | No es el mismo objeto | `a is not b`  | `True`    |
+
+---
+
+#### 📝 Ejemplo Práctico
+
+```python
+nombre = "Oscar"
+if "O" in nombre and nombre != "":
+    print("Nombre válido")
+else:
+    print("Nombre no válido")
+```
+
 ### Colectando datos
 
 ### Que hace la funcion input
