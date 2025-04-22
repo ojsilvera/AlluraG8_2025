@@ -606,7 +606,108 @@ print(f"\n\tEl año de admisión fue: {añoAdmisión}\n\tLa nota de admisión fu
 
 ---
 
-### Que hace la funcion input
+### formatos para string en pyton
+
+En Python, dar formato a cadenas (strings) significa **insertar variables o valores dentro de un texto**, para que la salida sea más clara, legible y profesional.
+
+---
+
+#### 🔧 Métodos para dar formato a cadenas
+
+##### 1. 📎 Concatenación clásica
+
+Usa el símbolo `+` para unir textos.
+👉 Requiere convertir números a texto manualmente con `str()`.
+
+```python
+nombre = "Oscar"
+edad = 30
+print("Hola, " + nombre + ". Tienes " + str(edad) + " años.")
+```
+
+---
+
+##### 2. 🧮 Método `.format()`
+
+Usa llaves `{}` como marcadores dentro de la cadena.
+
+```python
+nombre = "Oscar"
+edad = 30
+print("Hola, {}. Tienes {} años.".format(nombre, edad))
+```
+
+También se puede usar con índices:
+
+```python
+print("Hola, {0}. Tienes {1} años. Chau, {0}.".format(nombre, edad))
+```
+
+---
+
+##### 3. ⚡ F-strings (formato recomendado desde Python 3.6)
+
+Son más legibles y potentes. Colocas la letra `f` antes de la cadena y las variables dentro de llaves `{}`.
+
+```python
+nombre = "Oscar"
+edad = 30
+print(f"Hola, {nombre}. Tienes {edad} años.")
+```
+
+Puedes incluir expresiones directamente:
+
+```python
+print(f"En 5 años, tendrás {edad + 5} años.")
+```
+
+---
+
+#### ✨ Caracteres especiales de formato
+
+| Símbolo | Significado        |
+|---------|--------------------|
+| `\n`    | Nueva línea         |
+| `\t`    | Tabulación (espacio) |
+| `\\`    | Barra invertida `\` |
+| `\"`    | Comillas dobles dentro de string |
+
+Ejemplo:
+
+```python
+print(f"\n\tNombre:\t{nombre}\n\tEdad:\t{edad}")
+```
+
+---
+
+#### 🎯 Formateo de números
+
+##### Redondeo de decimales
+
+```python
+nota = 9.45678
+print(f"Tu nota es: {nota:.2f}")  # Resultado: 9.46
+```
+
+##### Ancho de campo (alineación)
+
+```python
+print(f"{'Producto':<10}{'Precio':>10}")   # Alinea izquierda y derecha
+print(f"{'Manzana':<10}{3.5:>10.2f}")
+```
+
+---
+
+## 🛠️ Aplicación práctica combinada
+
+```python
+nombre = input("¿Cuál es tu nombre? ")
+nota = float(input("¿Cuál fue tu nota? "))
+
+print(f"\nHola, {nombre}.\n\tTu nota fue: {nota:.1f}")
+```
+
+---
 
 ### Desafios 2
 
