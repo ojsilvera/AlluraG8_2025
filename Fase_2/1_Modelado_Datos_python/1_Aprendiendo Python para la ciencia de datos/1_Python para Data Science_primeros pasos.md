@@ -390,7 +390,7 @@ type(T)  # <class 'str'>
 Las *strings* son objetos en Python que tienen métodos propios que permiten su manipulación.
 Para invocar un método o atributo se usa el operador punto (`.`).
 
-#### Métodos comunes:
+#### Métodos comunes
 
 - `.upper()` → Convierte el texto a **mayúsculas**.
 - `.lower()` → Convierte el texto a **minúsculas**.
