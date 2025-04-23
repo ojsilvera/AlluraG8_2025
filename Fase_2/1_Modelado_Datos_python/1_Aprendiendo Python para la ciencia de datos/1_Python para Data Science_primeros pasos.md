@@ -487,6 +487,8 @@ Sirven para **asignar valores** a variables y también para combinar operaciones
 | `%=`     | `a = a % 2`   | `a %= 2`    | `a = 0` o `1`        |
 | `**=`    | `a = a ** 2`  | `a **= 2`   | `a = 100`            |
 
+[Exponentes](https://www.datacamp.com/es/tutorial/exponents-in-python)
+
 ---
 
 #### 3. 📏 Operadores de Comparación
