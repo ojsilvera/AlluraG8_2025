@@ -719,6 +719,63 @@ print(f"\nHola, {nombre}.\n\tTu nota fue: {nota:.1f}")
 
 ## Estructuras condicionales
 
+Ayudar al equipo de datos a **estructurar una condición** en Python que determine si un estudiante **aprueba o reprueba**
+una asignatura según su nota.
+
+---
+
+## 📝 Comentarios en Python
+
+- Para escribir **comentarios de una sola línea**, se utiliza el símbolo `#`.
+
+  ```python
+  # Este es un comentario de una sola línea
+  ```
+
+- Para escribir **comentarios multilínea**, se utilizan **tres comillas dobles** (`"""`) o simples (`'''`) al inicio y al final.
+
+  ```python
+  """
+  Este es un comentario
+  que abarca varias líneas
+  """
+  ```
+
+---
+
+## 🧮 Lógica de Aprobación
+
+- **Condición de aprobación:** nota **mayor o igual a 7**.
+- **Condición de reprobación:** nota **menor a 7**.
+
+---
+
+## 🧠 Concepto clave: Estructura condicional `if` en Python
+
+Aunque no se muestra el código completo en esta lección, se introduce la **estructura condicional** como base para evaluar
+si un estudiante aprueba:
+
+```python
+if nota >= 7:
+    print("Estudiante aprueba")
+else:
+    print("Estudiante reprueba")
+```
+
+> Cada lenguaje tiene su propia sintaxis para condicionales, y Python no es la excepción.
+
+---
+
+## 📌 Conclusión
+
+En esta lección se introdujeron tres conceptos fundamentales en Python:
+
+- Uso de **comentarios** en código.
+- Definición de una **condición lógica** para evaluar datos.
+- Introducción a la **estructura `if`**, que será abordada a profundidad en la próxima clase.
+
+---
+
 ## Estructuras de repetición
 
 ## Estructuras de datos
