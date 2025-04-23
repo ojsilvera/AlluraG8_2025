@@ -724,7 +724,7 @@ una asignatura según su nota.
 
 ---
 
-## 📝 Comentarios en Python
+### 📝 Comentarios en Python
 
 - Para escribir **comentarios de una sola línea**, se utiliza el símbolo `#`.
 
@@ -743,14 +743,14 @@ una asignatura según su nota.
 
 ---
 
-## 🧮 Lógica de Aprobación
+### 🧮 Lógica de Aprobación
 
 - **Condición de aprobación:** nota **mayor o igual a 7**.
 - **Condición de reprobación:** nota **menor a 7**.
 
 ---
 
-## 🧠 Concepto clave: Estructura condicional `if` en Python
+### 🧠 Concepto clave: Estructura condicional `if` en Python
 
 Aunque no se muestra el código completo en esta lección, se introduce la **estructura condicional** como base para evaluar
 si un estudiante aprueba:
@@ -766,13 +766,101 @@ else:
 
 ---
 
-## 📌 Conclusión
+### 📌 Conclusión
 
 En esta lección se introdujeron tres conceptos fundamentales en Python:
 
 - Uso de **comentarios** en código.
 - Definición de una **condición lógica** para evaluar datos.
 - Introducción a la **estructura `if`**, que será abordada a profundidad en la próxima clase.
+
+---
+
+### 📘 Condicionales en Python: `if` y `else`
+
+#### 🎯 Objetivo
+
+Aprender a usar las **estructuras condicionales** `if` y `else` en Python, fundamentales para el **control de flujo** de
+un programa, permitiendo que ciertas instrucciones se ejecuten sólo si se cumplen condiciones específicas.
+
+---
+
+#### 🧠 ¿Qué es una estructura condicional?
+
+> Es una herramienta de control de flujo que **ejecuta diferentes bloques de código dependiendo de si una condición es verdadera o falsa**.
+
+- Si la condición es **verdadera**, se ejecuta el primer bloque.
+- Si la condición es **falsa**, se puede ejecutar un bloque alternativo usando `else`.
+
+---
+
+#### 🛠️ Sintaxis en Python
+
+```python
+if condición:
+  # bloque si la condición es verdadera
+else:
+  # bloque si la condición es falsa
+```
+
+- **`if`**: palabra clave que evalúa si una condición se cumple.
+- **`else`**: ejecuta el bloque de código si la condición del `if` es falsa.
+- Los bloques de código **se indentan**, normalmente con 2 o 4 espacios (Python no usa `{}` ni `;`).
+
+---
+
+#### 💬 Comentarios en código
+
+- Para **una línea**: usar `#`
+
+  ```python
+  # Esto es un comentario
+  ```
+
+- Para **varias líneas**: usar `"""` o `'''`
+
+  ```python
+  """
+  Comentario
+  en varias líneas
+  """
+  ```
+
+---
+
+#### 🧪 Ejemplo práctico
+
+```python
+if 2 < 7:
+  print("La condición es verdadera")
+else:
+  print("La condición es falsa")
+
+print("Fin de la consulta")
+```
+
+### Resultado
+
+- Imprime `"La condición es verdadera"` si la condición se cumple.
+- Imprime `"La condición es falsa"` si no se cumple.
+- Siempre imprime `"Fin de la consulta"` porque está fuera del bloque condicional.
+
+---
+
+#### 🔍 Detalles importantes
+
+- Python **indentará automáticamente** después de `if` o `else`.
+- La indentación (consistencia en espacios) es crucial para definir correctamente los bloques.
+- El `if` devuelve internamente **True** o **False** al evaluar la condición.
+- La estructura `else` representa el camino **alternativo o por defecto**.
+
+---
+
+#### 📌 Conclusión estrucuras condicionales if, else
+
+- Las estructuras `if` y `else` son esenciales para manejar decisiones en un programa.
+- Permiten definir qué debe ocurrir en función de **condiciones lógicas**.
+- La **sintaxis clara** y el uso de **indentación** hacen que Python sea intuitivo para implementar condicionales.
 
 ---
 
