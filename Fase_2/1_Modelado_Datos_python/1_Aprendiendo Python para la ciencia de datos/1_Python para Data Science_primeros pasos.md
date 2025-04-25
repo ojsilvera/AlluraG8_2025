@@ -950,7 +950,57 @@ else:
 
 ---
 
-¿Te gustaría que también lo convierta en una tarjeta visual o infografía para tus notas o redes?
+#### `elif` en control de flujo en Python
+
+##### 🔍 Problema detectado
+
+Un **problema lógico** al usar un `else` luego de varios `if` independientes. El `else` se ejecutaba si **el último `if` era falso**,
+sin considerar si condiciones anteriores ya se habían cumplido. Esto provocaba
+una **ejecución inesperada del flujo**.
+
+---
+
+##### ✅ Solución: uso de `elif`
+
+Se introduce la cláusula **`elif`** como solución.
+
+##### ¿Qué es `elif`?
+
+- Es una **contracción** de `else if`.
+- Permite evaluar **múltiples condiciones** de forma ordenada y clara.
+- Evita errores en el flujo lógico del programa.
+
+##### 🔠 Sintaxis básica
+
+```python
+if condición1:
+    # acción si condición1 es verdadera
+elif condición2:
+    # acción si condición2 es verdadera
+elif condición3:
+    # acción si condición3 es verdadera
+else:
+    # acción si ninguna condición fue verdadera
+```
+
+---
+
+##### 🔄 Funcionamiento del `elif`
+
+- Se **evalúan las condiciones en orden**.
+- Python detiene la evaluación **cuando una condición es verdadera**.
+- Si ninguna lo es, se ejecuta el bloque `else`.
+
+---
+
+##### 💡 Beneficios de usar `elif`
+
+- **Evita errores lógicos** por condiciones mal encadenadas.
+- **Reduce la repetición** de código.
+- Mejora la **claridad y mantenimiento** del código.
+- Se pueden usar **varios `elif` seguidos**, no está limitado a uno solo.
+
+---
 
 ## Estructuras de repetición
 
