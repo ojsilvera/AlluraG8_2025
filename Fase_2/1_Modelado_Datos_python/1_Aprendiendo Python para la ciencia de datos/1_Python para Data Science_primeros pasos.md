@@ -1002,6 +1002,76 @@ else:
 
 ---
 
+#### Condicionales Compuestas y Operadores Lógicos en Python
+
+##### 🔍 Condiciones Simples vs Condiciones Compuestas
+
+Hasta ahora se han trabajado **condiciones simples** (una sola evaluación lógica), pero en programación real es común tener
+que evaluar **múltiples condiciones al mismo tiempo** para tomar decisiones más complejas.
+
+---
+
+##### ⚙️ Operadores Lógicos
+
+###### 1. `and` (Y)
+
+- Evalúa como **True** solo si *ambas condiciones* son verdaderas.
+- Tabla de verdad:
+
+  ```python
+  True and True   => True
+  True and False  => False
+  False and True  => False
+  False and False => False
+  ```
+
+###### 2. `or` (O)
+
+- Evalúa como **True** si *al menos una condición* es verdadera.
+- Tabla de verdad:
+
+  ```python
+  True or True    => True
+  True or False   => True
+  False or True   => True
+  False or False  => False
+  ```
+
+###### 3. `not` (Negación)
+
+- Invierte el valor lógico de la condición.
+
+  ```python
+  not True  => False
+  not False => True
+  ```
+
+---
+
+###### 4. 🔎 Operador `in`
+
+- Se utiliza para verificar si un **elemento está presente dentro de una colección** (cadena, lista, tupla, etc.).
+- Ejemplo:
+
+  ```python
+  if "Miguel Castro" in lista_estudiantes:
+      print("El estudiante aprobó")
+  else:
+      print("El estudiante reprobó")
+  ```
+
+- Útil especialmente en validaciones y estructuras repetitivas.
+
+---
+
+###### 🧰 Aplicación Práctica
+
+1. Se crean variables booleanas (`True`, `False`) para probar combinaciones con `and`, `or`, `not`.
+2. Se verifica la pertenencia de nombres en una lista de estudiantes usando el operador `in`.
+3. Se introducen conceptos básicos de **control de flujo** y **evaluación lógica** aplicados a la solución de problemas.
+
+---
+
 ## Estructuras de repetición
 
 ## Estructuras de datos
