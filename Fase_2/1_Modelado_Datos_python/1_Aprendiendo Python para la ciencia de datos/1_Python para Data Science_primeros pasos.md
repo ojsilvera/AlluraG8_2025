@@ -864,6 +864,94 @@ print("Fin de la consulta")
 
 ---
 
+### Uso del if & else
+
+---
+
+#### 🎯 Objetivo del algoritmo
+
+Crear un programa que:
+
+- Reciba una calificación como entrada.
+- Determine si la persona estudiante **aprueba**, **va a recuperación** o **reprueba**.
+- Muestre un mensaje según el resultado.
+
+---
+
+#### 🛠️ Lógica básica implementada
+
+```python
+calificacion = float(input("Digita la calificación: "))
+
+if calificacion >= 7:
+    print("La persona estudiante aprobó")
+else:
+    print("La persona estudiante reprobó")
+```
+
+---
+
+#### ⚙️ Extensión con más condiciones
+
+> La institución permite **recuperación** si la calificación está entre 5 y 6.99.
+
+Nueva lógica:
+
+```python
+if calificacion >= 7:
+    print("Aprobó")
+elif calificacion >= 5:
+    print("Va a recuperación")
+else:
+    print("Reprobó")
+```
+
+📌 Se usan varios `if` seguidos, o mejor aún, `elif` para evaluar condiciones intermedias y evitar errores lógicos.
+
+---
+
+#### 🚧 Problemas comunes con múltiples `if` + `else`
+
+- Si no se estructuran bien los `if` y `else`, **pueden producirse errores lógicos**.
+- Ejemplo de error: colocar un `else` que se asocia con el `if` más reciente, ignorando condiciones anteriores que ya se cumplieron.
+
+```python
+if calificacion >= 7:
+    print("Aprobó")
+
+if calificacion >= 5:
+    print("Recuperación")
+else:
+    print("Reprobó")  # ❌ Este else se asocia solo con el segundo if
+```
+
+✅ Solución: usar estructuras de control como `if`, `elif` y `else` correctamente anidadas para mantener un **flujo lógico claro y consistente**.
+
+---
+
+#### 🧩 Conceptos claves relacionados
+
+| Concepto          | Significado clave                                                                 |
+|-------------------|------------------------------------------------------------------------------------|
+| `if`              | Evalúa una condición; si es verdadera, ejecuta el bloque de código.                |
+| `elif`            | Evalúa otra condición si el `if` anterior fue falso.                               |
+| `else`            | Se ejecuta solo si todas las condiciones anteriores son falsas.                    |
+| Indentación       | Importante para definir qué pertenece a cada bloque (`if`, `else`, etc.).          |
+| Flujo de control  | Determina el camino que toma el programa según las condiciones evaluadas.          |
+| Lógica condicional | Es vital ser preciso con los rangos y el orden para evitar contradicciones.       |
+
+---
+
+#### ✅ Buenas prácticas
+
+- Usar `elif` en lugar de múltiples `if` independientes si las condiciones son mutuamente excluyentes.
+- Asegurarse de que cada bloque condicional cubra rangos **claros y no superpuestos**.
+- Probar varios valores (límites y fuera de rango) para validar la lógica.
+
+---
+
+¿Te gustaría que también lo convierta en una tarjeta visual o infografía para tus notas o redes?
+
 ## Estructuras de repetición
 
 ## Estructuras de datos
