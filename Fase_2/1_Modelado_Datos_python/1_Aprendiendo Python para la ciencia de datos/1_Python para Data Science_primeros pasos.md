@@ -1074,4 +1074,65 @@ que evaluar **múltiples condiciones al mismo tiempo** para tomar decisiones má
 
 ## Estructuras de repetición
 
+### Estructuras de repeticion o cilcos
+
+Obtener e imprimir el promedio de **dos calificaciones** para **tres estudiantes**, utilizando **variables de tipo `float`**.
+
+---
+
+## 🔢 Cálculo del Promedio
+
+- Se crean dos variables por estudiante: `calificación1` y `calificación2`.
+- Se solicita al usuario que ingrese ambas calificaciones usando `input()`.
+- Las calificaciones se convierten a `float` para permitir decimales.
+- El **promedio** se calcula mediante la fórmula:
+
+  ```python
+  promedio = (calificación1 + calificación2) / 2
+  ```
+
+- Se imprime el resultado con la función `print()` y el método `format()`:
+
+  ```python
+  print("El promedio del estudiante es {:.2f}".format(promedio))
+  ```
+
+---
+
+## 🔁 Problema Identificado
+
+Aunque el cálculo funciona, **repetir el mismo bloque de código tres veces no es práctico**. Esto plantea un problema de escalabilidad:
+
+> ¿Qué pasaría si hubiera que calcular el promedio para **100 estudiantes**?
+
+---
+
+## 🧩 Solución Propuesta
+
+El texto introduce el concepto de **estructuras de repetición (bucles)** como solución eficiente para este tipo de tareas repetitivas:
+
+### Tipos de bucles en Python:
+
+- `while`: Repite un bloque **mientras** se cumpla una condición.
+- `for`: Recorre una **secuencia de elementos** (como un rango de números, listas, etc.).
+
+> Estas estructuras permiten ejecutar bloques de código múltiples veces **sin duplicar código manualmente**.
+
+---
+
+## 🔚 Conclusión
+
+El ejercicio resalta la importancia de:
+
+- Entender cómo trabajar con entradas de usuario.
+- Calcular promedios correctamente.
+- Identificar patrones repetitivos en código.
+- Introducir estructuras de control como los **bucles**, que serán estudiados a profundidad en la siguiente lección.
+
+---
+
+### Ciclo while
+
+### Ciclo for
+
 ## Estructuras de datos
