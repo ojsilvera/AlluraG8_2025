@@ -1072,15 +1072,13 @@ que evaluar **múltiples condiciones al mismo tiempo** para tomar decisiones má
 
 ---
 
-## Estructuras de repetición
-
-### Estructuras de repeticion o cilcos
+### Estructuras de repeticion o ciclos
 
 Obtener e imprimir el promedio de **dos calificaciones** para **tres estudiantes**, utilizando **variables de tipo `float`**.
 
 ---
 
-## 🔢 Cálculo del Promedio
+#### 🔢 Cálculo del Promedio
 
 - Se crean dos variables por estudiante: `calificación1` y `calificación2`.
 - Se solicita al usuario que ingrese ambas calificaciones usando `input()`.
@@ -1099,7 +1097,7 @@ Obtener e imprimir el promedio de **dos calificaciones** para **tres estudiantes
 
 ---
 
-## 🔁 Problema Identificado
+#### 🔁 Problema Identificado
 
 Aunque el cálculo funciona, **repetir el mismo bloque de código tres veces no es práctico**. Esto plantea un problema de escalabilidad:
 
@@ -1107,11 +1105,11 @@ Aunque el cálculo funciona, **repetir el mismo bloque de código tres veces no 
 
 ---
 
-## 🧩 Solución Propuesta
+#### 🧩 Solución Propuesta
 
 El texto introduce el concepto de **estructuras de repetición (bucles)** como solución eficiente para este tipo de tareas repetitivas:
 
-### Tipos de bucles en Python:
+##### Tipos de bucles en Python
 
 - `while`: Repite un bloque **mientras** se cumpla una condición.
 - `for`: Recorre una **secuencia de elementos** (como un rango de números, listas, etc.).
@@ -1120,7 +1118,7 @@ El texto introduce el concepto de **estructuras de repetición (bucles)** como s
 
 ---
 
-## 🔚 Conclusión
+#### 🔚 Conclusión
 
 El ejercicio resalta la importancia de:
 
@@ -1133,6 +1131,147 @@ El ejercicio resalta la importancia de:
 
 ### Ciclo while
 
+En la lección anterior, se repitió manualmente un bloque de código para calcular promedios de tres estudiantes. Sin embargo,
+esta solución **no es escalable**.
+
+#### 🎯 Problema a Resolver
+
+> ¿Qué sucede si debemos repetir ese bloque más de tres veces?
+Repetir código manualmente se vuelve ineficiente. Por ello, **se introduce el bucle `while` como solución automatizada**.
+
+---
+
+#### 🔹 ¿Qué es?
+
+Es una estructura de control que permite ejecutar un bloque de código **mientras una condición sea verdadera**.
+
+#### 🔹 Sintaxis básica
+
+```python
+while condición:
+    # bloque de código que se repite
+```
+
+---
+
+#### 🔢 Ejemplo Práctico: Contador del 1 al 10
+
+1. **Inicialización del contador**:
+
+   ```python
+   contador = 1
+   ```
+
+2. **Condición del bucle**:
+
+   ```python
+   while contador <= 10:
+       print(contador)
+       contador += 1
+   ```
+
+3. **Pythonic Way**:
+   Se recomienda usar `contador += 1` como forma más clara y concisa, en lugar de `contador = contador + 1`.
+
+---
+
+#### ✅ Ventajas del `while`
+
+- Automatiza tareas repetitivas sin necesidad de copiar código.
+- Facilita la escalabilidad (ej. más estudiantes, más datos).
+- Promueve el uso de **buenas prácticas** y escritura más limpia en Python.
+
+---
+
+#### 🔄 Aplicación al Problema de los Promedios
+
+El siguiente paso es **integrar la recolección de calificaciones y cálculo de promedios dentro del bucle `while`**, para automatizar el proceso con cualquier cantidad de estudiantes. Esto reemplaza la repetición manual del código.
+
+---
+
+#### 📌 Sintesis ciclo while
+
+El bucle `while` permite:
+
+- Evitar la repetición innecesaria de código.
+- Automatizar procesos iterativos como cálculos por estudiante.
+- Aplicar lógica condicional para controlar la duración del ciclo.
+
+> Aprender estructuras como `while` es fundamental para escribir programas eficientes y escalables en Python.
+
+---
+
 ### Ciclo for
+
+### Operadores de asignacion o atribucion
+
+En Python, **los operadores de asignación (o de atribución)** se utilizan para **asignar valores a variables** y, en muchos casos, también para realizar operaciones matemáticas o lógicas **modificando el valor de la variable en el mismo paso**.
+
+---
+
+## 🟩 Operador de asignación básica
+
+| Operador | Descripción                          | Ejemplo           |
+|----------|--------------------------------------|-------------------|
+| `=`      | Asignación simple                    | `x = 5`           |
+
+Esto significa que el valor `5` se asigna a la variable `x`.
+
+---
+
+## 🔁 Operadores de asignación compuesta
+
+Estos operadores **combinan una operación con una asignación**, permitiendo escribir código más compacto:
+
+| Operador | Equivalente                | Uso típico               |
+|----------|----------------------------|--------------------------|
+| `+=`     | `x = x + valor`            | `x += 2`  ➝ suma y asigna |
+| `-=`     | `x = x - valor`            | `x -= 3`  ➝ resta         |
+| `*=`     | `x = x * valor`            | `x *= 4`  ➝ multiplica    |
+| `/=`     | `x = x / valor`            | `x /= 2`  ➝ divide        |
+| `//=`    | `x = x // valor`           | `x //= 2` ➝ división entera |
+| `%=`     | `x = x % valor`            | `x %= 3`  ➝ módulo        |
+| `**=`    | `x = x ** valor`           | `x **= 2` ➝ potencia      |
+
+---
+
+## 🔁 Operadores de asignación lógica y binaria (más avanzados)
+
+Estos son menos comunes pero útiles en operaciones a nivel de bits:
+
+| Operador | Equivalente                | Descripción                   |
+|----------|----------------------------|-------------------------------|
+| `&=`     | `x = x & valor`            | AND binario                   |
+| `|=`     | `x = x | valor`            | OR binario                    |
+| `^=`     | `x = x ^ valor`            | XOR binario                   |
+| `>>=`    | `x = x >> valor`           | Desplazamiento a la derecha   |
+| `<<=`    | `x = x << valor`           | Desplazamiento a la izquierda |
+
+---
+
+## 🧪 Ejemplo práctico:
+
+```python
+x = 10
+x += 5    # ahora x vale 15
+x *= 2    # ahora x vale 20
+x -= 10   # ahora x vale 0
+```
+
+Cada línea **modifica el valor anterior de `x` en el mismo paso que realiza la operación**.
+
+---
+
+## 🧠 Conclusión
+
+Los operadores de asignación:
+
+- Hacen tu código más limpio y legible.
+- Son fundamentales para tareas repetitivas o acumulativas (como contadores, sumas, productos).
+- Se combinan comúnmente con estructuras como bucles (`for`, `while`).
+
+> Dominar estos operadores es clave para escribir código eficiente en Python.
+
+¿Te gustaría ver un ejercicio aplicando varios de estos operadores juntos en un caso práctico?
 
 ## Estructuras de datos
