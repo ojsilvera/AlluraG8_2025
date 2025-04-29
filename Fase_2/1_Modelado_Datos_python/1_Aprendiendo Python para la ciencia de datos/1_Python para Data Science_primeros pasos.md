@@ -1375,3 +1375,7 @@ En este caso, el código imprime todos los números del 1 al 3. Cuando el valor 
 ejecución del bucle y sale de él, ignorando cualquier otra iteración que esté dentro de la estructura.
 
 ## Estructuras de datos
+
+### Listas
+
+### Diccionarios
