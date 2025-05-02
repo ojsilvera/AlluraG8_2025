@@ -1567,9 +1567,66 @@ Ejemplos
 
 ---
 
-## ✅ Conclusión introduccion a las listas
+#### ✅ Conclusión introduccion a las listas
 
 Las **listas** permiten trabajar de manera flexible y dinámica con conjuntos de datos. Son esenciales en Python para la
 manipulación básica de datos, desde el acceso y modificación hasta la iteración y cálculos numéricos.
+
+### Otras funciones de manipulacion de listas
+
+Hemos estudiado algunos métodos en clase, y además de esos, podemos utilizar otros para manipular listas en Python. Vamos
+a conocerlos y ver ejemplos de cómo se utilizan. En todos los casos, utilizaremos la siguiente lista llamada "razas_de_perros":
+
+razas_de_perros = ['Labrador Retriever',
+                   'Bulldog Francés',
+                   'Pastor Alemán',
+                   'Poodle']
+
+- **insert()**, que permite insertar un elemento en una posición específica de la lista. La sintaxis es `lista.insert(indice, elemento)`,
+donde "lista" es la lista que recibirá el nuevo elemento, "indice" es la posición donde se insertará el nuevo elemento y "elemento"
+es el nuevo elemento que se insertará.
+
+```python
+  razas_de_perros.insert(1, 'Golden Retriever')
+  razas_de_perros
+  Copia el código
+```
+
+Salida: ['Labrador Retriever', 'Golden Retriever', 'Bulldog Francés', 'Pastor Alemán', 'Poodle']
+
+Siguiendo este enfoque, la estructura `lista.insert(len(lista), elemento)` es equivalente al uso del método append().
+
+- **pop()** elimina el elemento en una posición específica de la lista y lo devuelve como salida al ejecutar el método. Solo
+necesitamos especificar, entre paréntesis, el índice del elemento que deseamos eliminar, y se eliminará de la lista. Por
+lo tanto, eliminemos la raza "Golden Retriever" que agregamos en el método anterior.
+
+```python
+  razas_de_perros.pop(1)
+  Copia el código
+```
+
+Salida: 'Golden Retriever'
+
+- **index()** devuelve el índice de un elemento específico en la lista. Para hacerlo, especificamos el elemento entre
+- paréntesis. Para encontrar el índice de la raza "Pastor Alemán" en la lista, hacemos lo siguiente:
+
+```python
+  razas_de_perros.index('Pastor Alemán')
+  Copia el código
+```
+
+Salida: 2
+
+- **sort()** ordena los elementos de la lista en orden ascendente o descendente. Si son palabras, el orden se basa en el
+- orden alfabético o en el orden inverso. Para ordenar los valores, simplemente llamamos al método sort(), y la lista se
+- organizará en orden. Para ordenar alfabéticamente la lista de razas de perros, podemos usar el siguiente código:
+
+```python
+  razas_de_perros.sort()
+  razas_de_perros
+  Copia el código
+```
+
+Salida: ['Bulldog Francés', 'Labrador Retriever', 'Pastor Alemán', 'Poodle']
 
 ### Diccionarios
