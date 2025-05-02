@@ -1717,3 +1717,61 @@ Los **diccionarios** permiten organizar y acceder a datos de manera eficiente a 
 - Consultar el tamaño de la colección.
 
 ---
+
+Claro, aquí tienes el **resumen en formato Markdown** del texto solicitado, con los **conceptos clave relacionados**:
+
+---
+
+#### Métodos y Manipulación de Diccionarios en Python
+
+##### 🔑 ¿Qué es un Diccionario?
+
+- Estructura de datos que permite almacenar información en **pares clave\:valor**.
+- Las claves son únicas y permiten identificar rápidamente sus valores asociados.
+- Ejemplo real: como un diccionario tradicional de palabras y definiciones.
+
+---
+
+##### 🛠 Métodos fundamentales para manipular diccionarios
+
+| Método       | Descripción                                               |
+| ------------ | --------------------------------------------------------- |
+| `pop(clave)` | Elimina un par clave-valor y devuelve su valor.           |
+| `items()`    | Devuelve una lista de tuplas con los pares clave-valor.   |
+| `keys()`     | Devuelve una lista con todas las claves del diccionario.  |
+| `values()`   | Devuelve una lista con todos los valores del diccionario. |
+
+---
+
+##### 🔁 Iteración sobre un diccionario
+
+- Se puede **iterar directamente** sobre las claves:
+
+  ```python
+  for clave in estudiante.keys():
+      print(clave)
+  ```
+
+- También se puede iterar sobre los pares clave-valor usando `items()`:
+
+  ```python
+  for clave, valor in estudiante.items():
+      print(clave, "→", valor)
+  ```
+
+---
+
+##### 📌 Conceptos relacionados
+
+- **Tupla**: estructura de datos **inmutable**, útil en ciertos contextos; `items()` devuelve tuplas.
+- **Iterable**: tanto las claves como los valores devueltos son objetos que pueden recorrerse en bucles `for`.
+
+---
+
+##### 🧩 Importancia para Ciencia de Datos
+
+- Los diccionarios son especialmente útiles para representar datos estructurados.
+- Combinados con listas, permiten crear estructuras más complejas como registros, catálogos o matrices de datos.
+- Su flexibilidad los convierte en una herramienta fundamental en tareas de análisis, limpieza y transformación de datos.
+
+---
