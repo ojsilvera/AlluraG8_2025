@@ -1378,4 +1378,85 @@ ejecución del bucle y sale de él, ignorando cualquier otra iteración que est�
 
 ### Listas
 
+---
+
+#### 🔹 ¿Qué es una lista en Python?
+
+- Es una **colección ordenada** y **mutable** de ítems.
+- Se define usando **corchetes `[ ]`**.
+- Los elementos están separados por **comas**.
+- Puede contener múltiples tipos de datos: `números`, `cadenas`, `objetos`, `listas`, `tuplas`, `diccionarios`, etc.
+
+#### 🔹 Características importantes
+
+- Los **ítems se pueden modificar** luego de la creación de la lista.
+- Es una de las estructuras más utilizadas en Ciencia de Datos.
+- Cada elemento tiene una **posición (índice)**:
+
+  - El primer elemento tiene índice `0`.
+  - También se pueden usar **índices negativos** (`-1`, `-2`, etc.) para contar desde el final.
+
+#### 🔹 Acceso a elementos
+
+- Se accede a un ítem con la sintaxis: `lista[indice]`.
+- El tipo de cada elemento se puede consultar con `type(lista[indice])`.
+
+#### 🔹 Iteración con bucle `for`
+
+- Se puede recorrer la lista con:
+
+  ```python
+  for elemento in lista:
+      print(elemento)
+  ```
+
+#### 🔹 Modificación de elementos
+
+- Para cambiar un valor específico:
+
+  ```python
+  lista[2] = 10  # Cambia el valor en el índice 2 a 10
+  ```
+
+#### 🔹 Cálculo con elementos de la lista
+
+- Es posible operar con elementos específicos:
+
+  ```python
+  promedio = (lista[1] + lista[2] + lista[3]) / 3
+  ```
+
+---
+
+#### 🧪 Ejemplo práctico listas
+
+Lista original:
+
+```python
+lista = ["Penélope Camacho", 9.5, 9.0, 9.7, True]
+```
+
+### Acciones realizadas
+
+1.**Cambio de la nota en índice 2** de `9.0` a `10.0`
+
+  ```python
+    lista[2] = 10.0
+  ```
+
+2.**Cálculo del promedio** de notas
+
+   ```python
+   promedio = (lista[1] + lista[2] + lista[3]) / 3
+   ```
+
+---
+
+
+
+## ✅ Conclusión introduccion a las listas
+
+Las **listas** permiten trabajar de manera flexible y dinámica con conjuntos de datos. Son esenciales en Python para la
+manipulación básica de datos, desde el acceso y modificación hasta la iteración y cálculos numéricos.
+
 ### Diccionarios
