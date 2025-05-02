@@ -1452,7 +1452,45 @@ lista = ["Penélope Camacho", 9.5, 9.0, 9.7, True]
 
 ---
 
+Sin embargo, es posible convertir una cadena en una lista mediante el método split(). Este método divide la cadena en una
+lista de cadenas, utilizando un delimitador especificado entre paréntesis. Este delimitador debe ser una cadena. Como ejemplo,
+convirtamos la cadena en una lista dividiéndola cada vez que aparezca el signo de interrogación "?":
 
+```python
+  pregunta = '¿Quién vino primero? ¿El huevo? ¿O fue la serpiente?'
+  lista_palabras = pregunta.split('?')
+  print(lista_palabras)
+```
+
+Salida: ['¿Quién vino primero', ' ¿El huevo', ' ¿O fue la serpiente', '']
+
+El delimitador no aparece en la separación. Si no se define un delimitador, la cadena se separará por todos los espacios
+en blanco en el texto.
+
+```python
+  pregunta = '¿Quién vino primero? ¿El huevo? ¿O fue la serpiente?'
+  lista_palabras = pregunta.split()
+  print(lista_palabras)
+```
+
+Salida: ['¿Quién', 'vino', 'primero?', '¿El', 'huevo?', '¿O', 'fue', 'la', 'serpiente?']
+
+Es posible convertir una lista en una cadena mediante el método join(). Para usar esta función, debemos definir el
+carácter que se utilizará para unir los elementos de la lista y formar la cadena. Luego, usamos el método { join() pasando
+la lista como argumento. Veamos un ejemplo con una lista que contiene el resultado de algunas mezclas de colores primarios
+en pintura:
+
+```python
+  mezclas = ['Pinturas: rojo, azul y amarillo',
+              'Verde: mezcla de azul y amarillo',
+              'Naranja: mezcla de rojo y amarillo',
+              'Morado: mezcla de rojo y azul']
+  unificador = '. '
+  cadena_mezclas = unificador.join(mezclas)
+print(cadena_mezclas)
+```
+
+Salida: 'Pinturas: rojo, azul y amarillo. Verde: mezcla de azul y amarillo. Naranja: mezcla de rojo y amarillo. Morado: mezcla de rojo y azul'
 
 ## ✅ Conclusión introduccion a las listas
 
