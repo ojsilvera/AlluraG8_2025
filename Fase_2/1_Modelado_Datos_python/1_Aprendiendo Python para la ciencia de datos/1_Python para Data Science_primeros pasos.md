@@ -1492,6 +1492,81 @@ print(cadena_mezclas)
 
 Salida: 'Pinturas: rojo, azul y amarillo. Verde: mezcla de azul y amarillo. Naranja: mezcla de rojo y amarillo. Morado: mezcla de rojo y azul'
 
+### 📘 Manipulación de Listas en Python
+
+---
+
+#### 🧮 Métodos Básicos de Listas
+
+##### `len()`
+
+- Permite conocer la **cantidad de elementos** en una lista.
+- Ejemplo: `len(lista)` devuelve el número total de ítems.
+
+---
+
+##### ✂️ Slice Notation (Notación de corte)
+
+Permite obtener **subconjuntos** de una lista utilizando la sintaxis `lista[inicio:fin]`, donde:
+
+- El **índice de inicio** es inclusivo.
+- El **índice final** es exclusivo.
+
+Ejemplos
+
+- `lista[0:2]` → Toma los elementos en posición 0 y 1.
+- `lista[:3]` → Desde el inicio hasta el índice 2.
+- `lista[3:]` → Desde el índice 3 hasta el final.
+- `lista[:]` → Devuelve la lista completa.
+
+---
+
+#### 🧱 Métodos para Modificar Listas
+
+##### `append()`
+
+- Añade **un único elemento** al **final** de la lista.
+- Si se añade una lista, se inserta **como un solo elemento anidado**.
+- Ejemplo:
+
+  ```python
+  lista.append(10)
+  lista.append([8, 9, 10])  # Lista dentro de lista
+  ```
+
+##### `extend()`
+
+- Añade **varios elementos** al final de la lista.
+- Cada ítem de la colección externa es añadido **como un nuevo elemento**.
+- Ejemplo:
+
+  ```python
+  lista.extend([10, 8, 9])
+  ```
+
+---
+
+##### 🗑️ Eliminar Elementos
+
+`remove()`
+
+- Elimina un **elemento específico** (por valor) de la lista.
+- Ejemplo:
+
+  ```python
+  lista.remove([10, 8, 9])  # Elimina la lista anidada si existe
+  ```
+
+---
+
+#### 💡 Recomendaciones
+
+- Consultar la documentación oficial o usar la **autocompletación en Google Colab** (`lista.`) para explorar todos los
+- métodos disponibles como `insert()`, `pop()`, `sort()`, etc.
+- **Experimentar** directamente en el entorno para entender el comportamiento de cada método.
+
+---
+
 ## ✅ Conclusión introduccion a las listas
 
 Las **listas** permiten trabajar de manera flexible y dinámica con conjuntos de datos. Son esenciales en Python para la
