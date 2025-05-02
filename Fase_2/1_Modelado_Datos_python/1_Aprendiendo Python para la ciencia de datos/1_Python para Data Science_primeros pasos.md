@@ -1630,3 +1630,90 @@ Salida: 2
 Salida: ['Bulldog Francés', 'Labrador Retriever', 'Pastor Alemán', 'Poodle']
 
 ### Diccionarios
+
+---
+
+#### 📘 ¿Qué es un Diccionario en Python?
+
+Un **diccionario** (`dict`) es una estructura de datos que almacena información en **pares clave-valor**. A diferencia de
+las listas (que usan corchetes `[]`), los diccionarios se crean con **llaves `{}`**.
+
+##### ✅ Características
+
+- Cada **clave (key)** es **única** dentro del diccionario.
+- Cada **clave** está asociada a un **valor (value)**.
+- Se usa la sintaxis: `"clave": valor`.
+
+> En otros lenguajes de programación, esta estructura es conocida como **mapa (map)**.
+
+---
+
+#### 🛠️ Creación y Manipulación de Diccionarios
+
+##### 🔹 Crear un diccionario simple
+
+```python
+diccionario = {
+  "clave1": 1,
+  "clave2": 2
+}
+```
+
+##### 🔹 Consultar el tipo de dato
+
+```python
+type(diccionario)  # dict
+```
+
+---
+
+##### 📋 Caso práctico: Información de un estudiante
+
+Se modela la información de matrícula de un estudiante con un diccionario:
+
+```python
+estudiante = {
+  "matrícula": 2168933,
+  "día_registro": 25,
+  "mes_registro": 10,
+  "grupo": "2E"
+}
+```
+
+##### 🔍 Acceso a valores mediante claves
+
+```python
+estudiante["matrícula"]  # 2168933
+estudiante["grupo"]      # "2E"
+```
+
+##### 🔄 Actualizar un valor
+
+```python
+estudiante["grupo"] = "2G"
+```
+
+##### ➕ Añadir un nuevo par clave-valor
+
+```python
+estudiante["modalidad"] = "educación a distancia"
+```
+
+##### 📏 Obtener el tamaño del diccionario
+
+```python
+len(estudiante)  # 5
+```
+
+---
+
+#### 📌 Conclusión intro diccionarios
+
+Los **diccionarios** permiten organizar y acceder a datos de manera eficiente a través de claves únicas. Se pueden:
+
+- Crear y estructurar fácilmente.
+- Modificar valores.
+- Añadir nueva información.
+- Consultar el tamaño de la colección.
+
+---
