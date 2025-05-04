@@ -68,7 +68,7 @@
 
 ---
 
-### ⚙️ Herramienta utilizada
+#### ⚙️ Herramienta utilizada
 
 * **Google Colab:** entorno en línea para codificar en Python sin necesidad de instalaciones locales.
 
@@ -84,7 +84,7 @@
   * GitHub (si está conectado a tu cuenta)
   * Subida directa desde tu máquina local
 
-## 💻 Uso de Google Colab
+#### 💻 Uso de Google Colab
 
 * Utiliza una **máquina virtual con Python 3 ya instalado**
 * Ventajas:
@@ -96,12 +96,12 @@
     * \~13 GB de RAM
     * \~107 GB de almacenamiento
 
-## 🧰 Entorno de desarrollo
+#### 🧰 Entorno de desarrollo
 
 * No se profundiza en la interfaz de Colab, ya cubierta en un entrenamiento anterior.
 * Python permite trabajar con **bibliotecas (librerías)**, que contienen módulos y funciones reutilizables.
 
-## 📦 Instalación de bibliotecas en Colab
+##### 📦 Instalación de bibliotecas en Colab
 
 * Se usa `pip` para instalar paquetes desde el sistema Linux subyacente:
 
@@ -111,7 +111,7 @@
 
 * El símbolo `!` ejecuta comandos del sistema operativo desde la celda del notebook.
 
-## 🔍 Verificación de la instalación y versión
+##### 🔍 Verificación de la instalación y versión
 
 1. Intentar consultar versión directamente da error si no se ha **importado** la biblioteca:
 
@@ -126,7 +126,7 @@
    import matplotlib.pyplot as plt
    ```
 
-## 🗂 Repositorio PyPI (Python Package Index)
+##### 🗂 Repositorio PyPI (Python Package Index)
 
 * Se accede a [pypi.org](https://pypi.org) para ver:
 
@@ -134,14 +134,14 @@
   * Historial de versiones
   * Documentación y enlaces útiles
 
-### Versión de ejemplo
+#### Versión de ejemplo
 
 * **Versión actual**: `3.8.1`
 * **Colab usa** por defecto: `3.7.1`
 
   * Esto se debe a prácticas de **estabilidad y compatibilidad**.
 
-## 🔄 Instalación de versión específica
+##### 🔄 Instalación de versión específica
 
 Para asegurar compatibilidad entre desarrolladores (serialización de entornos):
 
@@ -157,7 +157,7 @@ Para asegurar compatibilidad entre desarrolladores (serialización de entornos):
     * Menú: Entorno de ejecución → Reiniciar entorno
     * O botón directo en Colab
 
-## 📊 Submódulo pyplot
+##### 📊 Submódulo pyplot
 
 * **pyplot** es el submódulo más usado para graficar en Python.
 * Importación recomendada:
@@ -172,11 +172,98 @@ Para asegurar compatibilidad entre desarrolladores (serialización de entornos):
   plt.show()
   ```
 
-## 🧠 Buenas prácticas destacadas
+##### 🧠 Buenas prácticas destacadas
 
 * Importar solo lo necesario (submódulos, no toda la biblioteca)
 * Usar alias para facilitar el código (`as plt`)
 * Trabajar con versiones estables o forzar versiones específicas para evitar errores futuros
+
+---
+
+##### Pip y PyPi
+
+El PIP es un administrador de paquetes para Python. A través de él, tenemos acceso a las bibliotecas ya instaladas en
+nuestra aplicación junto con la versión de cada una de ellas. Desde las líneas de comandos, podemos instalar, actualizar
+y eliminar paquetes de Python. Con pip, podemos instalar fácilmente paquetes de terceros en proyectos de Python.
+
+Para acceder a todos los paquetes instalados en nuestro Jupyter Notebook en Colab, podemos escribir el siguiente código:
+
+Imprimir todos los paquetes instalados en el entorno y sus versiones:
+
+```Python
+   !pip install pandas==1.5.0
+```
+
+pip funciona conectándose al Python Package Index (PyPI), que es el repositorio centralizado más grande para paquetes de
+Python con miles de bibliotecas disponibles para la instalación. Podemos buscar en PyPI para encontrar paquetes que
+satisfagan nuestras necesidades y luego usar pip para instalarlos en nuestros proyectos.
+
+PyPI es mantenido por la Python Software Foundation y contiene una amplia variedad de paquetes de Python. En él, se publican
+paquetes de Python para que otros desarrolladores puedan usarlos. Por lo tanto, pip y PyPI son dos herramientas importantes
+en Python.
+
+#### Bibliotecas o modulos
+
+---
+
+##### 📌 Importación de Módulos
+
+* **Módulos o bibliotecas**: Conjunto de funciones y métodos que facilitan operaciones específicas y reducen la cantidad de código.
+* **Importación**:
+
+  * `import matplotlib.pyplot as plt`
+  * `from matplotlib import pyplot as plt`
+  * Ambas sintaxis importan el submódulo `pyplot` de `matplotlib`, usado para visualizaciones.
+
+##### 📊 Ejemplo con Matplotlib
+
+* **Caso práctico**: Visualizar notas de estudiantes en un gráfico de barras.
+* **Datos**:
+
+  ```python
+  estudiantes = ["Juan", "Maria", "José"]
+  notas = [9, 8.5, 6.5]
+  ```
+
+* **Gráfico de barras**:
+
+  ```python
+  plt.bar(estudiantes, notas)
+  plt.show()
+  ```
+
+##### 🎲 Selección Aleatoria con Random
+
+* Se agrega un nuevo estudiante: `"Erica"`.
+* **Importación del módulo**:
+
+  * Completa: `import random`
+  * Específica: `from random import choice`
+* **Uso de `choice`**:
+
+  ```python
+  estudiante = choice(estudiantes2)
+  print(estudiante)
+  ```
+
+  * Elige aleatoriamente un elemento de una secuencia no vacía.
+  * Se puede consultar la documentación con `help(choice)`.
+
+##### 🧠 Buenas prácticas
+
+* **Consultar la documentación**: clave para entender cómo funcionan los métodos y módulos.
+* **Funciones nativas de Python**: Algunas tareas comunes ya están incluidas sin necesidad de importar bibliotecas
+
+##### ✅ Conceptos Relacionados
+
+| Concepto            | Relación                                                                 |
+| ------------------- | ------------------------------------------------------------------------ |
+| Módulo              | Unidad de funcionalidad importable en Python                             |
+| Biblioteca          | Conjunto organizado de módulos                                           |
+| `matplotlib.pyplot` | Submódulo para visualización de datos con gráficos                       |
+| `random`            | Biblioteca para generar datos aleatorios                                 |
+| `choice`            | Función para seleccionar aleatoriamente un elemento de una secuencia     |
+| `help()`            | Función integrada para acceder a documentación directamente en el código |
 
 ---
 
