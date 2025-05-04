@@ -267,6 +267,66 @@ en Python.
 
 ---
 
+#### Utilizando bibliotecas y modulos
+
+##### 🔹 Importación y uso de módulos
+
+* **Módulos o bibliotecas** en Python son conjuntos de funciones y métodos que permiten reducir el volumen de código al
+  reutilizar funcionalidades ya desarrolladas.
+* Se pueden **importar de varias formas**, por ejemplo:
+
+  ```python
+  import matplotlib.pyplot as plt
+  # o
+  from matplotlib import pyplot as plt
+  ```
+
+###### 📊 Ejemplo con Matplotlib: Visualización de datos
+
+* Se usó `matplotlib.pyplot` para graficar **notas de estudiantes**:
+
+  * Lista de estudiantes: `["Juan", "Maria", "José"]`
+  * Lista de notas: `[9, 8.5, 6.5]`
+* Se generó un **gráfico de barras** con:
+
+  ```python
+  plt.bar(estudiantes, notas)
+  plt.show()
+  ```
+
+##### 🎲 Ejemplo con Random: Selección aleatoria
+
+* Se utilizó el módulo `random` para seleccionar un estudiante al azar de una lista:
+
+  * Se añadió a "Erica" a una nueva lista `estudiantes2`.
+  * Se usó la función `choice` de forma directa:
+
+    ```python
+    from random import choice
+    estudiante = choice(estudiantes2)
+    print(estudiante)
+    ```
+
+##### 📘 Consulta de documentación
+
+* Se destaca la importancia de **consultar la documentación** para entender el funcionamiento de módulos y funciones:
+
+  * Ejemplo:
+
+    ```python
+    help(choice)
+    ```
+
+  * Esto muestra una descripción del método `choice` y su uso.
+
+##### ⚙️ Funciones nativas en Python
+
+* No siempre es necesario importar módulos para tareas comunes, ya que **Python incluye funciones integradas** para muchas
+  operaciones básicas.
+* Este tema se profundizará en la próxima clase.
+
+---
+
 ## Funciones
 
 ## Estructuras de datos
