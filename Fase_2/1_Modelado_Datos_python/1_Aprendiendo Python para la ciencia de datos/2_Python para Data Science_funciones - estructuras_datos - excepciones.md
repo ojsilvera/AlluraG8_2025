@@ -212,8 +212,10 @@ en Python.
 * **Importación**:
 
   * `import matplotlib.pyplot as plt`
+  o
   * `from matplotlib import pyplot as plt`
-  * Ambas sintaxis importan el submódulo `pyplot` de `matplotlib`, usado para visualizaciones.
+
+  Ambas sintaxis importan el submódulo `pyplot` de `matplotlib`, usado para visualizaciones.
 
 ##### 📊 Ejemplo con Matplotlib
 
