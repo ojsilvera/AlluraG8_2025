@@ -698,7 +698,7 @@ notas = [6, 7, 9, 5.5, 8]
 Notas_Actualizadas = list(map(lambda x: x + 0.5, notas))
 ```
 
-#### 🔄 Resultado:
+#### 🔄 Resultado
 
 ```python
 [6.5, 7.5, 9.5, 6.0, 8.5]
