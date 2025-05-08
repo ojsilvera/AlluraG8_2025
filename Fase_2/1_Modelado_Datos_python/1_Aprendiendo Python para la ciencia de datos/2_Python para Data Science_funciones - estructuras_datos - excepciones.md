@@ -717,6 +717,83 @@ Notas_Actualizadas = list(map(lambda x: x + 0.5, notas))
 
 ## Estructuras de datos
 
+### Listas de listas
+
+La lección trata sobre **estructuras de datos compuestas**, específicamente sobre **listas anidadas** en Python, y cómo
+manipularlas para separar información contenida en una estructura compleja.
+
+---
+
+#### 1. **Estructuras de Datos Anidadas**
+
+* Una **lista de listas** es un tipo común de estructura compuesta.
+* Cada elemento de la lista principal puede ser a su vez una lista (ej. calificaciones de estudiantes).
+
+#### 2. **Caso Práctico**
+
+Transformar una lista lineal de estudiantes y sus calificaciones, tipo:
+
+```python
+Notas_Grupo = ['Ana', 8, 9, 10, 'Luis', 9, 7, 6, ...]
+```
+
+En:
+
+* Una **lista con nombres separados**
+* Una **lista de listas** con sus respectivas tres calificaciones
+
+---
+
+#### ⚙️ Procedimiento Paso a Paso
+
+#### 🪪 Separar nombres
+
+1. Crear dos listas vacías: `Nombres` y `Notas`.
+2. Iterar con `range(len(Notas_Grupo))`.
+3. Usar el **módulo (mod)** para identificar los nombres:
+
+   ```python
+   if i % 4 == 0:
+       Nombres.append(Notas_Grupo[i])
+   else:
+       Notas.append(Notas_Grupo[i])
+   ```
+
+#### 📊 Agrupar calificaciones
+
+1. Crear lista vacía `Notas_Separadas`.
+2. Iterar sobre `Notas` de tres en tres:
+
+   ```python
+   for i in range(0, len(Notas), 3):
+       Notas_Separadas.append([Notas[i], Notas[i+1], Notas[i+2]])
+   ```
+
+#### 🧪 Validación y Corrección
+
+* Se prueba el código y se corrige un error al usar `append` con múltiples argumentos: se debe pasar como **una lista**.
+
+---
+
+#### ✅ Resultados Obtenidos
+
+* `Nombres`: lista con solo los nombres de los estudiantes.
+* `Notas_Separadas`: lista de listas con las tres calificaciones por estudiante.
+
+---
+
+#### 🧩 Reflexión
+
+Este ejercicio muestra cómo:
+
+* Resolver problemas comunes en **preparación de datos**.
+* Usar estructuras de control y funciones como `%`, `append()` y `range()` para manipular listas.
+* Afrontar errores durante el desarrollo y solucionarlos de forma iterativa.
+
+---
+
+### Listas de tuplas
+
 ## Estructuras anidadas
 
 ## Trabajando con excepciones
