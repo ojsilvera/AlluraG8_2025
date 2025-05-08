@@ -862,9 +862,9 @@ Python aplicando operaciones, condicionales o bucles directamente en una única 
 
 #### 🧰 Sintaxis Básica
 
-```python
-[expresión for elemento in iterable if condición]
-```
+  ```python
+  [expresión for elemento in iterable if condición]
+  ```
 
 * Permite aplicar **operaciones** y **condiciones** a los elementos de una secuencia para construir nuevas listas.
 * Mejora la **legibilidad del código**.
@@ -928,5 +928,57 @@ Python aplicando operaciones, condicionales o bucles directamente en una única 
 La comprensión de listas permite **manipular estructuras de datos de forma elegante** y **potente**. Aunque en este ejemplo se utilizó con una simple condición `if`, es posible combinarla con `else` para estructuras más complejas (tema de la próxima lección).
 
 ### List comprenhension con if & else
+
+Se plantean dos nuevas tareas sobre el mismo proyecto relacionado con el manejo de datos de estudiantes:
+
+1. **Crear una lista de la situación académica** de cada estudiante según su promedio:
+
+   * Si el promedio es `≥ 7`: el estudiante está **"aprobado"**.
+   * Si el promedio es `< 7`: el estudiante está **"reprobado"**.
+
+2. **Generar listas estructuradas**:
+
+   * Lista de **tuplas** con el nombre y código de cada estudiante.
+   * Lista con las **notas** de cada estudiante.
+   * Lista con los **promedios**.
+   * Lista con la **situación académica** determinada previamente.
+
+---
+
+#### 🧮 Construcción de Listas
+
+#### 1. Listas base
+
+* `nombres`: lista con los nombres de los estudiantes.
+* `notas`: lista con las notas (listas anidadas).
+* `promedios`: lista de promedios por estudiante.
+
+#### 2. Lista de situación
+
+Se crea usando **comprensión de listas** con `if-else`:
+
+```python
+situacion = ["aprobado" if promedio >= 7 else "reprobado" for promedio in promedios]
+```
+
+#### 3. Lista de listas o `registros`
+
+Se combinan `nombres`, `notas`, `promedios` y `situacion` en una sola estructura:
+
+```python
+registros = [[nombre, nota, promedio, estado]
+             for nombre, nota, promedio, estado in zip(nombres, notas, promedios, situacion)]
+```
+
+🔹 También se puede construir **sin comprensión de listas**, utilizando corchetes de forma manual para simplificar la lectura.
+
+---
+
+#### 🔄 Notas sobre aleatoriedad
+
+* Los **códigos de los estudiantes** fueron generados de forma aleatoria mediante una función `random`.
+* Por lo tanto, estos códigos **cambiarán** en cada ejecución del script.
+
+---
 
 ## Trabajando con excepciones
