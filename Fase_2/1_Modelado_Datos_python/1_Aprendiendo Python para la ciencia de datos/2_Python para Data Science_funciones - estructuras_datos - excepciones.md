@@ -396,6 +396,325 @@ No queda explícito de dónde proviene esa variable, método o clase.
 
 ## Funciones
 
+### Funciones incorporadas
+
+---
+
+#### ✅ ¿Es siempre necesario importar módulos?
+
+* **No siempre.** Python cuenta con funciones que **ya están integradas** en el lenguaje, conocidas como **Built-in Functions**.
+* Estas funciones no requieren ninguna importación previa.
+
+---
+
+#### 🔁 ¿Qué es una función?
+
+* Una **función** es una **secuencia de instrucciones reutilizables** que pueden:
+
+  * Recibir entradas (parámetros)
+  * Retornar o no un valor de salida
+  * Ser invocadas varias veces
+
+---
+
+### 🧰 Funciones incorporadas destacadas
+
+| Función   | Uso principal                          |
+| --------- | -------------------------------------- |
+| `abs()`   | Valor absoluto                         |
+| `bool()`  | Convertir a booleano                   |
+| `chr()`   | Convertir a carácter                   |
+| `dict()`  | Crear diccionarios                     |
+| `print()` | Imprimir en pantalla                   |
+| `len()`   | Obtener longitud de un objeto          |
+| `sum()`   | Sumar elementos de un iterable         |
+| `round()` | Redondear un número a cierta precisión |
+
+Estas funciones están documentadas en el sitio oficial de Python y **pueden utilizarse sin importar módulos**.
+
+---
+
+#### 📘 Ejemplo aplicado: Cálculo de promedio de notas
+
+1. **Estructura de datos usada:**
+   Se utiliza un **diccionario** donde las claves representan trimestres y los valores las notas.
+
+2. **Cálculo con acumulador manual:**
+
+   ```python
+   suma = 0
+   for s in notas.values():
+       suma += s
+   promedio = suma / len(notas)
+   ```
+
+3. **Cálculo con funciones incorporadas:**
+
+   ```python
+   promedio = sum(notas.values()) / len(notas)
+   promedio = round(promedio, 1)
+   ```
+
+   Resultado: `8.2` (redondeado desde `8.16`)
+
+---
+
+#### 💡 Buenas prácticas
+
+* **Consultar la documentación** oficial para descubrir y entender las funciones nativas.
+* **Usar funciones incorporadas** para mantener el código más simple, claro y eficiente.
+* **Evitar duplicación de código** usando funciones en lugar de repetir instrucciones.
+
+---
+
+### Creando funciones
+
+Este contenido explica la **importancia de definir funciones personalizadas en Python**, especialmente cuando las funciones
+integradas no son suficientes. Se abordan conceptos fundamentales como la **sintaxis, tipos de funciones, paso de parámetros**
+y el **alcance (scope)** de las variables dentro de funciones.
+
+---
+
+#### 🔹 Funciones sin parámetros
+
+* No reciben *input*.
+* Se definen con `def nombre():`.
+* Ejemplo: calcular e imprimir el promedio de tres valores fijos.
+
+```python
+def promedio():
+    calculo = (10 + 9 + 7) / 3
+    print(calculo)  # Salida: 8.66
+```
+
+---
+
+#### 🔹 Funciones con parámetros
+
+* Reciben valores definidos al momento de la ejecución.
+* Se definen con `def nombre(param1, param2, ...)`.
+* Permiten reutilización con diferentes entradas.
+
+```python
+def promedio(nota1, nota2, nota3):
+    calculo = (nota1 + nota2 + nota3) / 3
+    print(calculo)
+```
+
+* **Llamado por posición**:
+
+  ```python
+  promedio(10, 9, 7)
+  ```
+
+* **Llamado por nombre** (útil cuando el orden importa):
+
+  ```python
+  promedio(nota2=9, nota1=10, nota3=7)
+  ```
+
+---
+
+#### 🔄 Funciones con listas como parámetro
+
+Permiten calcular promedios sin restringirse a una cantidad fija de notas:
+
+```python
+def promedio(lista):
+    calculo = sum(lista) / len(lista)
+    print(calculo)
+```
+
+* Flexible ante listas de cualquier longitud:
+
+  ```python
+  notas = [9.5, 8.7, 7.0, 8.3]
+  promedio(notas)  # Salida: 8.375
+  ```
+
+---
+
+#### 🧠 Importancia del **scope** o **alcance** de variables
+
+* Las variables definidas **dentro** de una función **no existen fuera** de ella.
+* Si se imprime un valor dentro de una función (`print()`), este **no puede ser reutilizado directamente** en el código exterior.
+
+Ejemplo del problema:
+
+```python
+def promedio(lista):
+    calculo = sum(lista) / len(lista)
+    print(calculo)
+
+media = promedio(notas)
+print(media)  # Imprime None
+```
+
+* La variable `calculo` está **dentro del ámbito de la función**, por lo que no es accesible luego de su ejecución.
+* Para **almacenar resultados**, se debe usar `return` en lugar de `print()`.
+
+---
+
+#### 🧪 Conclusión
+
+* Entender la **sintaxis y uso de parámetros** permite crear funciones más reutilizables y eficientes.
+* Es crucial comprender el **alcance de las variables** en funciones para evitar errores como `NoneType`.
+* La correcta implementación de funciones mejora la escalabilidad y claridad del código.
+
+---
+
+### Return
+
+#### 1. **Alcance de una Variable (Scope)**
+
+* Las variables **definidas dentro de una función** tienen un **alcance local**.
+* Estas variables **solo existen durante la ejecución** de la función.
+* Al finalizar la ejecución, la variable **desaparece**.
+
+#### 2. **Uso del `return`**
+
+* Para conservar una variable creada dentro de una función, se utiliza `**return**`.
+* `return` permite **extraer valores fuera del alcance local** y **asignarlos a otras variables**.
+
+#### 3. **Cálculo del Promedio**
+
+* Se define una función `promedio(lista)` que:
+
+  * Calcula el promedio: `suma(lista) / len(lista)`
+  * Retorna ese valor usando `return resultado`
+
+```python
+def promedio(lista):
+    resultado = sum(lista) / len(lista)
+    return resultado
+```
+
+#### 4. **Retornar Múltiples Valores**
+
+* Para retornar **el promedio** y **la situación del estudiante** (aprobado/reprobado):
+
+  * Se define una variable `situacion` según el promedio.
+  * Se retorna una **tupla** con ambos valores.
+
+```python
+def boletin(lista):
+    resultado = sum(lista) / len(lista)
+    if resultado >= 7:
+        situacion = "aprobado"
+    else:
+        situacion = "reprobado"
+    return resultado, situacion
+```
+
+#### 5. **Impresión de Resultados con `format()`**
+
+* Se usa `print()` y `str.format()` para mostrar un mensaje personalizado:
+
+```python
+resultado, situacion = boletin(notas)
+print("El o la estudiante obtuvo un puntaje de {:.2f} y su situación es {}.".format(resultado, situacion))
+```
+
+#### 6. **Retornar el Mensaje Directamente**
+
+* Alternativamente, la función puede **retornar el mensaje final** directamente.
+
+```python
+def boletin(lista):
+    resultado = sum(lista) / len(lista)
+    situacion = "aprobado" if resultado >= 7 else "reprobado"
+    return "El o la estudiante obtuvo un puntaje de {:.2f} y su situación es {}.".format(resultado, situacion)
+```
+
+#### ✅ Aplicación Práctica
+
+* Se crean listas con diferentes notas para probar la función `boletin()`.
+* Se comprueba si el estudiante aprueba o reprueba según el promedio calculado.
+
+#### 💡 Reflexión Final
+
+* Aunque definir funciones ofrece control y claridad, en algunos casos pueden existir **métodos más simples** para resolver problemas con funciones.
+* Esto será explorado en el siguiente video.
+
+---
+
+### Lambda
+
+#### 🔍 ¿Qué son las funciones Lambda?
+
+Las **funciones Lambda** en Python son funciones **anónimas** que:
+
+* No necesitan definirse usando `def`.
+* Se escriben en **una sola línea**.
+* Tienen la forma:
+
+  ```python
+  lambda parámetros: expresión
+  ```
+
+#### 🧪 Ejemplo 1: Sumar un valor a una nota
+
+* Función tradicional:
+
+  ```python
+  def cualitativa(nota):
+      return nota + 0.5
+  ```
+
+* Función Lambda equivalente:
+
+  ```python
+  cualitativa = lambda x: x + 0.5
+  ```
+
+#### 🧮 Ejemplo 2: Promedio Ponderado
+
+Se construyó una **calculadora de promedio ponderado** con pesos asignados a 3 notas:
+
+* Pesos:
+
+  * n1 × 3
+  * n2 × 2
+  * n3 × 5
+* Función Lambda:
+
+  ```python
+  ponderado = lambda x, y, z: (x*3 + y*2 + z*5) / 10
+  ```
+
+#### 📊 Ejemplo 3: Sumar un puntaje extra a una lista de notas
+
+Cuando se trabaja con listas de datos, se debe **mapear** la función Lambda a cada elemento:
+
+#### ✅ Paso 1: Lista de calificaciones
+
+```python
+notas = [6, 7, 9, 5.5, 8]
+```
+
+#### ✅ Paso 2: Uso de `map()` con Lambda
+
+```python
+Notas_Actualizadas = list(map(lambda x: x + 0.5, notas))
+```
+
+#### 🔄 Resultado:
+
+```python
+[6.5, 7.5, 9.5, 6.0, 8.5]
+```
+
+---
+
+#### ✅ Conclusiones
+
+* Las funciones Lambda son ideales para tareas simples, rápidas y sin la necesidad de definir funciones completas.
+* Son **muy útiles** en Ciencia de Datos cuando se necesitan aplicar transformaciones ligeras a los datos.
+* Para trabajar con **listas o iterables**, es necesario usar `map()` junto a Lambda.
+* Se pueden emplear en cálculos como promedios, transformaciones cualitativas, ajustes a listas, etc.
+
+---
+
 ## Estructuras de datos
 
 ## Estructuras anidadas
