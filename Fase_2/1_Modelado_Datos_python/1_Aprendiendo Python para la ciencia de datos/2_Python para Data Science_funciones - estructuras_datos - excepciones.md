@@ -853,4 +853,80 @@ tradicionales —lo cual será abordado en la próxima lección.
 
 ## Estructuras anidadas
 
+### List comprenhension
+
+La **comprensión de listas** (*list comprehension*) es una forma **concisa, legible y eficiente** de construir listas en
+Python aplicando operaciones, condicionales o bucles directamente en una única línea de código.
+
+---
+
+#### 🧰 Sintaxis Básica
+
+```python
+[expresión for elemento in iterable if condición]
+```
+
+* Permite aplicar **operaciones** y **condiciones** a los elementos de una secuencia para construir nuevas listas.
+* Mejora la **legibilidad del código**.
+
+---
+
+#### 🧪 Caso Práctico
+
+#### 🎯 Objetivo
+
+* Calcular el **promedio de calificaciones** de estudiantes a partir de una lista de listas.
+* Seleccionar estudiantes con promedio ≥ 8 para optar por una **beca académica**.
+
+#### 🧮 Paso a Paso
+
+1.**Calcular el promedio redondeado a un decimal**:
+
+  ```python
+  promedios = [round(promedio(calificacion), 1) for calificacion in calificaciones]
+  ```
+
+2.**Extraer los nombres de una lista de tuplas (nombre, código)**:
+
+  ```python
+  nombres = [nombre[0] for nombre in datos_estudiantes]
+  ```
+
+3.**Unir nombres y promedios utilizando `zip()`**:
+
+  ```python
+  estudiantes = list(zip(nombres, promedios))
+  ```
+
+4.**Filtrar estudiantes con promedio ≥ 8 usando comprensión de listas con condición**:
+
+  ```python
+  candidatos = [est[0] for est in estudiantes if est[1] >= 8]
+  ```
+
+---
+
+#### 🔍 Funciones Clave Utilizadas
+
+| Función                   | Descripción                                                             |
+| ------------------------- | ----------------------------------------------------------------------- |
+| `round(valor, decimales)` | Redondea un número a la cantidad de decimales especificados.            |
+| `zip(lista1, lista2)`     | Une elementos de múltiples iterables en tuplas.                         |
+| `list()`                  | Convierte un objeto iterable (como el resultado de `zip`) en una lista. |
+
+---
+
+#### ✅ Resultados
+
+* Se obtuvo una lista de promedios por estudiante.
+* Se filtraron correctamente los estudiantes **Juan** y **Ana**, quienes cumplen con el criterio de promedio ≥ 8.
+
+---
+
+#### 📌 Conclusión
+
+La comprensión de listas permite **manipular estructuras de datos de forma elegante** y **potente**. Aunque en este ejemplo se utilizó con una simple condición `if`, es posible combinarla con `else` para estructuras más complejas (tema de la próxima lección).
+
+### List comprenhension con if & else
+
 ## Trabajando con excepciones
