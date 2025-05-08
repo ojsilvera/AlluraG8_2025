@@ -981,4 +981,85 @@ registros = [[nombre, nota, promedio, estado]
 
 ---
 
+
+### diccionary comprenhension
+
+Claro, aquí tienes el resumen solicitado en formato **Markdown**, destacando y relacionando los conceptos más importantes del texto:
+
+---
+
+## 🧾 Resumen: Comprensión de Diccionarios y Generación de Registros en Python
+
+### 📌 ¿Qué es la Comprensión de Diccionarios?
+
+* Es una **extensión sintáctica de la comprensión de listas**.
+* Permite crear diccionarios de forma compacta y eficiente.
+* Sintaxis básica:
+
+  ```python
+  {clave: valor for elemento in iterable}
+  ```
+
+---
+
+### 🧪 Caso Práctico: Generación de un Diccionario para Análisis de Datos
+
+Construir un **diccionario llamado `registro`** a partir de una `lista_completa` (lista de listas), con la finalidad de
+entregarlo a la persona responsable del análisis de datos.
+
+#### 📋 Estructura de la Información
+
+* La `lista_completa` contiene, para cada estudiante:
+
+  * Nombre (incluido dentro de una tupla)
+  * Notas
+  * Promedio final
+  * Situación (aprobado/reprobado)
+
+#### 🏗️ Paso a Paso
+
+1. **Crear la lista de columnas** a incluir en el diccionario:
+
+   ```python
+   columnas = ["notas", "promedio_final", "situacion"]
+   ```
+
+2. **Construcción del diccionario `registro`**:
+
+   * Se usa comprensión de diccionarios para asociar cada columna con su lista de valores desde `lista_completa`:
+
+     ```python
+     registro = {
+         columnas[i]: [fila[i+1] for fila in lista_completa]
+         for i in range(len(columnas))
+     }
+     ```
+
+3. **Agregar la clave `estudiante`** con los nombres de los alumnos:
+
+   * Se extraen los nombres desde el primer elemento (índice 0) de cada fila de `lista_completa`:
+
+     ```python
+     registro["estudiante"] = [fila[0][0] for fila in lista_completa]
+     ```
+
+---
+
+### ✅ Resultado
+
+El diccionario `registro` contiene los datos organizados por columnas:
+
+```python
+{
+  "notas": [...],
+  "promedio_final": [...],
+  "situacion": [...],
+  "estudiante": [...]
+}
+```
+
+✔️ Listo para usarse en la creación de **tablas de análisis de datos**.
+
+---
+
 ## Trabajando con excepciones
