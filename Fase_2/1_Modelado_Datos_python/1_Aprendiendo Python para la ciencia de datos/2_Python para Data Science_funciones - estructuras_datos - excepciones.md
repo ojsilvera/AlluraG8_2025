@@ -794,6 +794,63 @@ Este ejercicio muestra cómo:
 
 ### Listas de tuplas
 
+* **Lista**: Estructura de datos **mutable**. Permite almacenar diferentes tipos de datos (números, cadenas, otras listas, etc.).
+* **Tupla**: Estructura de datos **inmutable**. Una vez creada, no puede modificarse. Es útil para datos que no deben cambiar.
+
+---
+
+#### 🛠️ Caso Práctico
+
+**Objetivo**: Generar una lista de tuplas con el **nombre de cada estudiante** y un **código ID único** para una plataforma de análisis de datos.
+
+#### 📥 Entrada
+
+* Lista de nombres de estudiantes (`nombres`).
+
+#### 📤 Salida
+
+* Lista de tuplas `[(nombre, código_id), ...]`, donde `código_id = primera_letra_nombre + número_aleatorio`.
+
+---
+
+#### ⚙️ Proceso Paso a Paso
+
+1. **Importar la función `randint`** desde la biblioteca `random` para generar números aleatorios en el rango `0-999`.
+
+2. **Crear una función auxiliar `genera_numero()`**:
+
+   ```python
+   def genera_numero():
+       return randint(0, 999)
+   ```
+
+   Esta función retorna un número aleatorio cada vez que se llama.
+
+3. **Crear una lista vacía `codigos_estudiantes`** para almacenar las tuplas.
+
+4. **Iterar sobre la lista de nombres**:
+
+   * Extraer el nombre.
+   * Obtener la **primera letra** del nombre.
+   * Concatenar esta letra con un número aleatorio convertido a cadena.
+   * Crear la tupla `(nombre, codigo_id)` y añadirla a la lista.
+
+   ```python
+   for i in range(len(nombres)):
+       codigo = nombres[i][0] + str(genera_numero())
+       codigos_estudiantes.append((nombres[i], codigo))
+   ```
+
+---
+
+#### 💡 Reflexión Final lista tuplas
+
+Se menciona que este tipo de operación (crear listas iterando con `for` y `append`) es muy común, pero se anticipa que
+existen **formas más concisas y eficientes** de lograr lo mismo sin necesidad de inicializar listas vacías y usar `for`
+tradicionales —lo cual será abordado en la próxima lección.
+
+---
+
 ## Estructuras anidadas
 
 ## Trabajando con excepciones
