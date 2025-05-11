@@ -981,7 +981,6 @@ registros = [[nombre, nota, promedio, estado]
 
 ---
 
-
 ### diccionary comprenhension
 
 Claro, aquí tienes el resumen solicitado en formato **Markdown**, destacando y relacionando los conceptos más importantes del texto:
@@ -1063,3 +1062,17 @@ El diccionario `registro` contiene los datos organizados por columnas:
 ---
 
 ## Trabajando con excepciones
+
+### Tratando excepciones
+
+#### Para saber más: tipos de excepciones
+
+#### Ventajas de las excepciones
+
+### Cláusula Raise
+
+#### ¿Dónde está el error?
+
+### Generando nuestra propia excepción
+
+### Proyecto final
