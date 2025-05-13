@@ -1065,7 +1065,216 @@ El diccionario `registro` contiene los datos organizados por columnas:
 
 ### Tratando excepciones
 
+#### 📌 ¿Qué son las excepciones?
+
+* **Excepciones**: Errores que ocurren durante la **ejecución del programa**.
+* Interrumpen el flujo del código si **no son manejadas adecuadamente**.
+* Su manejo adecuado **evita fallos inesperados** o bugs.
+
+#### ⚠️ Tipos de errores en Python
+
+1. **Errores de sintaxis**: Comunes en la fase de escritura, impiden ejecutar el código.
+2. **Excepciones**: Se presentan durante la ejecución, incluso si la sintaxis es correcta.
+
+> 💡 Python proporciona documentación amplia sobre los diferentes tipos de excepciones y su jerarquía.
+
+#### 📚 Jerarquía de excepciones
+
+* Existe una estructura jerárquica que **organiza los tipos de excepciones**.
+* Consultarla facilita la **comprensión y manejo de errores específicos** como `KeyError`, `ValueError`, etc.
+
+#### 🛠️ Cláusulas para el manejo de excepciones
+
+##### `try` y `except`
+
+* **`try`**: Se coloca el bloque de código que **puede causar una excepción**.
+* **`except`**: Define qué hacer si ocurre una **excepción específica**.
+
+```python
+try:
+    resultado = diccionario[clave]
+except KeyError:
+    print("Clave no encontrada")
+```
+
+##### Alias de excepción
+
+* Se puede capturar el error con un alias para **examinar el tipo o mensaje del error**.
+
+```python
+except KeyError as e:
+    print(type(e))
+    print(e)
+```
+
+#### 🧪 Ejemplo práctico
+
+* Se consulta un **diccionario de notas** por nombre de estudiante.
+* Si el nombre no está en el diccionario, ocurre un `KeyError`.
+* Se maneja la excepción mostrando: `"estudiante no matriculado en el grupo"`.
+
+#### Código mejorado con `else`
+
+* Permite ejecutar código **solo si no ocurre ninguna excepción**.
+
+```python
+try:
+    resultado = notas[nombre]
+except KeyError:
+    print("Estudiante no matriculado en el grupo")
+else:
+    print(f"Las notas del estudiante son: {resultado}")
+```
+
+#### Uso de `finally`
+
+* Se ejecuta **siempre**, ocurra o no una excepción.
+* Ideal para **mensajes finales o tareas de limpieza**.
+
+```python
+finally:
+    print("La consulta ha concluido")
+```
+
+#### ✅ Conclusiones excepciones
+
+* Manejar excepciones permite **controlar el flujo del programa** y mejorar la experiencia del usuario.
+* Las cláusulas `try`, `except`, `else` y `finally` son herramientas clave.
+* Python facilita el manejo de errores gracias a su **claridad y documentación**.
+* En próximas lecciones se explorarán otras formas de **elevar excepciones directamente**.
+
+---
+
 #### Para saber más: tipos de excepciones
+
+En Python, básicamente existen dos formas distintas de errores: los de sintaxis y las excepciones. Las excepciones son
+una manera de manejar errores y situaciones inesperadas en el código, asegurando un flujo de ejecución más controlado.
+
+Como científico de datos, deberás prestar atención a situaciones como estas para evitar errores o problemas en tus códigos
+y análisis que puedan afectar tanto la experiencia del usuario como la eficiencia de tu análisis.
+
+Tipos de Excepciones
+
+SyntaxError
+
+Ocurre cuando el analizador detecta un error en la descripción del código. Normalmente, una flecha señala la parte del
+código que generó el error, como una especie de pista sobre dónde puede haber ocurrido el error.
+
+print(10 / 2
+
+Salida:
+´´´python
+    File "<ipython-input-16-2db3afa07d68>", line 1
+      print(10/2
+                ^
+  SyntaxError: unexpected EOF while parsing
+´´´
+
+Observa que olvidamos cerrar el paréntesis y, por lo tanto, se presentó un error de sintaxis, es decir, de escritura de código.
+
+NameError
+
+Excepción lanzada cuando intentamos utilizar un nombre de algún elemento que no está presente en nuestro código.
+
+raiz = sqrt(100)
+
+Salida:
+
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-17-2e14e900fb9f> in <module>
+----> 1 raiz = sqrt(100)
+
+NameError: name 'sqrt' is not defined
+
+En este caso, el intérprete no puede aplicar el método de la raíz cuadrada porque no se ha importado junto con la biblioteca
+math.
+
+IndexError
+
+Excepción lanzada cuando intentamos indexar alguna estructura de datos como lista, tupla o incluso una cadena más allá de
+sus límites.
+
+lista = [1, 2, 3]
+lista[4]
+
+Salida:
+
+---------------------------------------------------------------------------
+IndexError                                Traceback (most recent call last)
+
+<ipython-input-18-f5fe6d922eea> in <module>
+      1 lista = [1, 2, 3]
+----> 2 lista[4]
+
+IndexError: list index out of range
+
+Para esta situación, solo tenemos 3 elementos en la lista y tratamos de leer el elemento en la posición 4, que no existe.
+Recibimos el mensaje de que el índice está fuera de rango.
+
+TypeError
+
+Excepción lanzada cuando un operador o función se aplican a un objeto cuyo tipo es inapropiado.
+
+"1" + 1
+
+Salida:
+
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-20-ec358fc6499a> in <module>
+----> 1 "1" + 1
+
+TypeError: can only concatenate str (not "int") to str
+
+Observa que intentamos "sumar" una cadena con un número entero y esto generó una excepción en nuestro código. Esto ocurrió
+por 2 razones: el operador de suma se consideró como concatenación porque comenzamos usando una cadena (en este caso, el
+signo de suma se utiliza para concatenar cadenas), y un valor de tipo entero no se puede concatenar en este tipo de
+operación.
+
+KeyError
+
+Excepción lanzada cuando intentamos acceder a una clave que no está en el diccionario presente en nuestro código.
+
+estados = {'EM': 1, 'JC': 2, 'OA': 3}
+estados["MI"]
+
+Salida:
+
+---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+<ipython-input-22-45729db26889> in <module>
+      1 estados =  {'EM': 1, 'JC': 2, 'OA': 3}
+----> 2 estados["MI"]
+
+KeyError: 'MI'
+Copia el código
+Intentamos acceder a los datos del Estado MI (Michoacán), que no está presente en el diccionario, lanzando así la excepción.
+
+Warning
+
+Excepción lanzada en situaciones en las que necesitamos alertar al usuario sobre algunas condiciones del código. Estas
+condiciones no necesariamente interrumpen la ejecución del programa, pero pueden lanzar advertencias sobre el uso de módulos
+obsoletos, o que pueden ser obsoletos en futuras actualizaciones, o también para cambios que pueden repercutir en alguna
+parte del código.
+
+Es importante recordar que, en el caso de los Warnings, pueden ser ignorados o tratados como excepciones.
+
+´´´python
+  import numpy as np
+  a = np.arange(5)
+  a / a  # presenta una advertencia
+´´´
+
+Salida:
+
+´´´python
+  <ipython-input-23-93a37b275923>:4: RuntimeWarning: invalid value encountered in true_divide
+    a / a  # presenta una advertencia
+  array([nan,  1.,  1.,  1.,  1.])
+´´´
+
+Intentamos dividir cero por cero. En un array Numpy, que es esta estructura en la salida de la consola, este resultado genera un valor nan (Not a Number). Es decir, puedes seguir con la ejecución del programa, pero es probable que necesites procesar los datos para poder utilizar este array en alguna operación más adelante.
 
 #### Ventajas de las excepciones
 
