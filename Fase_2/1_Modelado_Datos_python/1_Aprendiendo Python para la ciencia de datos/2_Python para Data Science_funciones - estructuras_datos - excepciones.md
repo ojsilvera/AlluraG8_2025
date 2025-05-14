@@ -1155,7 +1155,6 @@ y análisis que puedan afectar tanto la experiencia del usuario como la eficienc
 
 ##### Tipos de Excepciones
 
-
 | Tipo de Excepción | Descripción                                                                                     | Ejemplo de Código                  | Mensaje de Error                                       | Causa                                                                 |
 |-------------------|-------------------------------------------------------------------------------------------------|------------------------------------|---------------------------------------------------------|-----------------------------------------------------------------------|
 | **SyntaxError**    | Error en la escritura del código, detectado por el analizador.                                  | `print(10 / 2`                     | `SyntaxError: unexpected EOF while parsing`             | Paréntesis sin cerrar.                                               |
