@@ -1153,128 +1153,17 @@ una manera de manejar errores y situaciones inesperadas en el código, asegurand
 Como científico de datos, deberás prestar atención a situaciones como estas para evitar errores o problemas en tus códigos
 y análisis que puedan afectar tanto la experiencia del usuario como la eficiencia de tu análisis.
 
-Tipos de Excepciones
+##### Tipos de Excepciones
 
-SyntaxError
 
-Ocurre cuando el analizador detecta un error en la descripción del código. Normalmente, una flecha señala la parte del
-código que generó el error, como una especie de pista sobre dónde puede haber ocurrido el error.
-
-print(10 / 2
-
-Salida:
-´´´python
-    File "<ipython-input-16-2db3afa07d68>", line 1
-      print(10/2
-                ^
-  SyntaxError: unexpected EOF while parsing
-´´´
-
-Observa que olvidamos cerrar el paréntesis y, por lo tanto, se presentó un error de sintaxis, es decir, de escritura de código.
-
-NameError
-
-Excepción lanzada cuando intentamos utilizar un nombre de algún elemento que no está presente en nuestro código.
-
-raiz = sqrt(100)
-
-Salida:
-
----------------------------------------------------------------------------
-NameError                                 Traceback (most recent call last)
-<ipython-input-17-2e14e900fb9f> in <module>
-----> 1 raiz = sqrt(100)
-
-NameError: name 'sqrt' is not defined
-
-En este caso, el intérprete no puede aplicar el método de la raíz cuadrada porque no se ha importado junto con la biblioteca
-math.
-
-IndexError
-
-Excepción lanzada cuando intentamos indexar alguna estructura de datos como lista, tupla o incluso una cadena más allá de
-sus límites.
-
-lista = [1, 2, 3]
-lista[4]
-
-Salida:
-
----------------------------------------------------------------------------
-IndexError                                Traceback (most recent call last)
-
-<ipython-input-18-f5fe6d922eea> in <module>
-      1 lista = [1, 2, 3]
-----> 2 lista[4]
-
-IndexError: list index out of range
-
-Para esta situación, solo tenemos 3 elementos en la lista y tratamos de leer el elemento en la posición 4, que no existe.
-Recibimos el mensaje de que el índice está fuera de rango.
-
-TypeError
-
-Excepción lanzada cuando un operador o función se aplican a un objeto cuyo tipo es inapropiado.
-
-"1" + 1
-
-Salida:
-
----------------------------------------------------------------------------
-TypeError                                 Traceback (most recent call last)
-<ipython-input-20-ec358fc6499a> in <module>
-----> 1 "1" + 1
-
-TypeError: can only concatenate str (not "int") to str
-
-Observa que intentamos "sumar" una cadena con un número entero y esto generó una excepción en nuestro código. Esto ocurrió
-por 2 razones: el operador de suma se consideró como concatenación porque comenzamos usando una cadena (en este caso, el
-signo de suma se utiliza para concatenar cadenas), y un valor de tipo entero no se puede concatenar en este tipo de
-operación.
-
-KeyError
-
-Excepción lanzada cuando intentamos acceder a una clave que no está en el diccionario presente en nuestro código.
-
-estados = {'EM': 1, 'JC': 2, 'OA': 3}
-estados["MI"]
-
-Salida:
-
----------------------------------------------------------------------------
-KeyError                                  Traceback (most recent call last)
-<ipython-input-22-45729db26889> in <module>
-      1 estados =  {'EM': 1, 'JC': 2, 'OA': 3}
-----> 2 estados["MI"]
-
-KeyError: 'MI'
-Copia el código
-Intentamos acceder a los datos del Estado MI (Michoacán), que no está presente en el diccionario, lanzando así la excepción.
-
-Warning
-
-Excepción lanzada en situaciones en las que necesitamos alertar al usuario sobre algunas condiciones del código. Estas
-condiciones no necesariamente interrumpen la ejecución del programa, pero pueden lanzar advertencias sobre el uso de módulos
-obsoletos, o que pueden ser obsoletos en futuras actualizaciones, o también para cambios que pueden repercutir en alguna
-parte del código.
-
-Es importante recordar que, en el caso de los Warnings, pueden ser ignorados o tratados como excepciones.
-
-´´´python
-  import numpy as np
-  a = np.arange(5)
-  a / a  # presenta una advertencia
-´´´
-
-Salida:
-
-´´´python
-  <ipython-input-23-93a37b275923>:4: RuntimeWarning: invalid value encountered in true_divide
-    a / a  # presenta una advertencia
-  array([nan,  1.,  1.,  1.,  1.])
-´´´
-
-Intentamos dividir cero por cero. En un array Numpy, que es esta estructura en la salida de la consola, este resultado genera un valor nan (Not a Number). Es decir, puedes seguir con la ejecución del programa, pero es probable que necesites procesar los datos para poder utilizar este array en alguna operación más adelante.
+| Tipo de Excepción | Descripción                                                                                     | Ejemplo de Código                  | Mensaje de Error                                       | Causa                                                                 |
+|-------------------|-------------------------------------------------------------------------------------------------|------------------------------------|---------------------------------------------------------|-----------------------------------------------------------------------|
+| **SyntaxError**    | Error en la escritura del código, detectado por el analizador.                                  | `print(10 / 2`                     | `SyntaxError: unexpected EOF while parsing`             | Paréntesis sin cerrar.                                               |
+| **NameError**      | Se usa un nombre que no ha sido definido o importado.                                           | `raiz = sqrt(100)`                | `NameError: name 'sqrt' is not defined`                 | No se importó `sqrt` desde la biblioteca correspondiente.            |
+| **IndexError**     | Se intenta acceder a una posición inexistente en una estructura como lista, tupla o cadena.     | `lista = [1, 2, 3]; lista[4]`      | `IndexError: list index out of range`                   | Acceso fuera del rango de la lista.                                 |
+| **TypeError**      | Se aplica un operador o función a un tipo de dato incorrecto.                                   | `"1" + 1`                          | `TypeError: can only concatenate str (not "int") to str`| No se puede concatenar una cadena con un entero.                    |
+| **KeyError**       | Se intenta acceder a una clave inexistente en un diccionario.                                   | `estados["MI"]`                   | `KeyError: 'MI'`                                        | La clave "MI" no está en el diccionario.                            |
+| **Warning**        | Advertencia por una operación que no detiene el código, pero puede afectar resultados futuros.  | `a = np.arange(5); a / a`         | `RuntimeWarning: invalid value encountered in true_divide`| División de 0 por 0 genera valores `nan`.                            |
 
 #### Ventajas de las excepciones
 
