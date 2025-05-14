@@ -1282,9 +1282,3 @@ Python evalúa las excepciones siguiendo una jerarquía. Por ejemplo:
 2. La jerarquía determina qué excepción será capturada primero, no el orden en que se escriben los `except`.
 
 🔎 Por eso, aunque un `ValueError` también sea posible, si hay un `TypeError`, este será capturado primero.
-
-#### ¿Dónde está el error?
-
-### Generando nuestra propia excepción
-
-### Proyecto final
