@@ -1166,6 +1166,129 @@ y análisis que puedan afectar tanto la experiencia del usuario como la eficienc
 
 #### Ventajas de las excepciones
 
+Aquí tienes el texto ajustado, separado en **concepto** y **ejercicio paso a paso**, con cada paso y su respectiva **salida esperada** claramente diferenciados:
+
+---
+
+##### 🧠 Concepto: Uso de la cláusula `raise` en el manejo de excepciones
+
+En Python, además de capturar errores con `try` y `except`, podemos generar nuestras **propias excepciones** utilizando la cláusula `raise`. Esto permite controlar mejor los comportamientos inesperados en el código, emitiendo errores personalizados según la lógica del programa.
+
+**Casos comunes para usar `raise`:**
+
+* Validaciones personalizadas (por ejemplo, cantidad de elementos en una lista).
+* Alertas cuando un dato no cumple con el tipo requerido (números, cadenas, etc.).
+* Combinación con `try`-`except` para ofrecer mensajes claros al usuario final.
+
+---
+
+#### 💻 Ejercicio paso a paso: Validación de una lista de calificaciones con excepciones personalizadas
+
+Crear una función que calcule el promedio de una persona estudiante a partir de una lista de calificaciones. La función debe:
+
+1. Lanzar un `ValueError` si hay más de 4 calificaciones.
+2. Detectar y manejar un `TypeError` si hay valores no numéricos.
+3. Mostrar un mensaje final que indique que la consulta ha concluido, sin importar si hubo error o no.
+
+---
+
+#### 🪜 Paso 1: Definir la función con validaciones
+
+```python
+def calcular_promedio(calificaciones):
+    if len(calificaciones) > 4:
+        raise ValueError("La lista no puede tener más de cuatro calificaciones.")
+
+    promedio = sum(calificaciones) / len(calificaciones)
+    return promedio
+```
+
+---
+
+#### 🪜 Paso 2: Crear una lista válida y calcular el promedio
+
+```python
+notas = [6, 7, 8, 9]  # 4 calificaciones válidas
+
+try:
+    resultado = calcular_promedio(notas)
+    print("Promedio:", resultado)
+except TypeError:
+    print("No fue posible calcular el promedio de la persona estudiante, solo se admiten valores numéricos.")
+except ValueError as e:
+    print(e)
+finally:
+    print("Consulta finalizada.")
+```
+
+🔸 **Salida esperada:**
+
+```python
+Promedio: 7.5
+Consulta finalizada.
+```
+
+---
+
+#### 🪜 Paso 3: Agregar más de cuatro calificaciones
+
+```python
+notas = [6, 7, 8, 9, 10]  # 5 calificaciones
+
+try:
+    resultado = calcular_promedio(notas)
+    print("Promedio:", resultado)
+except TypeError:
+    print("No fue posible calcular el promedio de la persona estudiante, solo se admiten valores numéricos.")
+except ValueError as e:
+    print(e)
+finally:
+    print("Consulta finalizada.")
+```
+
+🔸 **Salida esperada:**
+
+```python
+La lista no puede tener más de cuatro calificaciones.
+Consulta finalizada.
+```
+
+---
+
+#### 🪜 Paso 4: Incluir un valor no numérico
+
+```python
+notas = [6, 7, 8, "10"]  # El último valor es una cadena de texto
+
+try:
+    resultado = calcular_promedio(notas)
+    print("Promedio:", resultado)
+except TypeError:
+    print("No fue posible calcular el promedio de la persona estudiante, solo se admiten valores numéricos.")
+except ValueError as e:
+    print(e)
+finally:
+    print("Consulta finalizada.")
+```
+
+🔸 **Salida esperada:**
+
+```python
+No fue posible calcular el promedio de la persona estudiante, solo se admiten valores numéricos.
+Consulta finalizada.
+```
+
+---
+
+#### 📌 Observación sobre la jerarquía de excepciones en Python
+
+Python evalúa las excepciones siguiendo una jerarquía. Por ejemplo:
+
+1. `TypeError` se evalúa antes que `ValueError`.
+2. La jerarquía determina qué excepción será capturada primero, no el orden en que se escriben los `except`.
+
+🔎 Por eso, aunque un `ValueError` también sea posible, si hay un `TypeError`, este será capturado primero.
+
 ### Cláusula Raise
 
 #### ¿Dónde está el error?
