@@ -1164,13 +1164,7 @@ y análisis que puedan afectar tanto la experiencia del usuario como la eficienc
 | **KeyError**       | Se intenta acceder a una clave inexistente en un diccionario.                                   | `estados["MI"]`                   | `KeyError: 'MI'`                                        | La clave "MI" no está en el diccionario.                            |
 | **Warning**        | Advertencia por una operación que no detiene el código, pero puede afectar resultados futuros.  | `a = np.arange(5); a / a`         | `RuntimeWarning: invalid value encountered in true_divide`| División de 0 por 0 genera valores `nan`.                            |
 
-#### Ventajas de las excepciones
-
-Aquí tienes el texto ajustado, separado en **concepto** y **ejercicio paso a paso**, con cada paso y su respectiva **salida esperada** claramente diferenciados:
-
----
-
-##### 🧠 Concepto: Uso de la cláusula `raise` en el manejo de excepciones
+#### 🧠 Concepto: Uso de la cláusula `raise` en el manejo de excepciones
 
 En Python, además de capturar errores con `try` y `except`, podemos generar nuestras **propias excepciones** utilizando la cláusula `raise`. Esto permite controlar mejor los comportamientos inesperados en el código, emitiendo errores personalizados según la lógica del programa.
 
@@ -1288,8 +1282,6 @@ Python evalúa las excepciones siguiendo una jerarquía. Por ejemplo:
 2. La jerarquía determina qué excepción será capturada primero, no el orden en que se escriben los `except`.
 
 🔎 Por eso, aunque un `ValueError` también sea posible, si hay un `TypeError`, este será capturado primero.
-
-### Cláusula Raise
 
 #### ¿Dónde está el error?
 
