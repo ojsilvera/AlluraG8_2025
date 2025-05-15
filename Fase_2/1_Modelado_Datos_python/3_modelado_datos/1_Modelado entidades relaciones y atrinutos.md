@@ -82,7 +82,7 @@ asegurar que todo el equipo tenga claridad sobre su función y características.
 ### Para saber más: diferencia entre modelos
 
 📦 Modelado de Datos
-│  └── Estructura los datos antes d ela construccion de la base de datos
+│  └── Estructura los datos antes de la construccion de la base de datos
 │      └──Incluye recopilación, tratamiento y estructuración de datos.
 │
 ├── 🧠 Modelo Conceptual
@@ -178,12 +178,11 @@ Claro, aquí tienes el texto ordenado y separado en dos partes claras: una parte
 
 ---
 
-## ✅ SOLUCIÓN DEL EJERCICIO – SECCIONES
+## ✅ SOLUCIÓN DEL EJERCICIO
 
 ### 🔹 Contexto
 
-Tras comprender la importancia del **modelo conceptual** gracias a la explicación de Martha, el equipo —liderado por Pedro—
-entendió que debía construir un **esquema gráfico** representando los elementos clave del negocio.
+Tras comprender la importancia del **modelo conceptual** gracias a la explicación de Martha, el equipo —liderado por Pedro— entendió que debía construir un **esquema gráfico** representando los elementos clave del negocio.
 
 ### 🔹 Desarrollo
 
@@ -562,6 +561,23 @@ mindmap
 ---
 
 ### Para saber más: la importancia de las entrevistas
+
+El modelado de datos es la base para lograr un buen proyecto final del banco de datos. Una de las etapas más importantes
+de este proceso es la entrevista con los(as) clientes, en la cual serán identificadas las reglas de negocio del proyecto.
+
+Cuando no identificamos las necesidades del proyecto, puede presentarse la necesidad de realizar esta etapa nuevamente,
+generando así, retrasos en todo el proceso.
+
+La entrevista dará toda la dirección a nuestro proyecto. A través de ella, conocemos todos los detalles del negocio y
+podemos estructurar los próximos pasos. Un factor importante de este proceso es saber de quién vamos a recopilar la
+información, o sea, debemos entrevistar a una o a más personas que puedan brindarnos todos los detalles importantes del
+negocio.
+
+Otro factor es escoger las preguntas ideales para definir todos los puntos clave del proyecto. En esta etapa, la persona
+que realiza la entrevista necesita tener un conocimiento previo sobre los puntos más relevantes para la construcción del
+proyecto, lo que posibilita recolectar la información realmente esencial para el modelado del banco de datos.
+
+En resumen, la entrevista es la base para construir un proyecto coherente que atienda las necesidades del cliente.
 
 ### MER y DER
 
