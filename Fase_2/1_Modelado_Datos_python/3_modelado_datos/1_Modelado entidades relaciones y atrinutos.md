@@ -173,6 +173,61 @@ style D fill:#f8d7da
 
 ### Escogiendo la aplicación
 
+Claro, aquí tienes el texto ordenado y separado en dos partes claras: una parte correspondiente a la
+**solución del ejercicio** (lo que hace el equipo) y otra a los **conceptos fundamentales** (el conocimiento que se explica).
+
+---
+
+## ✅ SOLUCIÓN DEL EJERCICIO – SECCIONES
+
+### 🔹 Contexto
+
+Tras comprender la importancia del **modelo conceptual** gracias a la explicación de Martha, el equipo —liderado por Pedro—
+entendió que debía construir un **esquema gráfico** representando los elementos clave del negocio.
+
+### 🔹 Desarrollo
+
+El equipo se preguntó si podían usar herramientas simples como **PowerPoint** o **Paint** para realizar el gráfico del
+modelo conceptual. Martha respondió afirmativamente, aclarando que lo importante en esta fase era representar visualmente el modelo.
+
+Sin embargo, también destacó que si bien cualquier software gráfico puede servir, sería más eficiente utilizar una herramienta
+que **facilite convertir ese modelo conceptual en un modelo lógico más adelante**.
+
+### 🔹 Resultado
+
+Martha sugirió usar **diagrams.net**, una herramienta en línea, gratuita y especializada en la creación de diagramas para
+modelado de datos, ideal para este tipo de trabajo.
+
+El equipo accedió a seguir su recomendación y se preparó para aprender a utilizar esta herramienta en la siguiente sesión.
+
+---
+
+## 📌 CONCEPTOS CLAVE – VISUAL EXPLICATIVO
+
+```mermaid
+flowchart TB
+    A[Modelado de Base de Datos] --> B[Modelo Conceptual]
+    B --> C[Representación gráfica de entidades y relaciones]
+    B --> D[Herramientas para diagramar]
+    D --> E[PowerPoint, Paint básico]
+    D --> F[diagrams.net recomendado]
+
+    F --> G[Facilita conversión a modelo lógico]
+    G --> H[Modelo Lógico]
+```
+
+---
+
+### 📘 RESUMEN DE CONCEPTOS
+
+| Concepto                     | Explicación                                                                                                                             |
+| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| **Modelo Conceptual**        | Representación visual de los elementos del negocio (entidades, relaciones, atributos), sin detalles técnicos.                           |
+| **Software de Diagramación** | Cualquier programa que permita crear gráficos puede utilizarse, pero se recomienda uno que facilite el paso posterior al modelo lógico. |
+| **diagrams.net**             | Herramienta gratuita, en línea y especializada en diagramas, ideal para modelado de bases de datos.                                     |
+
+---
+
 ### Para saber más: herramientas para el modelaje
 
 ### Usando diagrams.net
