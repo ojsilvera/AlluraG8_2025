@@ -671,11 +671,25 @@ mindmap
 
 ### Diferencia entre MER y DER
 
-El MER es un modelo conceptual usado para describir los objetos (entidades) con sus características (atributos) y cómo estas se relacionan entre sí (relaciones). En cuanto que el DER es una representación gráfica que ayuda a visualizar la información en situaciones prácticas.
+El MER es un modelo conceptual usado para describir los objetos (entidades) con sus características (atributos) y cómo
+estas se relacionan entre sí (relaciones). En cuanto que el DER es una representación gráfica que ayuda a visualizar la
+información en situaciones prácticas.
 
 Mientras que MER es un modelo conceptual, el DER es su representación gráfica y principal herramienta.
 
 ## Entidades
+
+### Qué son entidades
+
+### Identificando las entidades
+
+### Entidad fuerte vs débil
+
+### Características de las entidades
+
+### Entidades en el DER
+
+### Entidades fuertes y débiles
 
 ## Diagrama Entidad-Relacion
 
