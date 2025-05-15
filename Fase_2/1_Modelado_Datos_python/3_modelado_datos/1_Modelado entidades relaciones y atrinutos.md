@@ -142,27 +142,27 @@ asegurar que todo el equipo tenga claridad sobre su función y características.
    de procesos, para garantizar que el sistema resultante sea coherente, útil y escalable.
 
 ```mermaid
-   flowchart TD
+    flowchart TD
 
-   A[Modelado de Datos] --> B[Modelo Conceptual]
-   A --> C[Modelo Lógico]
-   A --> D[Modelo Físico]
+    A[Modelado de Datos] --> B[Modelo Conceptual]
+    A --> C[Modelo Lógico]
+    A --> D[Modelo Físico]
 
-   B --> E[Lenguaje de alto nivel]
-   B --> F[Requisitos del negocio]
-   B --> G[Entrevistas, diagramas, símbolos]
+    B --> E[Lenguaje de alto nivel]
+    B --> F[Requisitos del negocio]
+    B --> G[Entrevistas, diagramas, símbolos]
 
-   C --> H[Entidades, atributos, claves]
-   C --> I[Relaciones y reglas del dominio]
+    C --> H[Entidades, atributos, claves]
+    C --> I[Relaciones y reglas del dominio]
 
-   D --> J[Tablas, columnas, relaciones]
-   D --> K[SQL: lenguaje específico]
-   D --> L[SGBD: Oracle, MySQL, SQL Server]
+    D --> J[Tablas, columnas, relaciones]
+    D --> K[SQL: lenguaje específico]
+    D --> L[SGBD: Oracle, MySQL, SQL Server]
 
-   style A fill:#cce5ff,stroke:#333,stroke-width:2px
-   style B fill:#d4edda
-   style C fill:#fff3cd
-   style D fill:#f8d7da
+    style A fill:#cce5ff,stroke:#333,stroke-width:2px
+    style B fill:#d4edda
+    style C fill:#fff3cd
+    style D fill:#f8d7da
 ```
 
 ### Alto y bajo nivel
