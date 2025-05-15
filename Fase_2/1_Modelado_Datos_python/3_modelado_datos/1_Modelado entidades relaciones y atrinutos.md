@@ -581,7 +581,99 @@ En resumen, la entrevista es la base para construir un proyecto coherente que at
 
 ### MER y DER
 
+Aquí tienes el análisis del segundo texto. Separamos los **conceptos clave** de la parte **ejercicio/instrucción**, y al final te presento un **esquema tipo mindmap en Mermaid para Markdown**.
+
+---
+
+## ✅ CONCEPTOS CLAVE MER y DER
+
+### 📌 1. **Motivación del equipo**
+
+* El equipo (Pedro, Martha y demás) está entusiasmado por comenzar con el modelo conceptual de la base de datos.
+
+### 📌 2. **Diferencia entre MER y DER**
+
+* **MER (Modelo Entidad-Relación):**
+
+  * Representación **abstracta** del modelo conceptual.
+  * Describe **objetos (entidades)**, **características (atributos)** y **relaciones**.
+  * Es la **idea** del sistema de datos.
+
+* **DER (Diagrama Entidad-Relación):**
+
+  * **Representación gráfica** del MER.
+  * **Materializa** visualmente el modelo conceptual.
+  * Ayuda a la **comunicación** entre los miembros del equipo.
+
+* ⚠️ Aclaración: MER ≠ DER
+  Aunque suelen confundirse, **el MER es conceptual**, y **el DER es visual/tangible**.
+
+### 📌 3. **Importancia del DER**
+
+* Mejora la comunicación del equipo.
+* Permite una comprensión común de las relaciones entre entidades.
+
+### 📌 4. **Herramienta utilizada**
+
+* Se usará **diagrams.net** (herramienta online gratuita) para crear el DER.
+
+### 📌 5. **Fuente del modelo**
+
+* El DER se construirá a partir del **resumen de la entrevista** entre Martha y los directivos del Club del Libro.
+
+---
+
+## 📝 EJERCICIO PROPUESTO BASE DE DATOS
+
+* Esperar a profundizar en el concepto de **entidad** antes de iniciar el modelado práctico.
+* Próxima clase abordará el concepto de entidad.
+* El equipo debe prepararse para trabajar directamente sobre el DER utilizando el resumen anterior como base.
+
+---
+
+## 🧠 Mermaid Mindmap en Markdown
+
+```mermaid
+mindmap
+  root((MER vs DER - Modelado de BD))
+
+    Equipo
+      Martha, Pedro y colaboradores
+      Desean comenzar con el modelo conceptual
+
+    MER
+      Modelo Entidad-Relación
+      Representación abstracta
+      Describe entidades, atributos y relaciones
+      Modelo conceptual del comportamiento de la BD
+
+    DER
+      Diagrama Entidad-Relación
+      Representación gráfica del MER
+      Tangible y visual
+      Facilita comunicación en el equipo
+
+    Diferencias
+      MER = Concepto
+      DER = Gráfico
+      No son sinónimos
+
+    Herramienta
+      diagrams.net (para crear el DER)
+
+    Ejercicio
+      Construir DER con base en entrevista de Martha
+      Próxima clase: definición de "entidad"
+      Prepararse para modelar
+```
+
+---
+
 ### Diferencia entre MER y DER
+
+El MER es un modelo conceptual usado para describir los objetos (entidades) con sus características (atributos) y cómo estas se relacionan entre sí (relaciones). En cuanto que el DER es una representación gráfica que ayuda a visualizar la información en situaciones prácticas.
+
+Mientras que MER es un modelo conceptual, el DER es su representación gráfica y principal herramienta.
 
 ## Entidades
 
