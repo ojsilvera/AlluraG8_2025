@@ -118,14 +118,25 @@ asegurar que todo el equipo tenga claridad sobre su función y características.
    Martha corrigió esta aproximación, enfatizando que el modelado conceptual es el primer paso.
 
    Explicó que:
+
       el SGBD (Sistema de Gestión de Base de Datos) es solo la herramienta para manipular la información una vez diseñada
       la estructura lógica y conceptual de los datos.
 
    Se resaltó la necesidad de comprender bien los requisitos del negocio para luego pasar al diseño de la base de datos.
    Martha hizo una distinción clara entre los niveles de lenguaje involucrados:
 
-      Lenguaje de alto nivel → utilizado en el modelado conceptual.
-      Lenguaje de bajo nivel → relacionado con el funcionamiento del SGBD.
+      El modelo conceptual, por ejemplo, es un modelo de alto nivel y los modelos físicos son considerados de bajo nivel.
+
+      Lenguaje de alto nivel → utilizado en el modelado conceptual, Ya el modelo de bajo nivel es más cercano al lenguaje
+      de la máquina
+
+      Lenguaje de bajo nivel → relacionado con el funcionamiento del SGBD, es más cercano al lenguaje humano.
+
+      Un ejemplo de modelo de alto nivel conceptual es la representación de la estructura del banco de datos a través de
+      formas geométricas.
+
+      Un ejemplo de modelo de bajo nivel físico es la creación de un proyecto para la estructuración del banco de datos
+      a través de comandos que serán interpretados por la máquina.
 
 🔹 Resultado
 
@@ -142,30 +153,23 @@ asegurar que todo el equipo tenga claridad sobre su función y características.
    de procesos, para garantizar que el sistema resultante sea coherente, útil y escalable.
 
 ```mermaid
-    flowchart TD
-
-    A[Modelado de Datos] --> B[Modelo Conceptual]
-    A --> C[Modelo Lógico]
-    A --> D[Modelo Físico]
-
-    B --> E[Lenguaje de alto nivel]
-    B --> F[Requisitos del negocio]
-    B --> G[Entrevistas, diagramas, símbolos]
-
-    C --> H[Entidades, atributos, claves]
-    C --> I[Relaciones y reglas del dominio]
-
-    D --> J[Tablas, columnas, relaciones]
-    D --> K[SQL: lenguaje específico]
-    D --> L[SGBD: Oracle, MySQL, SQL Server]
-
-    style A fill:#cce5ff,stroke:#333,stroke-width:2px
-    style B fill:#d4edda
-    style C fill:#fff3cd
-    style D fill:#f8d7da
+graph LR
+A[Modelado de Datos] --> B[Modelo Conceptual]
+A --> C[Modelo Lógico]
+A --> D[Modelo Físico]
+B --> E[Lenguaje de alto nivel]
+B --> F[Requisitos del negocio]
+B --> G[Entrevistas, diagramas, símbolos]
+C --> H[Entidades, atributos, claves]
+C --> I[Relaciones y reglas del dominio]
+D --> J[Tablas, columnas, relaciones]
+D --> K[SQL: lenguaje específico]
+D --> L[SGBD: Oracle, MySQL, SQL Server]
+style A fill:#cce5ff,stroke:#333,stroke-width:2px
+style B fill:#d4edda
+style C fill:#fff3cd
+style D fill:#f8d7da
 ```
-
-### Alto y bajo nivel
 
 ### Escogiendo la aplicación
 
