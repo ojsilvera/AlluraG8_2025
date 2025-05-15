@@ -81,7 +81,89 @@ asegurar que todo el equipo tenga claridad sobre su función y características.
 
 ### Para saber más: diferencia entre modelos
 
+📦 Modelado de Datos
+│  └── Estructura los datos antes d ela construccion de la base de datos
+│      └──Incluye recopilación, tratamiento y estructuración de datos.
+│
+├── 🧠 Modelo Conceptual
+│   └── Comprender requisitos del sistema y del negocio
+│       └── Explora estructuras y conceptos del negocio
+│
+├── 🧩 Modelo Lógico
+│   └── Describe cómo se almacenarán los datos
+│       ├── *Define* entidades
+│       ├── *Define* atributos
+│       ├── *Define* claves primarias y foráneas
+│       └── *Establece* relaciones
+│
+└── 🛠️ Modelo Físico
+    └── Describe la implementación técnica de la base de datos
+        ├── Define tablas y columnas
+        ├── Define relaciones entre tablas
+        └── Utiliza lenguaje SQL
+
 ### Entendiendo SGBD
+
+🔹 Contexto
+
+   Martha fue contratada para liderar el modelado de la base de datos del Club del Libro, organización en expansión que
+   necesita estructurar eficientemente su información. Durante las primeras reuniones con el equipo, surgieron dudas sobre
+   qué tecnología usar, como Oracle, MySQL o Cassandra. Sin embargo, Martha aclaró que antes de elegir un SGBD, es necesario
+   entender los procesos del negocio.
+
+🔹 Desarrollo
+
+   Pedro, miembro del equipo de sistemas, propuso empezar directamente con un SGBD.
+
+   Martha corrigió esta aproximación, enfatizando que el modelado conceptual es el primer paso.
+
+   Explicó que:
+      el SGBD (Sistema de Gestión de Base de Datos) es solo la herramienta para manipular la información una vez diseñada
+      la estructura lógica y conceptual de los datos.
+
+   Se resaltó la necesidad de comprender bien los requisitos del negocio para luego pasar al diseño de la base de datos.
+   Martha hizo una distinción clara entre los niveles de lenguaje involucrados:
+
+      Lenguaje de alto nivel → utilizado en el modelado conceptual.
+      Lenguaje de bajo nivel → relacionado con el funcionamiento del SGBD.
+
+🔹 Resultado
+
+   El equipo comprendió que no se trata solo de elegir un software, sino de diseñar una base de datos funcional basada
+   en la comprensión del negocio.
+
+   Se acordó trabajar primero el modelado conceptual antes de seleccionar herramientas tecnológicas.
+
+   Se generó conciencia sobre la diferencia entre decir "base de datos MySQL" y entender que eso en realidad es un SGBD.
+
+🔹 Conclusión
+
+   Martha guiará al equipo paso a paso desde el modelado conceptual, usando un enfoque basado en entrevistas y comprensión
+   de procesos, para garantizar que el sistema resultante sea coherente, útil y escalable.
+
+```mermaid
+   flowchart TD
+
+   A[Modelado de Datos] --> B[Modelo Conceptual]
+   A --> C[Modelo Lógico]
+   A --> D[Modelo Físico]
+
+   B --> E[Lenguaje de alto nivel]
+   B --> F[Requisitos del negocio]
+   B --> G[Entrevistas, diagramas, símbolos]
+
+   C --> H[Entidades, atributos, claves]
+   C --> I[Relaciones y reglas del dominio]
+
+   D --> J[Tablas, columnas, relaciones]
+   D --> K[SQL: lenguaje específico]
+   D --> L[SGBD: Oracle, MySQL, SQL Server]
+
+   style A fill:#cce5ff,stroke:#333,stroke-width:2px
+   style B fill:#d4edda
+   style C fill:#fff3cd
+   style D fill:#f8d7da
+```
 
 ### Alto y bajo nivel
 
