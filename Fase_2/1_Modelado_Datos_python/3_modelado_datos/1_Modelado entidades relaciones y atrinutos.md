@@ -52,3 +52,11 @@
 ### Para saber más: herramientas para el modelaje
 
 ### Usando diagrams.net
+
+## Modelado entidad relacion
+
+## Entidades
+
+## Diagrama Entidad-Relacion
+
+## Atributos
