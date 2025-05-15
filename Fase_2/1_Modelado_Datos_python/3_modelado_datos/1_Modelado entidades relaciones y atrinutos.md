@@ -228,9 +228,81 @@ flowchart TB
 
 ---
 
-### Para saber más: herramientas para el modelaje
-
 ### Usando diagrams.net
+
+Claro, aquí tienes el texto reorganizado separando claramente lo que corresponde al **ejercicio práctico** (lo que hace
+el equipo y cómo usan la herramienta) y lo que corresponde a los **conceptos fundamentales** (lo que se enseña sobre diagrams.net y el modelado):
+
+---
+
+## ✅ SOLUCIÓN DEL EJERCICIO – PASOS DESARROLLADOS
+
+### 🔹 Selección de la herramienta
+
+* Martha y el equipo identificaron que antes de comenzar con el modelado conceptual necesitaban una herramienta para crear el esquema.
+* Martha sugirió **diagrams.net**, una plataforma gratuita disponible en línea, sin necesidad de registro.
+
+### 🔹 Acceso y configuración básica
+
+* Acceden al sitio web: **diagrams.net**.
+* Eligen la opción **"Start now"** para iniciar sin descargar nada.
+* Se les presenta la opción de **dónde guardar los archivos**: Google Drive, OneDrive, Dropbox, GitHub, localmente o
+  decidir después. Para avanzar, eligen "Decidir después".
+* Renombran el archivo inicial como **modelo.xml**.
+
+### 🔹 Personalización de la interfaz
+
+* Cambian el idioma desde **Extras > Language > Español**.
+* Recargan la página para aplicar el cambio.
+
+### 🔹 Organización del espacio de trabajo
+
+* Desde el menú **Vista**, eliminan categorías de formas innecesarias (general, básico, flechas, diagrama de flujo) y
+  dejan solo la opción **“Diagrama de entidad-relación”**.
+* Identifican:
+
+  * Área izquierda: herramientas y objetos disponibles.
+  * Área central: lienzo o área de trabajo.
+  * Panel derecho: propiedades del diagrama (estilo, cuadrícula, vista, tamaño de página, etc.).
+
+---
+
+## 📘 CONCEPTOS CLAVE – EXPLICACIÓN DIDÁCTICA
+
+```mermaid
+graph LR
+    A[diagrams.net]
+
+    A --> B[Acceso sin cuenta]
+    A --> C[Multiplataforma]
+    A --> D[Gratuita y Online]
+
+    A --> E[Tipos de almacenamiento]
+    E --> E1[Google Drive]
+    E --> E2[OneDrive]
+    E --> E3[Dropbox]
+    E --> E4[Local / GitHub / Decidir despues]
+
+    A --> F[Formatos de archivo]
+    F --> F1[XML]
+    F --> F2[Imagen vectorial]
+    F --> F3[Bitmap]
+    F --> F4[HTML]
+
+    A --> G[Idioma]
+    G --> G1[Extras - Language - Español]
+
+    A --> H[Estructura de la interfaz]
+    H --> H1[Area izquierda - Herramientas]
+    H --> H2[Area central - Lienzo de trabajo]
+    H --> H3[Panel derecho - Estilo, cuadrícula, etc.]
+
+    A --> I[Personalización de vista]
+    I --> I1[Ocultar elementos innecesarios]
+    I --> I2[Enfocarse en Entidad-Relación]
+```                                       |
+
+---
 
 ## Modelado entidad relacion
 
