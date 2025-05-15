@@ -300,11 +300,272 @@ graph LR
     A --> I[Personalización de vista]
     I --> I1[Ocultar elementos innecesarios]
     I --> I2[Enfocarse en Entidad-Relación]
-```                                       |
+```
 
 ---
 
 ## Modelado entidad relacion
+
+### El mini-mundo
+
+1. Mini-mundo
+
+   Definición: Recorte o fragmento del mundo real.
+
+   Objetivo: Analizar una pequeña porción del entorno con profundidad.
+
+   Importancia: Es la base sobre la que se estructura el modelo de base de datos.
+
+2. Abstracción
+
+   Definición: Proceso mental para aislar detalles específicos de un conjunto complejo.
+
+   Permite:
+
+   Ignorar detalles irrelevantes.
+
+   Enfocarse en lo esencial.
+
+   Manejar diferentes niveles de detalle según el propósito.
+
+   Ejemplos:
+
+   Descripción de un caballo (subjetiva).
+
+   Programación de una agenda (por bloques de tiempo).
+
+3. Aplicación práctica del Mini-mundo
+
+   Caso: E-commerce del Club del Libro.
+
+   Entidades:
+
+   Carlos (Cliente)
+
+   Victoria (Autora)
+
+   Libros
+
+   Relaciones:
+
+   Carlos → compra → Libros.
+
+   Victoria → escribe → Libros.
+
+4. Base de datos relacional
+
+   Relaciona entidades mediante vínculos lógicos.
+
+   Diferente de bases de datos no relacionales (no se centran en relaciones).
+
+   Enfoque del curso: Modelado conceptual de bases de datos relacionales.
+
+**Resumen esquematico**
+
+```mermaid
+flowchart LR
+    A[Inicio: Conceptos clave para modelado de BD]
+
+    A --> B[Mini-mundo]
+    B --> B1[Definición: Recorte del mundo real]
+    B --> B2[Objetivo: Analizar una porción del entorno]
+    B --> B3[Base para el modelo de base de datos]
+
+    A --> C[Abstracción]
+    C --> C1[Definición: Aislar aspectos específicos]
+    C --> C2[Propósito: Simplificar análisis]
+    C --> C3[Características]
+    C3 --> C3a[Ignorar detalles]
+    C3 --> C3b[Enfocar en lo esencial]
+    C3 --> C3c[Subjetividad]
+    C --> C4[Ejemplos]
+    C4 --> C4a[Describir un caballo]
+    C4 --> C4b[Programar una agenda]
+
+    A --> D[Caso práctico: Club del Libro]
+    D --> D1[Contexto: E-commerce de libros]
+    D --> D2[Entidades]
+    D2 --> D2a[Carlos - Cliente]
+    D2 --> D2b[Victoria - Autora]
+    D2 --> D2c[Libros]
+    D --> D3[Relaciones]
+    D3 --> D3a[Carlos compra Libros]
+    D3 --> D3b[Victoria escribe Libros]
+
+    A --> E[Base de Datos Relacional]
+    E --> E1[Relaciones entre entidades]
+    E --> E2[Diferente a bases no relacionales]
+    E --> E3[Enfoque del curso: Modelado conceptual relacional]
+```
+
+### Entrevista con los directores
+
+Aquí tienes el análisis del texto, dividido en **conceptos clave** y **ejercicio planteado**, seguido de un esquema final tipo **mermaid mindmap en Markdown** para visualizar los elementos de forma jerárquica.
+
+---
+
+## ✅ CONCEPTOS CLAVE
+
+### 📌 1. **Análisis de Requisitos**
+
+* Martha se reunió con la directiva del Club del Libro.
+* Elaboró un resumen con los requisitos funcionales del negocio.
+* El resumen está disponible para consulta y análisis.
+* Permite realizar el modelado de la base de datos a partir de esos requerimientos.
+
+### 📌 2. **Identificación del Cliente**
+
+* Tipos de clientes:
+
+  * Persona natural
+  * Persona jurídica
+* Información requerida:
+
+  * Persona natural: RUT (Registro Único Tributario), DNI
+  * Persona jurídica: NIT (Número de Identificación Tributaria), Registro Único de Empresa
+* Datos generales comunes:
+
+  * Nombre
+  * Dirección
+  * Teléfono
+  * Email
+
+### 📌 3. **Información del Producto (Libros)**
+
+* Información clave:
+
+  * Título
+  * Categoría
+  * Código ISBN
+  * Año de publicación
+  * Valor
+  * Casa editorial
+  * Autor
+
+### 📌 4. **Editorial**
+
+* Proveedor de libros.
+* Cada libro está asociado a **una única editorial** (exclusividad).
+* Datos requeridos:
+
+  * Número de la editorial
+  * Máximo dos teléfonos
+  * Nombre del contacto
+  * Email
+
+### 📌 5. **Pedidos de Compra**
+
+* Un cliente puede realizar uno o más pedidos.
+* Cada pedido puede contener uno o más libros.
+
+### 📌 6. **Inventario**
+
+* Antes de concretar un pedido, se debe verificar la disponibilidad del libro en el inventario.
+* Regla de negocio importante: **No vender libros inexistentes**.
+
+---
+
+## 📝 EJERCICIO PROPUESTO
+
+* Analizar el resumen de requisitos.
+* Extraer las entidades y atributos principales.
+* Realizar la **abstracción de datos**.
+* Proponer un modelo conceptual (diagrama ER).
+* Opcional: compartir observaciones y análisis en el foro del curso.
+
+---
+
+## 🧠 Modelado de requisitos
+
+```mermaid
+mindmap
+  root((Modelado de requsitos y relaciones))
+
+   Requisitos
+      Martha se reúne con la directiva
+      Elabora resumen de requisitos
+      Resumen disponible para análisis
+
+   PedidoCompra
+      Un cliente puede hacer múltiples pedidos
+      Cada pedido incluye uno o más libros
+
+   Inventario
+      Verificación previa a la venta
+      No vender libros no disponibles
+
+   Ejercicio
+      Analizar resumen
+      Extraer entidades/atributos
+      Hacer abstracción
+      Proponer modelo conceptual
+      Compartir análisis en el foro
+
+
+```
+
+---
+
+## Modelado logico de la base de pedidos
+
+```mermaid
+mindmap
+  root((Modelado BD: Base datos pedidos))
+    Pedidos
+        Id_Pedido
+        Fecha_Pedido
+        Observaciones_Pedido
+        Valor_libro
+        Id_cliente
+        ID_Libro
+    Clientes
+        ID cliente
+        Nombre Completo
+        ID_Tipo cliente
+        ID_Tipo documento
+    Datos personales
+        ID_DatoPersonal
+        Dirección
+        Teléfono
+        Email
+        Id_cliente
+    Tipos cliente
+        ID_TipoCliente
+        Persona natural
+        Persona jurídica
+    Tipo documento
+        ID_TipoDocumento
+        RUT
+        DNI
+        CC
+        NIT
+        Registro Empresa
+    Libro
+      ID_Libro
+      ID_editorial
+      Título
+      Categoría
+      ISBN
+      Año publicación
+      Valor
+      Casa editorial
+      Autor
+    Editorial
+      ID_Editorial
+      Proveedor exclusivo del libro
+      Número de editorial
+      Máximo 2 teléfonos
+      Contacto
+      Email
+```
+
+---
+
+### Para saber más: la importancia de las entrevistas
+
+### MER y DER
+
+### Diferencia entre MER y DER
 
 ## Entidades
 
