@@ -875,11 +875,204 @@ ejemplo, el atributo precio, de la entidad producto.
   - Cliente (Fuerte) ↔ Pedido (Débil)
 ```
 
-### Características de las entidades
-
 ### Entidades en el DER
 
+---
+
+## ✅ **Conceptos Relevantes**
+
+### **1. Identificación de Entidades**
+
+* Una **entidad** es cualquier objeto del mundo real sobre el cual se desea almacenar información.
+* Normalmente se identifica como un **sustantivo** dentro del texto (por ejemplo: cliente, libro, editorial...).
+* Una entidad puede tener varios **atributos**, que son características o datos relacionados con esa entidad (por ejemplo: nombre, dirección, NIT).
+
+### **2. Entidades Fuertes vs. Débiles** (mencionadas como repaso)
+
+* **Entidad Fuerte**
+
+  * Existe independientemente.
+  * No necesita de otra entidad para existir.
+* **Entidad Débil**
+
+  * Depende de otra entidad para existir.
+  * Se analizarán más adelante para clasificarlas correctamente.
+
+### **3. Atributos**
+
+* No son entidades, pero son **propiedades** que describen una entidad.
+* Ejemplos:
+
+  * Cliente → nombre, dirección, teléfono, tipo de persona (natural/jurídica), RUT, NIT.
+  * Libro → título.
+  * Editorial → información asociada.
+
+### **4. Reglas de Negocio**
+
+* Un **libro solo puede pertenecer a una editorial** (relación uno a uno o uno a muchos).
+* Un cliente puede **realizar varios pedidos de compra** (relación uno a muchos).
+* Se debe verificar el **inventario antes de procesar un pedido** (condición operativa).
+
+---
+
+## 🧪 **Ejercicio Aplicado**
+
+### **Texto de la entrevista - Extracción de entidades**
+
+#### Entidades identificadas
+
+1. **Cliente**
+2. **Libro**
+3. **Editorial**
+4. **Pedido de compra**
+5. **Inventario**
+
+#### Atributos mencionados (por entidad)
+
+* **Cliente**
+
+  * Tipo (persona natural / jurídica)
+  * RUT / DNI (natural)
+  * NIT / Registro de empresa (jurídica)
+  * Nombre
+  * Dirección
+  * Teléfono
+
+* **Libro**
+
+  * Título
+
+* **Editorial**
+
+  * Información asociada
+
+* **Pedido de compra**
+
+  * (No se mencionan atributos directamente, pero se infiere relación con cliente y libro)
+
+* **Inventario**
+
+  * Disponibilidad del libro
+
+#### Relaciones inferidas
+
+* Cliente **realiza** Pedido(s)
+* Pedido **contiene** Libro(s)
+* Libro **pertenece a una** Editorial
+* Pedido **verifica** Inventario
+
+---
+
+## 🧠 **Esquema**
+
+```markdown
+# Modelo Entidad-Relación: Entidades y Conceptos
+
+## 1. Entidades Identificadas
+- **Cliente**
+- **Libro**
+- **Editorial**
+- **Pedido de Compra**
+- **Inventario**
+
+## 2. Atributos por Entidad
+### Cliente
+- Tipo (Natural / Jurídica)
+- RUT / DNI / NIT
+- Nombre
+- Dirección
+- Teléfono
+
+### Libro
+- Título
+
+### Editorial
+- Información asociada
+
+### Inventario
+- Disponibilidad
+
+## 3. Relaciones
+- Cliente → realiza → Pedido de compra
+- Pedido de compra → incluye → Libro(s)
+- Libro → pertenece a → Editorial
+- Pedido de compra → consulta → Inventario
+
+## 4. Reglas de Negocio
+- Un libro pertenece a una sola editorial.
+- Un cliente puede realizar múltiples pedidos.
+- Verificar disponibilidad en inventario antes de procesar pedidos.
+
+## 5. Criterio de Identificación de Entidades
+- Se reconocen como **sustantivos** en el texto.
+- Atributos no se consideran entidades, describen las entidades.
+
+## 6. Clasificación Futura
+- Entidades serán clasificadas como **fuertes** o **débiles** en un análisis posterior.
+```
+
 ### Entidades fuertes y débiles
+
+Aquí tienes el **análisis del texto**, con los **conceptos relevantes separados del ejercicio**, seguido de un **esquema tipo flowchart en formato Mermaid**.
+
+---
+
+## 🧠 **Conceptos más relevantes**
+
+### 🔹 **Entidades**
+
+Se identifican y clasifican cinco entidades dentro del contexto de un sistema e-commerce de venta de libros:
+
+| Entidad              | Tipo   | Justificación                                                            |
+| -------------------- | ------ | ------------------------------------------------------------------------ |
+| **Cliente**          | Fuerte | No depende de otra entidad. Puede registrarse sin realizar compras.      |
+| **Editorial**        | Fuerte | Es quien produce/publica los libros. No depende de ninguna otra entidad. |
+| **Libro**            | Débil  | Necesita estar asociado a una editorial.                                 |
+| **Pedido de compra** | Débil  | Depende de la existencia de un cliente y al menos un libro.              |
+| **Inventario**       | Débil  | Su existencia depende de los libros que estén disponibles.               |
+
+---
+
+### 🧩 **Criterios para clasificar entidades**
+
+* **Entidad fuerte**: no depende de ninguna otra entidad para existir.
+* **Entidad débil**: necesita de otra entidad para tener sentido o existencia.
+
+---
+
+## ✅ **Ejercicio (desarrollo paso a paso)**
+
+1. **Identificación de entidades** a partir del análisis de entrevista.
+2. **Clasificación de entidades** en fuertes (resaltadas en amarillo) y débiles (en azul).
+3. **Justificación de cada clasificación** a través de reglas del negocio.
+4. **Construcción del diagrama** entidad-relación parcial.
+5. **Uso de rectángulos dobles para entidades débiles**.
+6. **Preparación para próxima etapa**: establecer relaciones entre entidades.
+
+---
+
+## 📊 **Esquema tipo flowchart (Mermaid)**
+
+```mermaid
+flowchart TD
+    subgraph Entidades_Fuertes [Entidades Fuertes]
+        Cliente[Cliente]
+        Editorial[Editorial]
+    end
+
+    subgraph Entidades_Débiles [Entidades Débiles]
+        Libro[[Libro]]
+        PedidoCompra[[Pedido de Compra]]
+        Inventario[[Inventario]]
+    end
+
+    Cliente --> PedidoCompra
+    Libro --> PedidoCompra
+    Editorial --> Libro
+    Libro --> Inventario
+```
+
+---
 
 ## Diagrama Entidad-Relacion
 
