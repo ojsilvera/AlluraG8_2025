@@ -1430,6 +1430,25 @@ erDiagram
 
 ### Para saber más: restricción de participación
 
+De acuerdo con las referencias utilizadas para realizar tus estudios, puedes encontrar otra forma de representar la
+cardinalidad mínima, conocida como restricción de participación o dependencia de existencia.
+
+La restricción de participación es utilizada para especificar si la existencia de la entidad depende de la asociación a
+otra entidad, o sea, depende de la relación. Existen dos tipos de restricción de participación: restricción total y restricción
+parcial.
+
+La restricción total ocurre cuando todas las instancias de una entidad X necesitan estar obligatoriamente relacionadas a
+alguna instancia de la entidad Y. Por ejemplo: Si en las reglas de negocio del proyecto se estableció que todo(a) colaborador(a)
+necesita estar asociado a un departamento para que la persona pueda trabajar en la empresa, consideramos que la restricción
+de participación entre colaborador(a) y el departamento es total, pues, él/ella necesita estar trabajando en, como mínimo,
+un departamento.
+
+Ya la restricción parcial ocurre cuando todas las instancias de una entidad X no necesitan estar obligatoriamente relacionadas
+a cualquier instancia de la entidad Y. Por ejemplo: Todo departamento necesita ser gestionado por un(a) colaborador(a),
+pero no todo colaborador(a) necesita ser gerente de un departamento. Entonces, consideramos que la restricción de participación
+entre la relación referente a la gestión de un departamento por parte de un(a) colaborador(a) es una restricción parcial,
+ya que no todos los colaboradores van a gestionar un solo departamento.
+
 ### Entidades asociativas
 
 ### Para saber más: resolución de la relación muchos a muchos
