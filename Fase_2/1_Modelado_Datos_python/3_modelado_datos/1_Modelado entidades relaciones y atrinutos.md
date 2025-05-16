@@ -1078,15 +1078,355 @@ flowchart TD
 
 ### Tipos de relaciones
 
+---
+
+### 📌 Reglas del negocio
+
+* Son fundamentales para modelar correctamente la base de datos.
+* El equipo debe alinearse con el cliente (el Club del Libro) para comprender **cómo funciona el negocio**.
+* Las **transacciones y operaciones** deben reflejarse fielmente en el modelo.
+
+### 📌 Entidades y relaciones
+
+* Ya se han identificado entidades **fuertes** y **débiles**.
+* El siguiente paso es **conectar las entidades a través de relaciones**.
+
+### 📌 Relaciones (en diagramas entidad-relación)
+
+* Se **representan con un rombo**.
+* Expresan una **acción**, no un sustantivo (ej.: "trabaja en" vs "trabajo").
+* Las relaciones pueden ser:
+
+  * **Binarias**: relación entre **2 entidades**.
+  * **Ternarias**: relación entre **3 entidades**.
+  * **N-arias**: relación entre **más de 3 entidades**.
+
+### 📌 Cardinalidad
+
+* Concepto que define **cómo se relacionan las entidades entre sí** (cuántos de un lado se asocian con cuántos del otro).
+* Será explorado en futuras lecciones.
+
+---
+
+## 🧪 Ejercicio o actividad planteada
+
+1. **Analizar la operación del negocio**: cómo se realizan las transacciones en la e-commerce del Club del Libro.
+2. **Identificar tipos de relaciones** entre entidades ya conocidas.
+3. **Distinguir grados de relación**:
+
+   * Relación binaria: *Colaborador trabaja en función.*
+   * Relación ternaria: *Colaborador trabaja en función y proyecto.*
+   * Relación N-aria: *Colaborador trabaja en múltiples proyectos, funciones, etc.*
+4. Introducir el **concepto de cardinalidad** como tema para futuras sesiones.
+
+---
+
+## 📊 Esquema tipo flowchart (Mermaid)
+
+```mermaid
+flowchart TD
+    subgraph ReglasDelNegocio
+        Negocio[Entender el negocio]
+        Operacion[Operación de la e-commerce]
+        Transacciones[Transacciones del negocio]
+    end
+
+    subgraph EntidadesRelacionadas
+        Entidades[Entidades fuertes y débiles]
+        Relaciones[Relaciones entre entidades]
+        Cardinalidad[Cardinalidad (próximo tema)]
+    end
+
+    subgraph TiposDeRelaciones
+        Binaria[Relación Binaria: Colaborador - Función]
+        Ternaria[Relación Ternaria: Colaborador - Función - Proyecto]
+        Naria[Relación N-aria: Colaborador - Múltiples proyectos]
+    end
+
+    Negocio --> Operacion --> Transacciones --> Entidades
+    Entidades --> Relaciones --> Binaria --> Ternaria --> Naria
+    Relaciones --> Cardinalidad
+```
+
+---
+
 ### Relaciones entre entidades
+
+---
+
+## 🧠 Conceptos más relevantes
+
+### 📌 Relaciones entre entidades
+
+* Las **relaciones** conectan entidades en un diagrama entidad-relación.
+* Se representan con un **rombo**.
+* Ejemplo de relación: entre **cliente** y **pedido**, la relación es **compra**.
+* Las relaciones indican **acciones**, no sustantivos.
+
+### 📌 Uso práctico (con diagram.net)
+
+* Se arrastran conexiones desde las entidades al rombo de relación.
+* La acción de conectar se realiza visualmente entre las entidades y el rombo.
+
+### 📌 Ejemplo práctico del sector salud
+
+* Entidades: **Médico** y **Paciente**.
+* Escenarios:
+
+  * Un médico puede atender a muchos pacientes.
+  * Un paciente puede consultar a muchos médicos.
+* Este ejemplo sirve como introducción al concepto de **cardinalidad**.
+
+### 📌 Cardinalidad entre entidades
+
+* Define **cómo se conectan las entidades entre sí**.
+* Determina si una relación es:
+
+  * Uno a uno (1:1)
+  * Uno a muchos (1\:N)
+  * Muchos a muchos (N\:N)
+* La cardinalidad es esencial para reflejar correctamente las relaciones en un modelo de base de datos.
+
+---
+
+## 🧪 Ejercicio cardinalidad
+
+1. **Abrir diagram.net** y seleccionar el **rombo** para representar relaciones.
+2. **Ejemplo de modelado**: conectar la entidad **Cliente** con **Pedido** mediante la relación **Compra**.
+3. **Aplicación del ejemplo de salud**:
+
+   * Identificar relación entre **Médico** y **Paciente**.
+   * Observar la **variabilidad de conexiones** posibles.
+4. Introducción al concepto de **cardinalidad**, que será tratado a profundidad más adelante.
+
+---
+
+## 📊 Esquema representacion de los conceptos
+
+```mermaid
+flowchart TD
+    subgraph Diagramacion
+        Entidades[Identificar entidades]
+        Rombos[Seleccionar rombo en diagram.net]
+        Conectar[Conectar entidades al rombo]
+        Relacion[Ejemplo: Cliente -- Compra --> Pedido]
+    end
+
+    subgraph EjemploSalud
+        Medico[Médico]
+        Paciente[Paciente]
+        Consulta[Consulta Médica]
+        Variabilidad[Relación puede ser múltiple en ambos sentidos]
+    end
+
+    subgraph Cardinalidad
+        CardinalidadIntro[¿Cómo se conectan las entidades?]
+        TiposCard[Tipos: 1:1, 1:N, N:N]
+        DiagramacionCard[Cardinalidad en el diagrama ER]
+    end
+
+    Entidades --> Rombos --> Conectar --> Relacion
+    Medico --> Consulta --> Paciente
+    Consulta --> Variabilidad
+    Relacion --> CardinalidadIntro --> TiposCard --> DiagramacionCard
+```
+
+---
 
 ### Clasificando las relaciones
 
-### Tipos de cardinalidad
+---
 
-### Diferenciando los tipos de cardinalidad
+### 📌 Definición de Cardinalidad
+
+* **Cardinalidad**: Indica **cuántas instancias** de una entidad pueden estar asociadas a una instancia de otra entidad.
+* Se representa gráficamente en un **diagrama entidad-relación (ER)**.
+
+### 📌 Tipos de Cardinalidad
+
+1. **1 a 1 (1:1)**: Una entidad A se relaciona con una sola entidad B y viceversa.
+2. **0 a 1 (0:1)**: Una entidad A puede no tener relación o tener una única entidad B asociada.
+3. **1 a muchos (1\:N)**: Una entidad A puede relacionarse con muchas instancias de entidad B.
+4. **0 a muchos (0\:N)**: Una entidad A puede no tener relación o relacionarse con muchas instancias de B.
+5. **Muchos a muchos (M\:N)**: Varias instancias de A se relacionan con varias instancias de B.
+
+---
+
+## 🧪 Ejercicio / Ejemplos
+
+### 🏢 Ejemplo: Empresa y departamentos
+
+* **Entidad**: Empresa
+
+  * Tiene un departamento (ej. Recursos Humanos).
+  * Un **colaborador** puede estar a cargo (gerente) del departamento.
+  * Si hay un solo colaborador encargado → **Cardinalidad 1:1**
+  * Si hay varios colaboradores en un departamento → **Cardinalidad 1\:N**
+  * Si hay múltiples departamentos y múltiples colaboradores, la relación se vuelve más compleja.
+
+### 📚 Ejemplo: Club del Libro
+
+* Entidades: **Pedido** y **Libro**
+
+  * Un pedido puede tener varios libros.
+  * Un libro puede estar en varios pedidos.
+  * Relación de **muchos a muchos (M\:N)**.
+  * Este tipo de relación se maneja con una **entidad intermedia** (no detallada aún).
+
+---
+
+## 📊 Esquema tipo cardinalidades
+
+```mermaid
+flowchart TD
+
+    subgraph Definicion
+        A1[¿Qué es Cardinalidad?]
+        A2[Indica cómo se relacionan las entidades]
+        A3[Se representa en Diagramas ER]
+    end
+
+    subgraph TiposCardinalidad
+        B1[1:1 - Uno a Uno]
+        B2[0:1 - Cero a Uno]
+        B3[1:N - Uno a Muchos]
+        B4[0:N - Cero a Muchos]
+        B5[M:N - Muchos a Muchos]
+    end
+
+    subgraph EjemploEmpresa
+        C1[Empresa con Departamento]
+        C2[Departamento con 1 Colaborador (Gerente)]
+        C3[Cardinalidad 1:1]
+        C4[Departamento con varios Colaboradores]
+        C5[Cardinalidad 1:N]
+        C6[Varios Departamentos y Colaboradores]
+    end
+
+    subgraph EjemploLibro
+        D1[Club del Libro]
+        D2[Pedido con varios Libros]
+        D3[Libro en varios Pedidos]
+        D4[Cardinalidad M:N]
+        D5[Se maneja con Entidad Intermedia]
+    end
+
+    A1 --> A2 --> A3 --> TiposCardinalidad
+    TiposCardinalidad --> C1
+    C1 --> C2 --> C3
+    C1 --> C4 --> C5
+    C1 --> C6
+    TiposCardinalidad --> D1
+    D1 --> D2 --> D4
+    D1 --> D3 --> D4
+    D4 --> D5
+```
+
+---
 
 ### Representando las relaciones
+
+---
+
+## 🔍 CONCEPTOS CLAVE
+
+**1. Cardinalidad**
+
+* Se refiere a la cantidad mínima y máxima de ocurrencias entre entidades.
+* Siempre se define como **mínima..máxima** (por ejemplo, 1..N).
+
+**2. Ejemplo de Casa**
+
+* Una casa debe tener al menos un propietario (1..N).
+* Puede estar habitada o no: (0..N) habitantes.
+
+**3. Relaciones y Reglas**
+
+* Un **cliente** debe existir para que exista un **pedido** → cardinalidad: Cliente (1..1), Pedido (0..N).
+* Un **pedido** debe contener al menos un **libro** → Pedido (1..N), Libro (1..N).
+* Un **libro** pertenece a una única **editorial** → Libro (1..1), Editorial (1..N).
+* Un **libro** debe existir en **inventario** para poder ser vendido → Libro (1..N), Inventario (0..N).
+
+**4. Tipos de Relaciones**
+
+* 1:1 (uno a uno)
+* 1\:N (uno a muchos)
+* N\:M (muchos a muchos) → requiere atención especial (posible tabla intermedia).
+
+---
+
+## 🧪 EJERCICIOS / EJEMPLOS PRÁCTICOS
+
+**Ejemplo 1: Casa y Propietario**
+
+* Casa:
+
+  * Cardinalidad mínima: 1 (al menos un propietario).
+  * Cardinalidad máxima: N (varios propietarios posibles).
+* Habitantes:
+
+  * Cardinalidad mínima: 0 (puede estar vacía).
+  * Cardinalidad máxima: N (puede haber muchos habitantes).
+
+**Ejemplo 2: Cliente y Pedido**
+
+* Un cliente puede no hacer pedidos (mínimo 0).
+* Un cliente puede hacer varios pedidos (máximo N).
+* Pero un pedido no existe sin un cliente (mínimo 1, máximo 1 en pedido respecto a cliente).
+
+**Ejemplo 3: Pedido y Libro**
+
+* Pedido debe contener al menos un libro (1..N).
+* Un libro puede estar en muchos pedidos (1..N).
+
+**Ejemplo 4: Libro y Editorial**
+
+* Un libro pertenece a una única editorial (1..1).
+* Una editorial puede tener muchos libros (1..N).
+
+**Ejemplo 5: Libro y Inventario**
+
+* Un libro debe estar en inventario (1..N).
+* El inventario puede estar vacío (0..N) — discutible pero posible.
+
+---
+
+## 📊 FLUJOGRAMA (FLOWCHART) EN FORMATO **MERMAID**
+
+```mermaid
+erDiagram
+    CLIENTE ||--o{ PEDIDO : realiza
+    PEDIDO }o--o{ LIBRO : contiene
+    LIBRO }o--|| EDITORIAL : pertenece_a
+    LIBRO ||--o{ INVENTARIO : existe_en
+
+    CLIENTE {
+        string id_cliente
+        string nombre
+    }
+
+    PEDIDO {
+        string id_pedido
+        date fecha
+    }
+
+    LIBRO {
+        string id_libro
+        string titulo
+    }
+
+    EDITORIAL {
+        string id_editorial
+        string nombre
+    }
+
+    INVENTARIO {
+        string id_stock
+        int cantidad
+    }
+```
+
+---
 
 ### Para saber más: restricción de participación
 
