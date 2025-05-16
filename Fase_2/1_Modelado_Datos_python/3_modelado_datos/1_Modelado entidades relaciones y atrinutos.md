@@ -1076,4 +1076,22 @@ flowchart TD
 
 ## Diagrama Entidad-Relacion
 
+### Tipos de relaciones
+
+### Relaciones entre entidades
+
+### Clasificando las relaciones
+
+### Tipos de cardinalidad
+
+### Diferenciando los tipos de cardinalidad
+
+### Representando las relaciones
+
+### Para saber más: restricción de participación
+
+### Entidades asociativas
+
+### Para saber más: resolución de la relación muchos a muchos
+
 ## Atributos
