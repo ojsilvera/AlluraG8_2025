@@ -1451,6 +1451,92 @@ ya que no todos los colaboradores van a gestionar un solo departamento.
 
 ### Entidades asociativas
 
-### Para saber más: resolución de la relación muchos a muchos
+### ✅ Análisis del texto
+
+---
+
+1. **Relación Muchos a Muchos (N\:M)**
+
+   * Puede ser confusa y difícil de gestionar directamente.
+   * Ejemplo: Muchos pedidos pueden contener muchos libros.
+
+2. **Entidad Asociativa (Associative Entity)**
+
+   * Se usa para descomponer relaciones muchos a muchos.
+   * Se representa como una nueva entidad en el modelo.
+   * Permite organizar la relación en una estructura más clara.
+   * En este caso, la entidad asociativa se llama `Items`.
+
+3. **Abstracción en modelado**
+
+   * La necesidad de crear una entidad asociativa nace de observar el problema.
+   * Facilita la organización y eficiencia en el diseño.
+
+4. **Cardinalidad en la entidad asociativa**
+
+   * **Pedido → Items**: 1 a N
+   * **Libro → Items**: 1 a N
+   * Para que exista un ítem, debe estar asociado como mínimo a un pedido y un libro.
+
+---
+
+## 🧪 Ejercicio explicado en el video
+
+1. Se parte de una **relación muchos a muchos** entre las entidades `Pedidos` y `Libros`.
+2. Se decide **crear una entidad asociativa** para manejar mejor esta relación.
+3. Se elimina la relación directa y se crea una nueva entidad llamada **Items**.
+4. Se establece que **Items** contiene la relación con ambos:
+
+   * Muchos pedidos pueden estar en Items.
+   * Muchos libros pueden estar en Items.
+5. Se ajustan gráficamente las relaciones y cardinalidades:
+
+   * **Pedidos (1\:N) Items**
+   * **Libros (1\:N) Items**
+6. Se menciona que esto mejora la comprensión y organización del modelo.
+7. Se concluye que el modelo ya está estructurado, solo faltan los atributos internos de cada entidad.
+
+---
+
+## 📊 Esquema tienda del libro
+
+```mermaid
+erDiagram
+    PEDIDOS ||--o{ ITEMS : contiene
+    LIBROS  ||--o{ ITEMS : incluye
+
+    PEDIDOS {
+        int id_pedido
+        ...
+    }
+
+    LIBROS {
+        int id_libro
+        ...
+    }
+
+    ITEMS {
+        int id_item
+        int id_pedido
+        int id_libro
+        ...
+    }
+```
 
 ## Atributos
+
+### Qué son los atributos
+
+### Identificando los tipos de atributos
+
+### Tipos de atributo
+
+### Para saber más: diferentes tipos de atributos
+
+### Atributos en el modelo
+
+### Para saber más: clave foránea
+
+### Representando atributos en el DER
+
+### Colocando la clave principal
