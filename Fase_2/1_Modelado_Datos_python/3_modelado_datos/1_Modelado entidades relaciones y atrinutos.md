@@ -359,7 +359,7 @@ graph LR
 
    Enfoque del curso: Modelado conceptual de bases de datos relacionales.
 
-**Resumen esquematico**
+## Resumen esquematico
 
 ```mermaid
 flowchart LR
@@ -677,13 +677,203 @@ información en situaciones prácticas.
 
 Mientras que MER es un modelo conceptual, el DER es su representación gráfica y principal herramienta.
 
-## Entidades
+## Entidades que son
 
 ### Qué son entidades
 
+---
+
+#### 📘 Entidad
+
+* Objeto único en el mundo real (persona, cosa, concepto).
+* Puede ser tangible (ej. carro) o abstracta (ej. departamento).
+* Puede representarse en singular con artículos: el, la, los, un, etc.
+* Ejemplos:
+
+  * Clientes → entidad
+  * Empresa → entidad
+  * Carros → entidad
+  * Departamento de ventas → entidad
+  * Vendedores → entidad
+
+#### 🧱 Tipos de Entidad
+
+* **Entidad fuerte**:
+
+  * Existe por sí sola.
+  * Ejemplo: Cliente.
+* **Entidad débil**:
+
+  * Depende de otra entidad para existir.
+  * Se verá en detalle más adelante.
+
+#### 🧰 Representación en diagramas
+
+* Se usan **rectángulos** para representar entidades.
+* También se pueden usar rectángulos con esquinas redondeadas (forma alternativa).
+* Se colocan en el lienzo arrastrando el objeto desde el panel izquierdo.
+* Se nombra en **singular** (ej. Cliente, no Clientes).
+
+#### 💻 Herramienta: diagrams.net
+
+* Requiere iniciar sesión para guardar el progreso.
+* Dispone de varios objetos para modelado (tabla, fila, lista, ítem, entidad, atributos).
+* La entidad se crea con un clic y se puede renombrar con doble clic.
+
+---
+
+#### 🧪 Ejercicio Práctico
+
+1. Ingresar a **diagrams.net**.
+2. Crear una **entidad** en el lienzo.
+3. Usar rectángulo desde el menú izquierdo.
+4. Nombrar la entidad como **Cliente** (forma singular).
+5. Prepararse para introducir **entidades fuertes y débiles** en próximas lecciones.
+
+---
+
+#### 🧠 Esquema Mermaid Flowchart en Markdown
+
+```mermaid
+flowchart LR
+    A[Inicio: Aula 3] --> B[Concepto de Entidad]
+
+    B --> C[Entidad = Objeto único del mundo real]
+    C --> C1[Puede ser una persona, cosa o concepto]
+    C --> C2[Se identifica con artículos: el, la, los, un...]
+
+    C --> D[Ejemplos de entidades]
+    D --> D1[Clientes]
+    D --> D2[Empresa]
+    D --> D3[Carros]
+    D --> D4[Departamento de Ventas]
+    D --> D5[Vendedores]
+
+    B --> E[Tipos de entidades]
+    E --> E1[Entidad fuerte → existe por sí sola (ej. Cliente)]
+    E --> E2[Entidad débil → depende de otra entidad]
+
+    B --> F[Representación gráfica en diagrams.net]
+    F --> F1[Rectángulos y rectángulos redondeados]
+    F --> F2[Entidad se nombra en singular]
+    F --> F3[Creación arrastrando desde panel izquierdo]
+
+    B --> G[Herramienta diagrams.net]
+    G --> G1[Iniciar sesión]
+    G --> G2[Guardar avances]
+    G --> G3[Panel con objetos: tabla, fila, lista, entidad...]
+
+    F --> H[Ejercicio práctico]
+    H --> H1[Crear entidad "Cliente"]
+    H --> H2[Colocarla en el lienzo]
+    H --> H3[Nombrarla con doble clic]
+
+    H --> I[Prepararse para próxima clase sobre entidades débiles]
+```
+
+---
+
 ### Identificando las entidades
 
+Imagina un escenario ficticio en el que fuimos contratados por una floristería que necesita un sistema para el control
+de ventas. Inicialmente, será almacenada la información de cada cliente, tales como: Nombre, dirección, fecha de nacimiento
+y edad.
+
+En cuanto a cada producto, almacenaremos la descripción, cantidad en inventario y el precio. En esta floristería también
+existen las personas colaboradoras, que tienen nombre, dirección, salario y cargo. Escoge la alternativa que indica cuáles
+son las entidades presentes en el proyecto de la floristería.
+
+Clientes, Producto y Colaborador(a).
+
+Estas son las entidades del proyecto de la floristería. Cada una de ellas posee atributos que las describen como, por
+ejemplo, el atributo precio, de la entidad producto.
+
 ### Entidad fuerte vs débil
+
+### **1. Entidades**
+
+* **Entidad Fuerte**
+
+  * Existe de forma independiente.
+  * No depende de ninguna otra entidad para existir.
+  * Tiene **clave principal (primary key)**.
+  * Ejemplos: `Empleado`, `Cliente`.
+
+* **Entidad Débil**
+
+  * Depende de una entidad fuerte para existir.
+  * No puede existir sin su entidad asociada.
+  * No tiene clave principal, pero sí una **clave parcial**, que junto con la clave de la entidad fuerte, forma una clave compuesta.
+  * Representación gráfica: **rectángulo dentro de otro rectángulo**.
+  * Ejemplos: `Dependiente`, `Pedido`.
+
+### **2. Relación entre Entidades**
+
+* Una entidad débil **no puede existir sin su entidad fuerte relacionada**.
+* Se ilustra con ejemplos como:
+
+  * `Empleado` (fuerte) ↔ `Dependiente` (débil)
+  * `Cliente` (fuerte) ↔ `Pedido` (débil)
+
+### **3. Claves**
+
+* **Clave principal** (entidad fuerte): identificador único de la entidad.
+* **Clave parcial** (entidad débil): requiere la clave de la entidad fuerte para ser única.
+
+---
+
+## 🧩 **Ejercicio**
+
+* **Escenario del Club del Libro**
+
+  * Se desea registrar empleados y los dependientes de cada empleado para asignar beneficios.
+  * No se puede tener **dependientes** sin un **empleado** asociado.
+  * En el modelo, `Empleado` se representa como **entidad fuerte**, y `Dependiente` como **entidad débil**.
+
+* **Segundo ejemplo:**
+
+  * Un cliente hace un **pedido de compra**.
+  * No puede existir un `Pedido` si no hay un `Cliente`.
+  * `Cliente`: entidad fuerte.
+  * `Pedido`: entidad débil.
+
+---
+
+## 🧠 **Esquema tipo Merdmind (Markdown)**
+
+```markdown
+# Entidades en Diagramas ER
+
+## Entidades
+- **Fuerte**
+  - Existe por sí misma
+  - Tiene clave principal (PK)
+  - Ejemplos:
+    - Empleado
+    - Cliente
+
+- **Débil**
+  - Depende de otra entidad
+  - No tiene clave principal, usa clave parcial
+  - Representación: rectángulo doble
+  - Ejemplos:
+    - Dependiente (de Empleado)
+    - Pedido (de Cliente)
+
+## Relaciones
+- Entidad débil ↔ Entidad fuerte
+  - Dependencia necesaria
+  - Clave compuesta: clave fuerte + clave parcial
+
+## Representación en diagrams.net
+- Entidad fuerte → rectángulo simple
+- Entidad débil → rectángulo doble
+
+## Ejemplos prácticos
+- Club del Libro:
+  - Empleado (Fuerte) ↔ Dependiente (Débil)
+  - Cliente (Fuerte) ↔ Pedido (Débil)
+```
 
 ### Características de las entidades
 
