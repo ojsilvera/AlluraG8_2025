@@ -1,6 +1,18 @@
 # Modelado de bases de datos relacionales: modelado lógico y físico
 
-## Tipos de modelado Ver el primer video
+## Tipos de modelado
+
+### Presentación
+
+### Diversos modelos
+
+### Características de MLD y MFD
+
+### Para saber más: representando el modelo lógico
+
+### Modelado lógico conceptos
+
+### Pasos para el MLD
 
 ## Modelado lógico
 
