@@ -1527,16 +1527,418 @@ erDiagram
 
 ### Qué son los atributos
 
+---
+
+1. **Entidad Inventario**
+
+   * Solo existe un inventario en el sistema (Cardinalidad máxima = 1).
+   * Puede haber 0 libros en inventario (Cardinalidad mínima = 0).
+
+2. **Cardinalidad**
+
+   * Define la cantidad mínima y máxima de elementos que pueden participar en una relación.
+   * En este caso, para Inventario, máximo 1 inventario.
+
+3. **Definición de atributos**
+
+   * Atributos son características que describen a una entidad.
+   * Sin atributos, una entidad no existe.
+
+4. **Ejemplos de atributos para entidades**
+
+   * **Clientes**:
+
+     * Tipo: Persona Natural o Persona Jurídica.
+     * Persona Natural: RUT, DNI.
+     * Persona Jurídica: NIT, RUES.
+     * Otros: Nombre, Dirección, Teléfono, Email.
+   * **Libros**:
+
+     * Título, Categoría, ISBN, Año de publicación, Valor, Casa editorial, Autor.
+   * **Editorial**:
+
+     * Teléfonos (máximo 2), Nombre de contacto, Email.
+
+5. **Relación cliente-libro**
+
+   * Un cliente puede comprar uno o más libros.
+   * Se verifica disponibilidad en inventario antes de la compra.
+
+6. **Diagramación de atributos**
+
+   * En el modelo entidad-relación, los atributos se representan con óvalos.
+   * Se pueden asignar múltiples atributos a una entidad (aunque se profundizará luego).
+
+---
+
+## 🧪 Ejercicio explicado
+
+1. Se revisa la entidad **Inventario** y se define su cardinalidad (máximo 1 inventario).
+2. Se explica la importancia de los atributos para definir las entidades.
+3. Se analizan atributos a partir de un documento real (entrevista a directivos):
+
+   * Se clasifican atributos según si el cliente es persona natural o jurídica.
+4. Se listan atributos clave para las entidades `Clientes`, `Libros` y `Editoriales`.
+5. Se establece la relación de compra entre clientes y libros con la condición de verificar inventario.
+6. Se muestra cómo agregar atributos en un diagrama entidad-relación con la herramienta (óvalos).
+
+---
+
+## 📊 Esquema tipo *flowchart* (Mermaid)
+
+```mermaid
+erDiagram
+    CLIENTES {
+        string tipo_cliente "Natural / Jurídica"
+        string RUT
+        string DNI
+        string NIT
+        string RUES
+        string nombre
+        string direccion
+        string telefono
+        string email
+    }
+
+    LIBROS {
+        string titulo
+        string categoria
+        string ISBN
+        int anio_publicacion
+        float valor
+        string casa_editorial
+        string autor
+    }
+
+    EDITORIAL {
+        string nombre_contacto
+        string telefono_1
+        string telefono_2
+        string email
+    }
+
+    INVENTARIO {
+        int id_inventario
+        -- Cardinalidad 1 inventario máximo
+    }
+
+    CLIENTES ||--o{ PEDIDOS : realiza
+    PEDIDOS ||--o{ LIBROS : incluye
+    INVENTARIO ||--o{ LIBROS : contiene
+
+```
+
 ### Identificando los tipos de atributos
 
-### Tipos de atributo
+### 1. **Tipos de atributos**
+
+* **Atributos atómicos:**
+
+  * Poseen un solo valor indivisible.
+  * Ejemplo: nombre, email (individual).
+* **Atributos multivalor:**
+
+  * Pueden tener varios valores para una sola entidad.
+  * Ejemplo: teléfono 1 y teléfono 2 (máximo dos valores permitidos, no un solo campo multivalor).
+
+### 2. **Ejemplo de atributos multivalor en la práctica**
+
+* Editorial acepta máximo 2 números de teléfono, por lo tanto no se usa un solo campo multivalor sino dos atributos separados: teléfono 1 y teléfono 2.
+
+### 3. **Manejo y organización de atributos**
+
+* Se agregan atributos de forma individual y se conectan a la entidad.
+* Ejemplo: para entidad Cliente se agregan: dirección, teléfono, email como atributos separados.
+
+### 4. **Atributos derivados**
+
+* Son atributos que se pueden descomponer o derivar en subcomponentes.
+* Ejemplo: la dirección se puede descomponer en calle, barrio, ciudad, estado.
+* Estos subatributos están relacionados y se agrupan para mejor organización visual.
+
+### 5. **Atributos clave**
+
+* Son atributos identificadores únicos de una entidad (se representan subrayados).
+* Ejemplo: RUT, DNI para persona natural; NIT, RUES para persona jurídica.
+* Se mencionan pero no se desarrollan en detalle en este texto (se verán en el próximo video).
+
+---
+
+## 🧪 Ejercicio descrito
+
+1. Explicación sobre los tipos de atributos (atómicos vs multivalor).
+2. Ejemplo práctico: Editorial con máximo 2 teléfonos (uso de teléfono 1 y teléfono 2).
+3. Agregar atributos individuales a la entidad Cliente (dirección, teléfono, email).
+4. Descomponer un atributo derivado (dirección) en subatributos: calle, barrio, ciudad, estado.
+5. Organización visual de atributos relacionados para facilitar comprensión.
+6. Introducción a los atributos clave, señalando que se abordarán en detalle posteriormente.
+
+---
+
+## 📊 Esquema tipo flowchart Mermaid
+
+```mermaid
+erDiagram
+    CLIENTE {
+        string nombre
+        string direccion
+        string telefono
+        string email
+    }
+
+    DIRECCION {
+        string calle
+        string barrio
+        string ciudad
+        string estado
+    }
+
+    EDITORIAL {
+        string telefono_1
+        string telefono_2
+    }
+
+    %% Relaciones
+    CLIENTE ||--|| DIRECCION : tiene
+    CLIENTE ||--o{ TELEFONOS : puede tener multiples (aunque en este caso es teléfono único)
+    EDITORIAL ||--o{ TELEFONOS : tiene max 2 teléfonos
+
+    %% Notas
+    %% Atributos atómicos: nombre, email
+    %% Atributos multivalor: teléfono_1, teléfono_2
+    %% Atributos derivados: dirección -> calle, barrio, ciudad, estado
+```
+
+---
 
 ### Para saber más: diferentes tipos de atributos
 
+Los atributos describen las propiedades de las entidades. Por ejemplo, la entidad persona puede tener como atributos:
+
+  Nombre, fecha de nacimiento, edad, dirección, etc.
+
+Al igual que las entidades, también existen algunos tipos de atributo. Estos son:
+
+  Atributo simple
+
+    Es un tipo de atributo indivisible, o sea, es un atributo atómico. Un ejemplo de este tipo es el atributo DNI, pues
+    este no puede ser dividido en partes menores para formar otros atributos.
+
+  Atributo compuesto
+
+    Puede ser dividido en partes menores que representan otros atributos, como por ejemplo dirección. Esta puede ser
+    subdividida en atributos menores, como: ciudad, estado, calle, código postal, etc.
+
+  Atributo multivalor
+
+    Es aquel que puede tener uno o N (varios) valores asociados a él. Por ejemplo: El atributo teléfono de un cliente. Este
+    puede tener uno o varios números de teléfono.
+
+  Atributo derivado y almacenado
+
+    Los atributos derivados dependen de otro atributo o incluso de otra entidad para existir, como, edad y fecha de
+    nacimiento. Para descubrir la edad de una persona, necesitamos de su fecha de nacimiento. Entonces, consideramos el
+    atributo edad como derivado del atributo fecha de nacimiento, que también se conoce como atributo almacenado.
+
+  Atributo clave
+
+    Es utilizado para identificar de forma única una entidad, o sea, los valores asociados a este atributo son distintos
+    entre el conjunto de entidades. Como ejemplo, podemos utilizar el Código del Producto. Este es único y puede ser utilizado
+    como atributo clave, dado que cada producto recibe un código en particular.
+
 ### Atributos en el modelo
+
+1. **Atributo Clave (Clave Principal)**
+
+   * Atributo que identifica unívocamente un registro en una entidad.
+   * Previene la duplicación de registros (por ejemplo, evitar que un libro o un pedido se repita).
+
+2. **Especialización (Herencia en el modelo ER)**
+
+   * Se representa con un triángulo en el diagrama.
+   * Permite dividir una entidad en subentidades específicas (ejemplo: persona natural y persona jurídica).
+   * Cada subentidad tiene atributos específicos.
+
+3. **Entidad Cliente con Especialización**
+
+   * Persona Natural: atributos RUT y DNI.
+   * Persona Jurídica: atributos NIT y RUES.
+
+4. **Atributos en diferentes entidades**
+
+   * **Pedido:** atributos `fecha` y `valor` (fecha del pedido y valor monetario).
+   * **Inventario:** atributo `cantidad` (cantidad disponible del libro).
+   * **Libro:** atributos `título`, `categoría`, `ISBN`, `año de publicación`, `valor`, `casa editorial`, `autor`.
+   * **Editorial:** atributos `nombre`, `contacto`, `teléfono 1`, `teléfono 2`, `email`.
+
+5. **Atributos derivados**
+
+   * Ejemplo: teléfono 1 y teléfono 2 derivados del atributo teléfono.
+
+6. **Organización del diagrama**
+
+   * Mover, arrastrar, y agrupar atributos para mejorar la estética y comprensión del diagrama.
+   * Uso de herramientas (como copiar/pegar, selección múltiple) para facilitar la edición.
+
+---
+
+## **Ejercicio descrito**
+
+* Eliminar un atributo clave previamente asignado.
+* Crear un atributo de especialización (triángulo) para diferenciar entre persona natural y persona jurídica en la entidad cliente.
+* Añadir los atributos específicos para cada subentidad (PN y PJ).
+* Añadir atributos relevantes a otras entidades: pedidos, inventario, libros, editorial.
+* Gestionar atributos derivados (teléfonos múltiples).
+* Organizar y acomodar los elementos del diagrama para facilitar la lectura y diseño.
+* Prepararse para la introducción formal de atributos clave en el próximo video.
+
+---
+
+## **Esquema tipo flowchart / mindmap**
+
+```
+[Entidad Cliente]
+    ├─ Especialización (Triángulo: Identificación)
+    │     ├─ Persona Natural (PN)
+    │     │     ├─ RUT
+    │     │     └─ DNI
+    │     └─ Persona Jurídica (PJ)
+    │           ├─ NIT
+    │           └─ RUES
+
+[Entidad Pedido]
+    ├─ Fecha
+    └─ Valor
+
+[Entidad Inventario]
+    └─ Cantidad
+
+[Entidad Libro]
+    ├─ Título
+    ├─ Categoría
+    ├─ ISBN
+    ├─ Año de publicación
+    ├─ Valor
+    ├─ Casa editorial
+    └─ Autor
+
+[Entidad Editorial]
+    ├─ Nombre
+    ├─ Contacto
+    ├─ Teléfono (atributo derivado)
+    │     ├─ Teléfono 1
+    │     └─ Teléfono 2
+    └─ Email
+
+[Concepto Clave]
+    └─ Evitar duplicación de registros (Libro, Pedido, etc.)
+
+[Diagrama]
+    ├─ Organizar atributos (arrastrar, seleccionar, agrupar)
+    └─ Uso de herramientas para mejorar visualización (copiar/pegar, mover)
+
+```
+
+---
 
 ### Para saber más: clave foránea
 
+Como estudiamos en las últimas aulas, la entidad débil acaba recibiendo la clave principal de la entidad fuerte con la
+cual está asociada para componer la clave parcial.
+
+Como sabemos, la entidad débil no posee la clave principal. Por este motivo, podemos tener atributos identificadores propios
+de la entidad débil que van a componer esta clave parcial. Adicionalmente, tenemos la clave principal de la entidad fuerte,
+que se desplaza hacia la entidad débil.
+
+A esta clave que parte desde la entidad fuerte y llega a la entidad débil damos el nombre de clave foránea. Podríamos hacer
+una analogía con la palabra foránea, ya que ella originalmente pertenece a otra entidad, y viaja hasta la entidad de destino.
+
 ### Representando atributos en el DER
+
+---
+
+## 1) Ejercicio
+
+* Completar un diagrama entidad-relación (ER) para un sistema que maneja clientes, editoriales, libros, pedidos e inventarios.
+* Resolver cómo evitar la duplicidad de registros (ejemplo: mismo libro repetido en inventario o pedidos duplicados).
+* Definir claves principales (primary keys) para entidades fuertes (cliente, editorial).
+* Crear un atributo adicional (código) para identificar unívocamente clientes y editoriales.
+* Manejar entidades débiles (libro, pedido, inventario) usando claves parciales y relacionarlas con entidades fuertes.
+* Asociar códigos (claves foráneas) para relacionar clientes con pedidos, editoriales con libros, libros con inventarios.
+* Establecer claves parciales para entidades débiles (ejemplo: número de pedido, código de libro).
+* Crear una entidad asociativa llamada “items” que relaciona pedido y libro, incluyendo atributos cantidad y valor.
+* Organizar y mostrar el modelo final con los objetos y relaciones correctamente distribuidos.
+
+---
+
+## 2) Conceptos Relevantes
+
+* **Base de datos relacional:** Se basa en tablas y relaciones entre ellas, que aseguran la integridad de los datos.
+* **Integridad de datos:** Evitar duplicidades o inconsistencias mediante reglas y restricciones.
+* **Clave principal (Primary Key):**
+
+  * Atributo único que identifica un registro de forma irrepetible dentro de una entidad.
+  * No puede ser nulo.
+  * Solo entidades fuertes poseen clave principal.
+* **Entidad fuerte:** Entidad que tiene su propia clave principal (ej. Cliente, Editorial).
+* **Entidad débil:** Entidad que no tiene clave principal propia, depende de una entidad fuerte y usa claves parciales (ej. Libro, Pedido, Inventario).
+* **Clave parcial:** Atributo que, junto con la clave principal de la entidad fuerte, identifica un registro de entidad débil.
+* **Clave foránea (Foreign Key):** Atributo que relaciona una entidad con otra, copiando la clave principal para mantener la relación.
+* **Atributos adicionales:** Para evitar duplicidades, se crean atributos como "código cliente" o "código editorial" asignados en el registro.
+* **Entidad asociativa:** Tabla que representa la relación muchos a muchos entre entidades, por ejemplo, "items" para relacionar pedidos con libros.
+* **Restricciones de clave:** No puede haber dos registros con la misma combinación de claves principales y parciales.
+* **Relaciones entre entidades:**
+
+  * Cliente realiza pedidos (pedido tiene código cliente).
+  * Editorial tiene libros (libro tiene código editorial).
+  * Inventario depende de libro y editorial (inventario tiene código libro y editorial).
+  * Pedido está asociado a ítems (que relacionan pedido y libro con cantidad y valor).
+
+---
+
+## 3) Esquema flowchart / mindmap (conceptual)
+
+```mermaid
+flowchart TD
+    A[Base de Datos Relacional]
+    A --> B[Integridad de Datos]
+    B --> C[Claves Principales (Primary Keys)]
+    B --> D[Restricciones (No duplicados, No nulos)]
+
+    A --> E[Entidades Fuertes]
+    E --> E1[Cliente]
+    E --> E2[Editorial]
+
+    E1 --> F1[Código Cliente (Primary Key)]
+    E2 --> F2[Código Editorial (Primary Key)]
+
+    A --> G[Entidades Débiles]
+    G --> G1[Libro]
+    G --> G2[Pedido]
+    G --> G3[Inventario]
+
+    G1 --> H1[Clave Parcial: Código Libro]
+    G2 --> H2[Clave Parcial: Código Pedido]
+
+    E1 -->|Relación| G2
+    G2 -->|Incluye| I[Items (Entidad Asociativa)]
+    G1 -->|Relacionado con| I
+    G2 --> I
+    I --> J[Atributos: Cantidad, Valor]
+
+    E2 -->|Relación| G1
+    E2 -->|Relación| G3
+    G1 -->|Relación| G3
+
+    subgraph Relaciones
+        E1 --> G2
+        E2 --> G1
+        G1 --> G3
+        G2 --> I
+        G1 --> I
+    end
+```
+
+---
 
 ### Colocando la clave principal
