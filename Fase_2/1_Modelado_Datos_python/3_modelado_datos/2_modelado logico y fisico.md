@@ -82,6 +82,91 @@ flowchart TD
 
 ### Diversos modelos
 
+---
+
+### 🔹 Fases del modelado de bases de datos
+
+* **Modelo conceptual → Modelo lógico → Modelo físico**
+
+---
+
+### 🔹 Modelo Conceptual concepto
+
+* Fue realizado previamente por Martha y su equipo.
+* Representado mediante un **diagrama entidad-relación (ER)**.
+* Define entidades y relaciones a alto nivel, sin detalles técnicos.
+
+---
+
+### 🔹 Modelo Lógico conceptos
+
+* Se construye **a partir del modelo conceptual**.
+* Se asemeja más a una base de datos real.
+* En esta fase:
+
+  * **Las entidades se convierten en relaciones** (tablas).
+  * Se definen **campos** y **restricciones**.
+  * Se especifican:
+
+    * **Cardinalidad mínima y máxima**.
+    * Relación entre entidades.
+  * Se usa la herramienta **diagrams.net** con formato **vertical**.
+
+---
+
+### 🔹 Modelo Físico conceptos
+
+* Se construye a partir del modelo lógico.
+* Implementado con la herramienta **SQL Power Architect**.
+* En esta fase:
+
+  * Las relaciones ya se denominan **tablas**.
+  * Los campos se conocen como **columnas**.
+  * Se definen:
+
+    * **Dominios**
+    * **Tipos de datos**
+    * **Restricciones (ej. NOT NULL, claves primarias/foráneas)**
+    * **Aceptación de valores nulos**
+  * Se incorpora **simbología de cardinalidad** (ej. pata de gallina).
+
+---
+
+### 🔹 Herramientas mencionadas
+
+* **diagrams.net**: Para diseño del modelo lógico.
+* **SQL Power Architect**: Para creación del modelo físico.
+
+---
+
+## 🧪 Ejercicio descrito
+
+* Retomar el **modelo conceptual** ya creado por Martha y su equipo.
+* Convertirlo en un **modelo lógico**, incluyendo relaciones, campos, cardinalidades y restricciones.
+* Representarlo en **formato vertical** usando **diagrams.net**.
+* Luego, transformar ese modelo lógico en un **modelo físico** con **SQL Power Architect**, definiendo dominios, restricciones, tipo de datos y cardinalidades visuales.
+* Prepararse para iniciar la construcción del modelo lógico en el próximo video.
+
+---
+
+## 🔁 Esquema modelado logico y fisico
+
+```mermaid
+flowchart TD
+    A[Inicio del entrenamiento] --> B[Modelo Conceptual]
+    B --> C[Diagrama Entidad-Relación (ER)]
+    C --> D[Convertir a Modelo Lógico]
+    D --> E[Usar diagrams.net]
+    E --> F[Formato vertical]
+    F --> G[Relaciones, Campos, Restricciones, Cardinalidades]
+    G --> H[Convertir a Modelo Físico]
+    H --> I[Usar SQL Power Architect]
+    I --> J[Tablas, Columnas, Dominios]
+    J --> K[Tipo de dato, NOT NULL, Claves]
+    K --> L[Simbología de Cardinalidad]
+    L --> M[Base de datos lista para implementación]
+```
+
 ### Características de MLD y MFD
 
 ### Para saber más: representando el modelo lógico
