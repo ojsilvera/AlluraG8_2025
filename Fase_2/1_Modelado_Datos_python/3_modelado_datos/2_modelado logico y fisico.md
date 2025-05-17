@@ -715,6 +715,246 @@ varias ocurrencias a la vez de la relación que, posteriormente, se convertirá 
 
 ## Modelado físico
 
+### SQL Power Architect
+
+---
+
+1. **Modelo físico de base de datos**
+
+   * Evolución del modelo lógico.
+   * Representa cómo se implementará realmente en un sistema gestor de bases de datos.
+
+2. **SQL Power Architect**
+
+   * Herramienta para modelado físico de bases de datos.
+   * Alternativa a diagrams.net para esta etapa del diseño.
+
+3. **Requisitos para usar SQL Power Architect**
+
+   * Instalación del programa desde el sitio "Best of BI".
+   * Java Runtime debe estar previamente instalado.
+
+4. **Componentes del proceso de instalación**
+
+   * Descarga de Java (si no está instalado).
+   * Instalación del SQL Power Architect.
+   * Creación del archivo `PL.ini`.
+   * Configuración del entorno de trabajo inicial.
+   * Aparición de recursos como tutoriales, foros, guía del usuario.
+
+5. **Ambiente de trabajo**
+
+   * El entorno gráfico del programa permite trabajar con el modelo físico de manera visual y estructurada.
+
+---
+
+### 🧪 **Ejercicio práctico descrito**
+
+1. Buscar en el navegador: **"SQL Power Architect"**.
+2. Ir al sitio **Best of BI** y descargar la versión gratuita.
+3. Verificar e instalar **Java Runtime** si no está presente.
+4. Ejecutar el instalador de SQL Power Architect.
+5. Aceptar condiciones, directorios y accesos directos.
+6. Finalizar instalación.
+7. Abrir SQL Power Architect desde el escritorio.
+8. Crear archivo **PL.ini** si el sistema lo solicita.
+9. Cerrar las ventanas de tutoriales.
+10. Confirmar que el entorno está listo para trabajar el modelo físico.
+
+---
+
+### 📊 **Diagrama tipo Mermaid (Flowchart)**
+
+```mermaid
+flowchart TD
+    A[Inicio: Crear Modelo Físico] --> B[Buscar "SQL Power Architect"]
+    B --> C[Entrar a sitio "Best of BI"]
+    C --> D[Descargar SQL Power Architect]
+    D --> E{¿Java instalado?}
+    E -- Sí --> G[Instalar SQL Power Architect]
+    E -- No --> F[Descargar e instalar Java]
+    F --> G[Instalar SQL Power Architect]
+    G --> H[Aceptar términos y condiciones]
+    H --> I[Elegir directorio e instalar]
+    I --> J[Crear accesos directos]
+    J --> K[Abrir desde escritorio]
+    K --> L{¿Falta PL.ini?}
+    L -- Sí --> M[Crear PL.ini]
+    L -- No --> N[Continuar]
+    M --> N[Continuar]
+    N --> O[Cerrar tutoriales y foros]
+    O --> P[Entorno listo para modelado físico]
+```
+
+---
+
+### Tablas
+
+---
+
+1. **Transición entre modelos de base de datos**
+
+   * **Modelo Entidad-Relación (ER):** Usa *entidades* y *atributos*.
+   * **Modelo Lógico:** Usa *relaciones* y *campos*.
+   * **Modelo Físico:** Usa *tablas* y *columnas*.
+
+2. **Nomenclatura técnica en el modelo físico**
+
+   * Tablas físicas nombradas con prefijo, por ejemplo: `Tb_CLIENTE`.
+   * Claves primarias se nombran comúnmente como `PK_...`.
+   * Las *columnas* sustituyen a los *campos* o *atributos*.
+   * Campo "Remarks" se utiliza para describir la tabla.
+
+3. **Herramienta SQL Power Architect**
+
+   * Se puede hacer zoom con herramienta externa (PlayPen Tool) o las opciones internas.
+   * Controles visuales: crear tabla (`T` o botón), ajustar zoom, crear relaciones (identificadas o no identificadas).
+   * Personalización de tabla: color, texto, bordes, forma de las líneas.
+
+4. **Buenas prácticas**
+
+   * Diferenciar el nombre lógico (modelo lógico) del nombre físico (modelo físico) mediante prefijos.
+   * Documentar cada tabla usando el campo "remarks".
+
+---
+
+### 🧪 **Ejercicio práctico paso a paso**
+
+1. Abrir **SQL Power Architect**.
+2. Activar herramienta de **zoom** para facilitar la visualización.
+3. Usar el botón o tecla `T` para **crear nueva tabla**.
+4. Dar clic en el área de trabajo para **posicionar la tabla**.
+5. Rellenar propiedades:
+
+   * **Nombre lógico** (ejemplo: cliente).
+   * **Nombre físico** (ejemplo: `Tb_CLIENTE`).
+   * **Clave primaria** (ejemplo: `PK_CLIENTE`).
+   * **Descripción** en campo *remarks*.
+6. (Opcional) Personalizar:
+
+   * Color de tabla y texto.
+   * Esquinas redondeadas.
+   * Estilo de bordes.
+7. Guardar cambios con clic en **OK**.
+8. La tabla queda lista en el entorno para agregar columnas (esto se verá en el siguiente video).
+
+---
+
+### 📊 **Flowchart tipo Mermaid**
+
+```mermaid
+flowchart TD
+    A[Inicio: Modelo Físico] --> B[Abrir SQL Power Architect]
+    B --> C[Activar herramienta de zoom]
+    C --> D[Crear nueva tabla (clic o tecla T)]
+    D --> E[Dar clic en el área de trabajo]
+    E --> F[Ingresar propiedades de la tabla]
+
+    F --> G[Nombre lógico: cliente]
+    G --> H[Nombre físico: Tb_CLIENTE]
+    H --> I[Clave primaria: PK_CLIENTE]
+    I --> J[Descripción: remarks]
+
+    J --> K{¿Desea personalizar tabla?}
+    K -- Sí --> L[Modificar color, texto, bordes]
+    K -- No --> M[Saltar personalización]
+
+    L --> N[Confirmar con OK]
+    M --> N[Confirmar con OK]
+
+    N --> O[Tabla creada en el entorno]
+    O --> P[Agregar columnas (próximo video)]
+```
+
+---
+
+### Campos
+
+1. **Gestión de columnas en una tabla (modelo físico)**
+
+   * Se accede a las opciones de edición de una tabla desde el área de trabajo.
+   * Es posible insertar columnas usando un icono o presionando la tecla `C`.
+
+2. **Nomenclatura de columnas**
+
+   * **Nombre lógico**: corresponde al modelo lógico (ej. “código cliente”).
+   * **Nombre físico**: puede ser el mismo que el lógico.
+
+3. **Clave primaria (Primary Key - PK)**
+
+   * Una columna marcada como PK **no puede aceptar valores nulos (NOT NULL)**.
+   * Marcar una columna como PK desactiva la opción de permitir nulos.
+   * Documentación del campo en *remarks* es importante para colaboración en equipo.
+
+4. **Tipo de dato y precisión**
+
+   * Se puede definir el tipo (ej. `VARCHAR(10)`).
+   * La elección del tipo de dato se relaciona con el **dominio** del campo (se tratará en próximos videos).
+
+5. **Buenas prácticas**
+
+   * Documentar cada columna (ej. con remarks como: “esta columna es la clave principal”).
+   * Modelar pensando en trabajo colaborativo y mantenibilidad.
+
+---
+
+### 🧪 **Ejercicio paso a paso**
+
+1. Abrir proyecto y localizar tabla `cliente`.
+2. Seleccionar la tabla → Aparecen nuevas opciones (índice, insertar columna).
+3. Insertar una nueva columna con el icono o pulsando `C`.
+4. Completar datos en el cuadro de diálogo:
+
+   * **Nombre lógico y físico:** `código cliente`
+   * **Marcar como clave primaria (PK)**
+   * **Tipo de dato:** `VARCHAR(10)`
+   * **No permitir valores nulos** (opción deshabilitada automáticamente al marcar PK)
+   * **Agregar remarks:** “Esta columna es la clave principal”
+5. Confirmar con **OK**.
+6. Se muestra en pantalla:
+   `código cliente VARCHAR(10) NOT NULL`
+
+---
+
+### 📊 **Flowchart tipo Mermaid campos**
+
+```mermaid
+flowchart TD
+    A[Inicio: Tabla Cliente creada] --> B[Seleccionar tabla en el área de trabajo]
+    B --> C[Insertar columna (icono o tecla C)]
+    C --> D[Se abre cuadro de diálogo para nueva columna]
+
+    D --> E[Ingresar nombre lógico: código cliente]
+    E --> F[Nombre físico: código cliente]
+    F --> G[Marcar como clave primaria (PK)]
+    G --> H[Tipo de dato: VARCHAR(10)]
+
+    H --> I{¿Permitir valores nulos?}
+    I -- No --> J[Restricción automática por PK]
+
+    J --> K[Agregar descripción en remarks]
+    K --> L[Confirmar con OK]
+
+    L --> M[Resultado: columna añadida a tabla]
+    M --> N[Nota: PK = NOT NULL por defecto]
+```
+
+---
+
 ## Tipos de datos, tablas y columnas
+
+### Dominio
+
+### Tipos de datos en el modelo físico
+
+### Para saber más: otros tipos de datos
+
+### Tabla CLIENTE
+
+### Creando una tabla en el modelo físico
+
+### Representando las entidades fuertes
+
+### Completando las tablas
 
 ## Concluyendo el proyecto
