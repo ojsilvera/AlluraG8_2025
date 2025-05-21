@@ -945,9 +945,209 @@ flowchart TD
 
 ### Dominio
 
+#### 🔹 Dominio
+
+* El **dominio** es el tipo de datos que puede tener una columna.
+* Es una **restricción lógica** que define qué valores son válidos para ese campo.
+
+#### 🔹 Tipos de datos comunes (dominios)
+
+* **VARCHAR(n)**: Texto alfanumérico de longitud variable. Ideal para códigos que pueden contener letras o ceros a la izquierda (ej. `00001`).
+* **CHAR(n)**: Texto de longitud fija. Siempre ocupa el mismo espacio aunque el contenido sea menor.
+* **INTEGER / BIGINT**: Números enteros.
+* **DECIMAL / FLOAT / NUMERIC**: Números con punto decimal.
+* **BINARY / BIT / BOOLEAN**: Valores binarios (0 o 1).
+* **DATE / TIME / TIMESTAMP**: Fechas y horas.
+* **BLOB**: Datos binarios largos (ej. imágenes).
+* **NCHAR / NVARCHAR**: Variantes para caracteres Unicode.
+
+#### 🔹 Elección de dominio para código de cliente
+
+* Se elige `VARCHAR` porque:
+
+  * El código puede contener letras y números.
+  * Puede incluir ceros a la izquierda (ej. `00001`), que se perderían si se usara `INTEGER`.
+
+#### 🔹 Clave primaria (PK)
+
+* No puede contener valores nulos.
+* Aporta **integridad a los datos**.
+* Se combina con el dominio `VARCHAR(10)` para el código del cliente.
+
+---
+
+### 🧪 **Ejercicio paso a paso dominio**
+
+1. Abrir la tabla `cliente` y seleccionar la columna `código cliente`.
+2. Hacer clic derecho → `Column Properties`.
+3. En el cuadro de diálogo se visualizan:
+
+   * **Nombre lógico y físico**
+   * **Dominio**: `VARCHAR(10)`
+   * **Clave primaria**: activada (PK)
+   * **Restricción**: NOT NULL
+
+4. Se discute por qué se eligió `VARCHAR`:
+
+   * Permite texto alfanumérico.
+   * Mantiene ceros a la izquierda.
+5. Se revisan otros tipos de datos que forman parte del **conjunto de dominios**.
+6. Se cierra el cuadro y se observa que:
+
+   * `código cliente` aparece como `VARCHAR(10)` + PK
+   * Por ser PK, **no acepta nulos**.
+
+---
+
+### 📊 **Flowchart dominio*
+
+```mermaid
+flowchart TD
+    A[Inicio: Revisión de columna código cliente] --> B[Click derecho → Column Properties]
+    B --> C[Se abre cuadro de diálogo con propiedades]
+
+    C --> D[Tipo de dato: VARCHAR(10)]
+    D --> E[Motivo: código puede tener ceros a la izquierda y letras]
+    E --> F[Evitar pérdida de formato al usar INTEGER]
+
+    C --> G[Se marca como Clave Primaria (PK)]
+    G --> H[Restricción: No acepta valores nulos]
+
+    C --> I[Se repasan otros tipos de dominio]
+    I --> I1[CHAR vs VARCHAR]
+    I --> I2[INTEGER, DECIMAL, FLOAT, BLOB]
+    I --> I3[DATE, TIME, TIMESTAMP, BOOLEAN]
+
+    H --> J[PK + VARCHAR(10) se confirma en la tabla]
+
+    J --> K[Resultado: Integridad y formato de datos asegurados]
+```
+
+---
+
 ### Tipos de datos en el modelo físico
 
+Al desarrollar el modelo físico pasamos a especificar el dominio que cada columna de la tabla va a pertenecer, o sea,
+cuáles son los tipos de datos que cada campo irá a recibir. Los tipos de datos normalmente son definidos en categorías:
+
+   Tipos numéricos, de fecha y de cadenas de caracteres, son las más conocidas.
+
+Entre los tipos de datos numéricos tenemos:
+
+   Int almacena valores numéricos enteros.
+
+   Float almacena valores numéricos aproximados con precisión de punto flotante.
+
+   Decimal almacena valores numéricos con casas decimales, utilizando precisión.
+
+   Entre los tipos de datos de cadenas de caracteres:
+
+   Varchar almacena valores de string de tamaño variable de acuerdo con su límite.
+
+   Char almacena valores de string de tamaño fijo.
+
+   Text almacena valores de string de tamaño variable.
+
+   Entre los tipos de datos de fecha tenemos:
+
+   Date almacena apenas los valores de fecha.
+
+   Time almacena apenas los valores de hora.
+
+   Timestamp almacena valores de fecha y hora.
+
+Estos son tan solo algunos ejemplos de tipos de datos que pueden ser utilizados para definir el dominio de una columna.
+Este uso puede variar entre los diversos SGBDs.
+
 ### Para saber más: otros tipos de datos
+
+### 🔹 Tipos de datos elegidos
+
+* **VARCHAR**: Se utiliza para todos los campos (nombre, teléfono, email, dirección, barrio, ciudad, estado).
+
+  * Permite almacenar texto de longitud variable.
+  * Justificación: estos campos contienen datos alfanuméricos que pueden variar en longitud.
+  * Apto para campos como teléfono (por posibles indicativos `011`, `025`) y estado (abreviaturas como `CA`, `NY`).
+
+### 🔹 Longitudes (precisión) sugeridas
+
+* `nombre`: 100 caracteres
+* `teléfono`: 12 caracteres
+* `email`, `calle`, `barrio`, `ciudad`: 50 caracteres
+* `estado`: 2 caracteres
+
+### 🔹 Restricciones de nulabilidad
+
+* Ningún campo permite valores nulos.
+
+  * Esto garantiza que se registren todos los datos esenciales de los clientes.
+
+### 🔹 Clave principal
+
+* Solo el campo `código del cliente` es **clave primaria**.
+* Todos los demás campos **no forman parte** de la clave primaria.
+
+### 🔹 Dominio varchar
+
+* Todos los campos de esta tabla comparten el mismo dominio de tipo: **VARCHAR** con distintas longitudes.
+
+---
+
+## 🧪 Ejercicio paso a paso
+
+1. Ingresar al modelo y seleccionar la tabla `clientes`.
+2. Presionar **C** para crear nueva columna:
+
+   * **Campo**: `nombre`
+   * Tipo: `VARCHAR(100)`
+   * Nulo: **No**
+3. Repetir el proceso para los siguientes campos:
+
+   * `teléfono` → `VARCHAR(12)`, no nulo
+   * `email` → `VARCHAR(50)`, no nulo
+   * `calle` → `VARCHAR(50)`, no nulo
+   * `barrio` → `VARCHAR(50)`, no nulo
+   * `ciudad` → `VARCHAR(50)`, no nulo
+   * `estado` → `VARCHAR(2)`, no nulo
+4. Revisar el diagrama entidad-relación:
+
+   * Todos los campos son tipo `VARCHAR`.
+   * Solo `código_cliente` es clave primaria.
+
+---
+
+## 📊 Diagrama tipo Flowchart en Mermaid
+
+```mermaid
+flowchart TD
+    A[Inicio: Agregar columnas a tabla Clientes] --> B[Crear campo: nombre]
+    B --> B1[Tipo: VARCHAR(100), No nulo]
+
+    B1 --> C[Crear campo: teléfono]
+    C --> C1[Tipo: VARCHAR(12), No nulo]
+
+    C1 --> D[Crear campo: email]
+    D --> D1[Tipo: VARCHAR(50), No nulo]
+
+    D1 --> E[Crear campo: calle]
+    E --> E1[Tipo: VARCHAR(50), No nulo]
+
+    E1 --> F[Crear campo: barrio]
+    F --> F1[Tipo: VARCHAR(50), No nulo]
+
+    F1 --> G[Crear campo: ciudad]
+    G --> G1[Tipo: VARCHAR(50), No nulo]
+
+    G1 --> H[Crear campo: estado]
+    H --> H1[Tipo: VARCHAR(2), No nulo]
+
+    H1 --> I[Revisar diagrama entidad-relación]
+    I --> J[Confirmar todos los campos como VARCHAR]
+    J --> K[Validar clave primaria: solo código_cliente]
+    K --> L[Resultado: Tabla clientes con todos los campos definidos]
+```
+
+---
 
 ### Tabla CLIENTE
 
