@@ -1025,6 +1025,8 @@ flowchart TD
 
 ---
 
+### Para saber más: otros tipos de datos
+
 ### Tipos de datos en el modelo físico
 
 Al desarrollar el modelo físico pasamos a especificar el dominio que cada columna de la tabla va a pertenecer, o sea,
@@ -1059,7 +1061,8 @@ Entre los tipos de datos numéricos tenemos:
 Estos son tan solo algunos ejemplos de tipos de datos que pueden ser utilizados para definir el dominio de una columna.
 Este uso puede variar entre los diversos SGBDs.
 
-### Para saber más: otros tipos de datos
+
+### Tabla CLIENTE
 
 ### 🔹 Tipos de datos elegidos
 
@@ -1147,14 +1150,433 @@ flowchart TD
     K --> L[Resultado: Tabla clientes con todos los campos definidos]
 ```
 
+### Representando las entidades fuertes
+
 ---
 
-### Tabla CLIENTE
+#### 🏗️ Modelado de Base de Datos
 
-### Creando una tabla en el modelo físico
+* **Entidad Fuerte**: Cliente, Editorial.
+* **Entidad Débil**: Pedido, Items.
+* **Clave Principal (PK)**: Campo que identifica de forma única una fila.
+* **Clave Parcial**: PK de entidades débiles; requiere una FK para completar su identificación.
+* **Clave Foránea (FK)**: Relaciona una tabla con otra (no se implementó en este video).
+* **Atributo / Columna / Campo**: Usados como sinónimos para referirse a los datos de una tabla.
+* **Nulos**:
 
-### Representando las entidades fuertes
+  * No se permiten en claves primarias o campos obligatorios.
+  * Se permiten en campos opcionales (ej. teléfono\_2, valor en Items).
+
+#### 📋 Tipos de Datos
+
+* `VARCHAR(n)`: Texto de longitud variable, con un máximo de `n` caracteres.
+* `DATE`: Fecha.
+* `DECIMAL`: Números con decimales exactos.
+* `INTEGER`: Números enteros.
+* `FLOAT`: Número con coma flotante (menos recomendable para precios).
+
+#### 🔧 Herramientas / Acciones
+
+* **Power Architect**: Herramienta usada para crear el modelo.
+* **Zoom**: Utilizado para visualizar mejor elementos del diagrama.
+* **Insertar columnas**: Proceso para añadir atributos a una tabla.
+* **Delete selected**: Opción para eliminar columnas creadas incorrectamente.
+
+---
+
+### 🧪 EJERCICIO RESUMIDO
+
+1. **Tabla: CLIENTE**
+
+   * (Ya creada previamente)
+
+2. **Tabla: EDITORIAL (Entidad Fuerte)**
+
+   * `cod_editorial` (PK, VARCHAR(10), NOT NULL)
+   * `nombre_contacto` (VARCHAR(50), NOT NULL)
+   * `email` (VARCHAR(50), NOT NULL)
+   * `telefono_1` (VARCHAR(12), NOT NULL)
+   * `telefono_2` (VARCHAR(12), NULL)
+
+3. **Tabla: PEDIDO (Entidad Débil)**
+
+   * `cod_pedido` (Clave Parcial, PK, VARCHAR(10), NOT NULL, marcada como clave parcial en remarks)
+   * `fecha` (DATE, NOT NULL)
+   * `valor` (DECIMAL, NOT NULL)
+
+4. **Tabla: ITEMS (Entidad Débil)**
+
+   * `valor` (DECIMAL, NULL)
+   * `cantidad` (INTEGER, NOT NULL)
+
+5. Claves Foráneas y relación con **libros** y otros atributos serán tratados en videos posteriores.
+
+---
+
+### 📊 FLOWCHART TIPO MERMAID
+
+```mermaid
+erDiagram
+    CLIENTE ||--o{ PEDIDO : hace
+    EDITORIAL ||--o{ PEDIDO : gestiona
+    PEDIDO ||--o{ ITEMS : contiene
+
+    CLIENTE {
+        string cod_cliente PK
+        ...
+    }
+
+    EDITORIAL {
+        string cod_editorial PK
+        string nombre_contacto
+        string email
+        string telefono_1
+        string telefono_2 NULL
+    }
+
+    PEDIDO {
+        string cod_pedido PK (clave parcial)
+        date fecha
+        decimal valor
+        -- cod_cliente FK (no implementada)
+        -- cod_editorial FK (no implementada)
+    }
+
+    ITEMS {
+        decimal valor NULL
+        int cantidad
+        -- cod_pedido FK (no implementada)
+        -- cod_libro FK (no implementada)
+    }
+```
 
 ### Completando las tablas
 
+---
+
+### 1. **Entidades débiles**
+
+* No poseen clave primaria propia.
+* Requieren de una clave parcial.
+* Se relacionan a otras entidades para garantizar unicidad (clave compuesta).
+
+### 2. **Manejo de valores nulos**
+
+* Un valor decimal puede ser 0 sin ser nulo.
+* Se permite registrar productos con valor 0 (promociones, regalos).
+* Algunos campos no deben permitir nulos (valor del libro, cantidad en inventario).
+
+### 3. **Diseño de tablas**
+
+* Se usa prefijo `Tb_` para nombrar tablas.
+* Columnas incluyen nombre lógico y físico.
+* Se especifica tipo de dato y precisión.
+
+### 4. **Tipos de datos y convenciones**
+
+* `VARCHAR`: para texto (nombre, autor, editorial, etc.).
+* `INTEGER`: para cantidades o años.
+* `DECIMAL`: para valores monetarios.
+* Precisión común: 12 para documentos, 50 para nombres largos.
+
+### 5. **Atributos específicos por tipo de cliente**
+
+* Persona Natural (PN): DNI, RUT.
+* Persona Jurídica (PJ): NIT, Registro Único de Empresa.
+
+### 6. **Modelo relacional lógico**
+
+* Entidades: Libro, Pedido, Inventario, Editorial, Cliente (PN y PJ).
+* Relaciones: Pedido - Libro (ítems), Pedido - Inventario, Libro - Editorial.
+* Faltan claves foráneas y relaciones, a definir en otra fase.
+
+---
+
+## 🛠 Ejercicio desarrollado (resumen de implementación)
+
+1. **Tabla `Tb_LIBRO`**
+
+   * Clave parcial: `cod_libro` (VARCHAR 10)
+   * Campos: `titulo` (VARCHAR 50), `categoria` (VARCHAR 20), `año_publicacion` (INTEGER), `ISBN` (INTEGER), `autor` (VARCHAR 50), `editorial` (VARCHAR 20), `valor` (DECIMAL, sin nulos)
+
+2. **Tabla `Tb_INVENTARIO`**
+
+   * Clave parcial, entidad débil
+   * Campo: `cantidad` (INTEGER, sin nulos)
+
+3. **Tabla `Tb_PN` (Persona Natural)**
+
+   * Clave: `DNI` (VARCHAR 12)
+   * Campo adicional: `RUT` (VARCHAR 9, ajustar según reglas de negocio)
+
+4. **Tabla `Tb_PJ` (Persona Jurídica)**
+
+   * Clave: `NIT` (VARCHAR 12)
+   * Campo adicional: `Registro_Unico_Empresa` (VARCHAR 12)
+
+5. **Relaciones previstas (a modelar luego)**
+
+   * Pedido tiene ítems que relacionan libros.
+   * Pedido está asociado al inventario.
+   * Libro está relacionado con editorial.
+   * Cliente puede ser PN o PJ (especialización).
+
+---
+
+## 🔄 Esquema tipo Flowchart Mermaid
+
+```mermaid
+flowchart TD
+
+%% Entidades principales
+LIBRO[Libro]
+INVENTARIO[Inventario]
+PEDIDO[Pedido]
+EDITORIAL[Editorial]
+CLIENTE[Cliente]
+PN[Persona Natural]
+PJ[Persona Jurídica]
+
+%% Atributos de LIBRO
+LIBRO -->|Tiene| COD_LIBRO[Clave parcial: cod_libro]
+LIBRO --> TITULO[Título (VARCHAR 50)]
+LIBRO --> CATEGORIA[Categoría (VARCHAR 20)]
+LIBRO --> ANIO[Año publicación (INTEGER)]
+LIBRO --> ISBN[ISBN (INTEGER)]
+LIBRO --> AUTOR[Autor (VARCHAR 50)]
+LIBRO --> VALOR[Valor (DECIMAL, no nulo)]
+LIBRO --> EDITORIAL_REF[Editorial (VARCHAR 20)]
+
+%% Inventario
+INVENTARIO --> CANTIDAD[Cantidad (INTEGER, no nulo)]
+
+%% Persona Natural
+PN --> DNI[DNI (VARCHAR 12)]
+PN --> RUT[RUT (VARCHAR 9)]
+
+%% Persona Jurídica
+PJ --> NIT[NIT (VARCHAR 12)]
+PJ --> RUE[Registro Único Empresa (VARCHAR 12)]
+
+%% Cliente
+CLIENTE --> PN
+CLIENTE --> PJ
+
+%% Relaciones
+PEDIDO -->|Contiene ítems de| LIBRO
+PEDIDO -->|Se consulta con| INVENTARIO
+LIBRO -->|Pertenece a| EDITORIAL
+CLIENTE --> PEDIDO
+```
+
+---
+
 ## Concluyendo el proyecto
+
+### Tipos de relación
+
+---
+
+#### 🔷 Generalidades
+
+* **Modelo físico**: Última fase de diseño de base de datos.
+* **Modelo lógico**: Base sobre la que se construye el modelo físico.
+* **Power Architect**: Herramienta utilizada para modelar el modelo físico.
+* **Diagrama Entidad-Relación (ERD)**: Punto de partida del modelo lógico.
+
+#### 🔷 Relaciones
+
+* **Claves foráneas (FK)**: No se crean automáticamente; se definen manualmente usando relaciones.
+* **Relaciones identificadas**: Se usan cuando la entidad receptora **no tiene clave parcial**.
+* **Relaciones no identificadas**: Se usan cuando la entidad receptora **ya tiene una clave parcial**.
+
+#### 🔷 Entidades y relaciones prácticas
+
+* **Cliente → Pedido**: Relación no identificada (el cliente tiene clave primaria).
+* **Editorial → Libro**: Relación identificada (libro tiene clave parcial).
+* **Pedido → Items**: Relación identificada (items no tiene clave parcial).
+* **Libro → Items**: Relación compuesta, aparece como PFK (clave parcial + foránea).
+* **Libro → Inventario**: Relación identificada.
+* **Cliente → Persona Natural / Persona Jurídica**: Relaciones identificadas, aparece como PFK en ambos.
+
+#### 🔷 Cardinalidad
+
+* **Cardinalidad mínima y máxima**: Se debe ajustar manualmente.
+
+  * Ejemplos:
+
+    * 0..1
+    * 1..N
+    * 1..1
+* En el modelo lógico se especifica, y se debe trasladar al modelo físico.
+
+---
+
+### 🧠 **Ejercicio descrito**
+
+1. Seleccionar la tabla base (ej. Cliente).
+2. Crear relación (identificada o no) según la existencia de clave parcial en la entidad destino.
+3. Indicar columna clave a usar como FK.
+4. Relacionar tablas arrastrando el campo desde origen a destino.
+5. Observar símbolos generados automáticamente (pata de gallina, PFK).
+6. Repetir con otras relaciones: Editorial → Libro, Pedido → Items, Libro → Items, etc.
+7. Ajustar posiciones visuales del diagrama.
+8. Revisar y luego definir **cardinalidades** manualmente.
+
+---
+
+### 🧭 **Esquema tipo flowchart (mermaid)**
+
+```mermaid
+flowchart TD
+    A[Inicio: Modelo Lógico] --> B[Importar a Power Architect]
+    B --> C[Crear Relaciones]
+
+    subgraph Tipos de Relaciones
+        C1[Relación Identificada]
+        C2[Relación No Identificada]
+    end
+
+    C --> D[Evaluar clave parcial en entidad destino]
+    D -->|Tiene clave parcial| C2
+    D -->|No tiene clave parcial| C1
+
+    subgraph Ejemplos Prácticos
+        E1[Cliente → Pedido: No Identificada]
+        E2[Editorial → Libro: Identificada]
+        E3[Pedido → Items: Identificada]
+        E4[Libro → Items: Clave compuesta (PFK)]
+        E5[Libro → Inventario: Identificada]
+        E6[Cliente → Persona Natural / Jurídica: Identificada]
+    end
+
+    C1 --> E2
+    C1 --> E3
+    C1 --> E4
+    C1 --> E5
+    C1 --> E6
+    C2 --> E1
+
+    E1 --> F[Verificar relaciones visuales]
+    F --> G[Definir cardinalidades]
+    G --> H[Cardinalidad mínima y máxima: 0..1, 1..N, etc.]
+
+    H --> Z[Modelo físico listo para uso]
+
+    style Tipos de Relaciones fill:#DFF0D8,stroke:#3C763D,stroke-width:1px
+    style Ejemplos Prácticos fill:#D9EDF7,stroke:#31708F,stroke-width:1px
+```
+
+---
+
+### Identificadora vs. No Identificadora
+
+La relación identificadora es aquella en que una ocurrencia de la entidad débil necesita estar asociada a exactamente una
+ocurrencia de la entidad fuerte y no puede existir sin ella. Es utilizada para representar una clave principal foránea.
+
+La relación no identificadora, cada ocurrencia de la entidad débil puede ser identificada sin la necesidad de saber a cuál
+ocurrencia de la entidad fuerte está asociada. En este caso, esta relación es utilizada solamente para claves foráneas.
+
+### Símbolos de la cardinalidad
+
+---
+
+1. **Modelo Físico vs Modelo Lógico**
+
+   * El modelo físico se construye a partir del modelo lógico.
+   * El modelo lógico muestra las relaciones conceptuales entre entidades.
+   * El modelo físico se implementa en herramientas como *Power Architect*.
+
+2. **Relaciones entre tablas**
+
+   * **Relación identificadora**: usada cuando la entidad receptora **no tiene clave parcial**.
+   * **Relación no identificadora**: usada cuando la entidad receptora **tiene clave parcial**.
+
+3. **Claves**
+
+   * **Claves foráneas (FK)** conectan tablas.
+   * **Claves compuestas / parciales** pueden actuar como claves foráneas parciales (**PFK**).
+
+4. **Cardinalidad**
+
+   * Define la cantidad mínima y máxima de registros que pueden relacionarse entre sí.
+   * Ejemplos:
+
+     * `1:1`: Uno a uno.
+     * `0:1`: Cero o uno.
+     * `1:N`: Uno a muchos.
+     * `0:N`: Cero a muchos.
+
+5. **Modificación de cardinalidad**
+
+   * Se realiza manualmente haciendo doble clic en la relación.
+   * Se selecciona la cardinalidad mínima y máxima de cada extremo.
+
+6. **Estética del diagrama**
+
+   * Es importante para la comprensión: organización visual del modelo.
+
+7. **Siguiente fase**
+
+   * Uso de un Sistema de Gestión de Bases de Datos (SGBD).
+
+---
+
+## 🧪 Ejercicio realizado
+
+1. Ajuste de **cardinalidades predeterminadas** (por defecto eran 1:1 y 0\:N).
+2. Revisión de cardinalidades reales basadas en el **modelo lógico**.
+3. Edición de relaciones entre tablas en **Power Architect**:
+
+   * Cliente ↔ Persona Natural / Jurídica → `1:1` y `0:1`.
+   * Cliente ↔ Pedido → `1:1` y `0:N`.
+   * Pedido ↔ Items → `1:1` y `1:N`.
+   * Libro ↔ Items → `1:1` y `1:N`.
+   * Editorial ↔ Libro → `1:1` y `1:N`.
+   * Libro ↔ Inventario → `1:N` y `0:1`.
+4. Reorganización estética del diagrama para mejor visualización.
+5. Confirmación final del modelo físico completo.
+6. Preparación para elegir un **Sistema de Gestión de Bases de Datos (SGBD)** para implementación.
+
+---
+
+## 🔁 Flowchart tipo Mermaid
+
+```mermaid
+flowchart TD
+    A[Inicio: Ajustar modelo físico] --> B[Revisar modelo lógico]
+    B --> C[Identificar cardinalidades reales]
+    C --> D[Editar relaciones en Power Architect]
+
+    subgraph Relaciones
+        D1[Cliente → Persona Natural/Jurídica: 1:1 / 0:1]
+        D2[Cliente → Pedido: 1:1 / 0:N]
+        D3[Pedido → Items: 1:1 / 1:N]
+        D4[Libro → Items: 1:1 / 1:N]
+        D5[Editorial → Libro: 1:1 / 1:N]
+        D6[Libro → Inventario: 1:N / 0:1]
+    end
+
+    D --> Relaciones
+    Relaciones --> E[Modificar cardinalidad manualmente]
+    E --> F[Reorganizar visualmente el diagrama]
+    F --> G[Confirmar modelo físico finalizado]
+    G --> H[Prepararse para elegir SGBD]
+```
+
+---
+
+### Representando la cardinalidad
+
+![Tabla](/AlluraG8_2025/Fase_2/assets/Table_ejemplo.png)
+
+La cardinalidad mínima de la tabla inventario es 1 y la máxima es N, representada en el modelo en el extremo más distante,
+al lado de la tabla de producto.
+
+   La cardinalidad es representada en el extremo opuesto a la tabla. En el ejemplo, el tridente (pie de gallina) y el trazo
+   en la vertical nos dice que la cardinalidad de la tabla inventario, contenida en el otro extremo, es (min: 1, max: N).
+
+La cardinalidad mínima de la tabla productos es 0 y la máxima es 1, representada en el modelo en el extremo más distante, al lado de la tabla de inventario.
+
+   La cardinalidad es representada en el extremo opuesto a la tabla. En el ejemplo, el círculo tangente al trazo vertical
+   nos dice que la cardinalidad de la tabla producto, contenida en el otro extremo, es (min: 0, max: 1).
