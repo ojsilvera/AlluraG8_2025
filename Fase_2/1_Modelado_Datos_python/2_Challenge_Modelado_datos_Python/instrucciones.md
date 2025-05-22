@@ -40,7 +40,8 @@ Debes evaluar cada tienda en base a los siguientes **cinco aspectos clave**:
 - [Google Colab](https://colab.research.google.com/)
 - [Google Drive](https://drive.google.com/)
 - [GitHub](https://github.com/)
-- [Trello](https://trello.com/)
+- [Trello](https://trello.com/b/AM8lA9mx/challenge-one-data-science-alura-store-trello)
+- [GitHub](https://github.com/ojsilvera/AlluraG8_2025_Challenge_Alura_Store)
 
 ---
 
